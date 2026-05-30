@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "",
+    "blog": "",
+    "export": "",
+    "products": "",
+    "contact": "",
+    "rfq": ""
+  },
+  "pages": {
+    "home": { "title": "" },
+    "blog": { "title": "" },
+    "export": { "title": "" },
+    "products": { "title": "" },
+    "contact": { "title": "" },
+    "rfq": { "title": "" }
+  },
+  "form": {
+    "name": "",
+    "email": "",
+    "company": "",
+    "phone": "",
+    "message": "",
+    "productInterest": "",
+    "quantity": "",
+    "details": "",
+    "submit": "",
+    "success": "",
+    "error": ""
+  }
+}
