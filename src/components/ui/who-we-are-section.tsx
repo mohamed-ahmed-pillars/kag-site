@@ -117,7 +117,7 @@ export default function WhoWeAreSection() {
     <section
       id="who-we-are"
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-background px-4 py-24 text-foreground"
+      className="relative w-full overflow-hidden px-4 py-24 text-foreground"
     >
       {/* Parallax background blobs */}
       <motion.div
@@ -219,7 +219,7 @@ export default function WhoWeAreSection() {
                   playsInline
                   preload="metadata"
                   aria-hidden="true"
-                  className="h-full w-full object-cover"
+                  className="block aspect-[9/16] w-full object-cover"
                 />
               </motion.div>
 
