@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useTransform, useInView, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "@/components/ui/flow-button";
+import { buttonVariants } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 
 type PillarKey = "ourBrands" | "privateLabel" | "customRecipe" | "export";
 
@@ -220,7 +222,14 @@ export default function WhatWeOfferSection() {
                     />
                   )}
                   {p.key === "ourBrands" && (
-                    <div className="p-4 text-sm text-muted-foreground">TODO: Our Brands</div>
+                    <OurBrandsCard
+                      title={t("pillars.ourBrands.title")}
+                      description={t("pillars.ourBrands.description")}
+                      categories={t.raw("pillars.ourBrands.categories") as string[]}
+                      primaryCta={t("pillars.ourBrands.cta.primary")}
+                      secondaryCta={t("pillars.ourBrands.cta.secondary")}
+                      isActive={isActive}
+                    />
                   )}
                   {p.key === "privateLabel" && (
                     <div className="p-4 text-sm text-muted-foreground">TODO: Private Label</div>
@@ -232,6 +241,142 @@ export default function WhatWeOfferSection() {
         </div>
       </motion.div>
     </section>
+  );
+}
+
+const BRAND_LOGOS = [
+  { src: "/yamkers_logo.png", alt: "Yamkers" },
+  { src: "/tasbeka_logo.png", alt: "Tasbeka" },
+];
+
+function BrandLogoCarousel() {
+  const [i, setI] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+    const id = setInterval(() => setI((v) => (v + 1) % BRAND_LOGOS.length), 3000);
+    return () => clearInterval(id);
+  }, [prefersReducedMotion]);
+
+  if (prefersReducedMotion) {
+    return (
+      <div className="flex items-center justify-center gap-10">
+        {BRAND_LOGOS.map((b) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img key={b.alt} src={b.src} alt={b.alt} className="h-24 w-auto object-contain" />
+        ))}
+      </div>
+    );
+  }
+
+  const current = BRAND_LOGOS[i];
+  return (
+    <div className="relative flex h-28 w-full items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current.alt}
+          src={current.src}
+          alt={current.alt}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute h-24 w-auto object-contain drop-shadow-lg"
+        />
+      </AnimatePresence>
+    </div>
+  );
+}
+
+type OurBrandsCardProps = {
+  title: string;
+  description: string;
+  categories: string[];
+  primaryCta: string;
+  secondaryCta: string;
+  isActive: boolean;
+};
+
+function OurBrandsCard({
+  title,
+  description,
+  categories,
+  primaryCta,
+  secondaryCta,
+  isActive,
+}: OurBrandsCardProps) {
+  return (
+    <>
+      <div
+        className="relative mb-4 h-72 w-full overflow-hidden rounded-lg bg-cover bg-center"
+        style={{ backgroundImage: "url('/ourbrandsbackground.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10 flex h-full items-center justify-center p-6">
+          <BrandLogoCarousel />
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <h3
+            className={cn(
+              "font-heading text-md font-medium leading-tight tracking-tight md:text-lg transition-colors duration-200",
+              isActive ? "text-primary" : "text-foreground/70",
+            )}
+          >
+            {title}
+          </h3>
+          <p
+            className={cn(
+              "text-xs leading-relaxed md:text-sm transition-all duration-300",
+              isActive
+                ? "text-muted-foreground line-clamp-none"
+                : "text-muted-foreground/80 line-clamp-2",
+            )}
+          >
+            {description}
+          </p>
+
+          {/* Category chips — always visible, brand-defining */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            {categories.map((c) => (
+              <span
+                key={c}
+                className="rounded-full bg-secondary/15 px-3 py-1 text-xs font-medium text-foreground"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div
+          aria-hidden={!isActive}
+          inert={!isActive}
+          className={cn(
+            "grid transition-all duration-500 ease-out",
+            isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+          )}
+        >
+          <div className="overflow-hidden">
+            <div className="flex flex-wrap items-center justify-end gap-3 pt-4">
+              <Link
+                href="/rfq"
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "lg" }),
+                  "rounded-full px-6",
+                )}
+              >
+                {secondaryCta}
+              </Link>
+              <FlowButton href="/products" text={primaryCta} className="px-6 py-2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
