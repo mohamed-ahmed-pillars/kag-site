@@ -60,7 +60,7 @@ function PillarItem({
           {title}
         </h3>
       </motion.div>
-      <p className="pl-16 text-sm leading-relaxed text-foreground/80">
+      <p className="ps-16 text-sm leading-relaxed text-foreground/80">
         {description}
       </p>
     </motion.div>
