@@ -26,6 +26,12 @@ const certifications = [
   { src: "/certifications/iso-45001.avif", alt: "ISO 45001" },
 ] as const;
 
+const values = [
+  { key: "quality",    Icon: Award },
+  { key: "innovation", Icon: Sparkles },
+  { key: "growth",     Icon: TrendingUp },
+] as const;
+
 type PillarKey = (typeof pillars)[number]["key"];
 
 interface PillarItemProps {
@@ -80,6 +86,8 @@ export default function WhoWeAreSection() {
   const t = useTranslations("whoWeAre");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  const valuesRef = useRef<HTMLDivElement>(null);
+  const isValuesInView = useInView(valuesRef, { once: false, amount: 0.3 });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -298,7 +306,40 @@ export default function WhoWeAreSection() {
           </div>
         </motion.div>
 
-        {/* Value cards — added in Task 7 */}
+        {/* Value cards: Quality / Innovation / Growth */}
+        <motion.div
+          ref={valuesRef}
+          className="mt-24 grid grid-cols-1 gap-8 sm:grid-cols-3"
+          initial="hidden"
+          animate={isValuesInView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
+          {values.map(({ key, Icon }, i) => (
+            <motion.div
+              key={key}
+              className="group flex flex-col items-center rounded-xl bg-white/50 p-6 text-center backdrop-blur-sm transition-colors duration-300 hover:bg-white"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1 } },
+              }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
+              <motion.div
+                className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/5 text-primary transition-colors duration-300 group-hover:bg-primary/10"
+                whileHover={{ rotate: 360, transition: { duration: 0.8 } }}
+              >
+                <Icon className="h-6 w-6" />
+              </motion.div>
+              <h3 className="font-heading text-xl font-medium text-foreground">
+                {t(`values.${key}.title`)}
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70">
+                {t(`values.${key}.description`)}
+              </p>
+              <motion.div className="mt-3 h-0.5 w-10 bg-secondary transition-all duration-300 group-hover:w-16" />
+            </motion.div>
+          ))}
+        </motion.div>
         {/* CTA banner — added in Task 8 */}
       </motion.div>
     </section>
