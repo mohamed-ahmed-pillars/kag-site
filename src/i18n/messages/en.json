@@ -36,5 +36,72 @@
       "sub": "Talk to our team about manufacturing, private-label, custom recipes, or export.",
       "button": "Talk to our team"
     }
+  },
+  "whatWeOffer": {
+    "eyebrow": "WHAT WE OFFER",
+    "heading": "Four pillars, one promise",
+    "intro": "From our own household brands to private-label production, bespoke recipes, and global export — every pillar is built on KAG's commitment to quality, consistency, and partnership.",
+    "pillars": {
+      "ourBrands": {
+        "title": "Our Brands",
+        "subtitle": "Yamkers & Tasbeka",
+        "description": "Two trusted household names crafted in Egypt — covering tomato sauces, jams, juices, and fava beans for everyday tables.",
+        "categories": ["Sauces", "Jams", "Juices", "Fava Beans"],
+        "cta": {
+          "primary": "See Our Products",
+          "secondary": "Request a Quote"
+        }
+      },
+      "privateLabel": {
+        "badge": "PRIVATE LABEL",
+        "title": "Expert Private Label Producers",
+        "subtitle": "Your brand, our expertise",
+        "tagline": "Your brand, our expertise.",
+        "paragraphs": [
+          "We produce tailor-made private-label products for international clients and partners. From sourcing premium ingredients to state-of-the-art manufacturing, we prioritize quality at every step.",
+          "As a trusted partner, we work closely with each client to develop and deliver customized private-label solutions aligned with their brand vision and market positioning."
+        ],
+        "features": [
+          { "title": "State-of-the-Art Manufacturing", "desc": "Modern lines and automated production." },
+          { "title": "Premium Ingredients",            "desc": "Sourced through long-term grower partnerships." },
+          { "title": "Dedicated Partnership",          "desc": "Close collaboration on tailored solutions." },
+          { "title": "Global Scale",                   "desc": "International reach and distribution." }
+        ],
+        "capabilitiesHeading": "Our Capabilities",
+        "capabilities": [
+          "Custom Recipe Development",
+          "Brand-Specific Packaging",
+          "Quality Assurance & Testing",
+          "Regulatory Compliance",
+          "Supply Chain Management",
+          "Global Distribution Support"
+        ],
+        "cta": "Partner with Us"
+      },
+      "customRecipe": {
+        "title": "Custom Recipe",
+        "subtitle": "From flavor brief to shelf",
+        "description": "Bring us a flavor profile, a target market, or a competitor benchmark — our R&D team develops, samples, and scales the recipe that fits.",
+        "items": [
+          "Flavor profiling & formulation",
+          "Sensory & shelf-life testing",
+          "Pilot batch & scale-up trials",
+          "Packaging match for target market"
+        ],
+        "cta": "Start a Recipe"
+      },
+      "export": {
+        "title": "Export",
+        "subtitle": "Egyptian origin, global shelves",
+        "description": "KAG products move reliably across borders — backed by export documentation, logistics partners, and importers who value consistent supply.",
+        "items": [
+          "Established regional & global markets",
+          "Logistics & export documentation",
+          "Trusted importer/partner network",
+          "Egyptian-origin consistency at scale"
+        ],
+        "cta": "Reach Global Markets"
+      }
+    }
   }
 }
