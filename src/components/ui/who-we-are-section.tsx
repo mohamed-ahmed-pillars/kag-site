@@ -3,9 +3,69 @@
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { Award, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "@/components/ui/flow-button";
+
+const pillars = [
+  { key: "manufacturing", icon: "/pattern/manufacturing-lime.png",        side: "left"  },
+  { key: "privateLabel",  icon: "/pattern/private-label-lime.png",        side: "left"  },
+  { key: "customRecipe",  icon: "/pattern/wheat-lime.png",                side: "left"  },
+  { key: "distribution",  icon: "/pattern/distribution-truck-lime.png",   side: "right" },
+  { key: "export",        icon: "/pattern/export-globe-lime.png",         side: "right" },
+  { key: "quality",       icon: "/pattern/kag-monogram-lime.png",         side: "right" },
+] as const;
+
+type PillarKey = (typeof pillars)[number]["key"];
+
+interface PillarItemProps {
+  iconSrc: string;
+  title: string;
+  description: string;
+  variants: Variants;
+  delay: number;
+  direction: "left" | "right";
+}
+
+function PillarItem({
+  iconSrc,
+  title,
+  description,
+  variants,
+  delay,
+  direction,
+}: PillarItemProps) {
+  return (
+    <motion.div
+      className="group flex flex-col"
+      variants={variants}
+      transition={{ delay }}
+      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+    >
+      <motion.div
+        className="mb-3 flex items-center gap-3"
+        initial={{ x: direction === "left" ? -20 : 20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: delay + 0.2 }}
+      >
+        <motion.div
+          className="rounded-lg bg-primary/10 p-3 transition-colors duration-300 group-hover:bg-primary/20"
+          whileHover={{ rotate: [0, -10, 10, -5, 0], transition: { duration: 0.5 } }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={iconSrc} alt="" className="h-10 w-10 object-contain" />
+        </motion.div>
+        <h3 className="font-heading text-xl text-foreground transition-colors duration-300 group-hover:text-primary">
+          {title}
+        </h3>
+      </motion.div>
+      <p className="pl-16 text-sm leading-relaxed text-foreground/80">
+        {description}
+      </p>
+    </motion.div>
+  );
+}
 
 export default function WhoWeAreSection() {
   const t = useTranslations("whoWeAre");
@@ -107,7 +167,92 @@ export default function WhoWeAreSection() {
           {t("intro")}
         </motion.p>
 
-        {/* Pillar grid — added in Task 5 */}
+        {/* Pillar grid: 3 left, framed video center, 3 right */}
+        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-3">
+          {/* Left column */}
+          <div className="space-y-16">
+            {pillars
+              .filter((p) => p.side === "left")
+              .map((p, i) => (
+                <PillarItem
+                  key={p.key}
+                  iconSrc={p.icon}
+                  title={t(`pillars.${p.key}.title`)}
+                  description={t(`pillars.${p.key}.description`)}
+                  variants={itemVariants}
+                  delay={i * 0.2}
+                  direction="left"
+                />
+              ))}
+          </div>
+
+          {/* Center: framed video */}
+          <div className="order-first mb-8 flex items-center justify-center md:order-none md:mb-0">
+            <motion.div className="relative w-full max-w-xs" variants={itemVariants}>
+              <motion.div
+                className="overflow-hidden rounded-md shadow-xl"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+              >
+                <video
+                  src="/mangojar.mp4"
+                  poster="/mangojar.png"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-hidden="true"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+
+              {/* Decorative offset frame */}
+              <motion.div
+                className="absolute inset-0 -m-3 rounded-md border-4 border-secondary z-[-1]"
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              />
+
+              {/* Floating decorative orbs */}
+              <motion.div
+                className="absolute -top-4 -right-8 h-16 w-16 rounded-full bg-primary/10"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.9 }}
+                style={{ y: y1 }}
+              />
+              <motion.div
+                className="absolute -bottom-6 -left-10 h-20 w-20 rounded-full bg-secondary/15"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.1 }}
+                style={{ y: y2 }}
+              />
+            </motion.div>
+          </div>
+
+          {/* Right column */}
+          <div className="space-y-16">
+            {pillars
+              .filter((p) => p.side === "right")
+              .map((p, i) => (
+                <PillarItem
+                  key={p.key}
+                  iconSrc={p.icon}
+                  title={t(`pillars.${p.key}.title`)}
+                  description={t(`pillars.${p.key}.description`)}
+                  variants={itemVariants}
+                  delay={i * 0.2}
+                  direction="right"
+                />
+              ))}
+          </div>
+        </div>
+
         {/* Marquee — added in Task 6 */}
         {/* Value cards — added in Task 7 */}
         {/* CTA banner — added in Task 8 */}
