@@ -10,5 +10,31 @@
       "customProduct": "Custom Product",
       "export": "Export"
     }
+  },
+  "whoWeAre": {
+    "eyebrow": "OUR STORY",
+    "heading": "Who We Are",
+    "intro": "KAG is an Egyptian food group producing, distributing, and exporting trusted food products — from tomato sauces and jams to juices and fava beans. We build for both local communities and global markets, grounded in three values: Quality. Innovation. Growth.",
+    "pillars": {
+      "manufacturing":   { "title": "Manufacturing",          "description": "Tomato sauces, jams, juices, fava beans — produced in-house to international food-safety standards." },
+      "privateLabel":    { "title": "Private Labeling",       "description": "We manufacture under your brand, with consistent quality at the volumes retail demands." },
+      "customRecipe":    { "title": "Custom Recipe",          "description": "Bring us a flavor profile or a target market — we develop the recipe, sample it, and scale it." },
+      "distribution":    { "title": "Distribution & Trading", "description": "A trade network that moves food goods reliably across Egypt and into regional markets." },
+      "export":          { "title": "Export",                 "description": "KAG products on shelves abroad — partnering with importers who value Egyptian origin and consistent supply." },
+      "quality":         { "title": "Quality & Food Safety",  "description": "Every batch passes through documented quality controls so what leaves our factory matches the spec." }
+    },
+    "certifications": {
+      "heading": "Backed by international standards"
+    },
+    "values": {
+      "quality":     { "title": "Quality",     "description": "Tomato sauces, jams, and juices crafted to international food-safety standards — every batch, every market." },
+      "innovation":  { "title": "Innovation",  "description": "New recipes, new packaging, new partnerships — we evolve what KAG puts on the shelf so it stays relevant." },
+      "growth":      { "title": "Growth",      "description": "Built in Egypt for the world: we grow KAG, our private-label partners, and the trade networks that carry our food." }
+    },
+    "cta": {
+      "heading": "Ready to bring KAG quality to your shelves?",
+      "sub": "Talk to our team about manufacturing, private-label, custom recipes, or export.",
+      "button": "Talk to our team"
+    }
   }
 }
