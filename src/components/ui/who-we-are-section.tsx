@@ -340,7 +340,21 @@ export default function WhoWeAreSection() {
             </motion.div>
           ))}
         </motion.div>
-        {/* CTA banner — added in Task 8 */}
+        {/* CTA banner */}
+        <motion.div
+          className="mt-20 flex flex-col items-center justify-between gap-6 rounded-xl bg-primary p-8 text-primary-foreground md:flex-row"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <div className="flex-1">
+            <h3 className="mb-2 font-heading text-2xl font-medium">
+              {t("cta.heading")}
+            </h3>
+            <p className="text-primary-foreground/80">{t("cta.sub")}</p>
+          </div>
+          <FlowButton href="/contact" text={t("cta.button")} className="px-10 py-3" />
+        </motion.div>
       </motion.div>
     </section>
   );
