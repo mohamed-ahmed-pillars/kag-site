@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Zap } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type PillarKey = "ourBrands" | "privateLabel" | "customRecipe" | "export";
 
@@ -29,14 +30,14 @@ export default function WhatWeOfferSection() {
   const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const activeIndexRef = useRef(0);
   const sentinelRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    if (!sentinelRefs.current.length) return;
     let frame = 0;
     const tick = () => {
       frame = requestAnimationFrame(tick);
-      const centerY = window.innerHeight / 3;
+      const centerY = window.innerHeight / 2;
       let bestIndex = 0;
       let bestDist = Infinity;
       sentinelRefs.current.forEach((node, i) => {
@@ -49,11 +50,14 @@ export default function WhatWeOfferSection() {
           bestIndex = i;
         }
       });
-      if (bestIndex !== activeIndex) setActiveIndex(bestIndex);
+      if (bestIndex !== activeIndexRef.current) {
+        activeIndexRef.current = bestIndex;
+        setActiveIndex(bestIndex);
+      }
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [activeIndex]);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -144,18 +148,18 @@ export default function WhatWeOfferSection() {
               <div
                 key={p.key}
                 className="relative flex flex-col gap-4 md:flex-row md:gap-16"
-                aria-current={isActive ? "true" : "false"}
+                aria-current={isActive ? "step" : undefined}
               >
                 {/* Sticky icon + title column */}
-                <div className="top-8 flex h-min w-64 shrink-0 items-center gap-4 md:sticky">
+                <div className="flex h-min w-64 shrink-0 items-center gap-4 md:sticky md:top-8">
                   <div className="flex items-center gap-3">
                     <div
-                      className={
-                        "rounded-lg p-2 " +
-                        (isActive
+                      className={cn(
+                        "rounded-lg p-2 transition-colors duration-300",
+                        isActive
                           ? "bg-primary text-primary-foreground"
-                          : "bg-muted text-muted-foreground")
-                      }
+                          : "bg-muted text-muted-foreground",
+                      )}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={p.icon} alt="" className="h-6 w-6 object-contain" />
@@ -175,19 +179,22 @@ export default function WhatWeOfferSection() {
                 <div
                   ref={(el) => {
                     sentinelRefs.current[index] = el;
+                    return () => {
+                      sentinelRefs.current[index] = null;
+                    };
                   }}
                   aria-hidden
-                  className="absolute -top-24 left-0 h-12 w-12 opacity-0"
+                  className="pointer-events-none absolute inset-y-0 left-0 w-1 opacity-0"
                 />
 
                 {/* Card body — placeholder for now */}
                 <article
-                  className={
-                    "flex flex-1 flex-col rounded-2xl border p-3 transition-all duration-300 " +
-                    (isActive
+                  className={cn(
+                    "flex flex-1 flex-col rounded-2xl border p-3 transition-all duration-300",
+                    isActive
                       ? "border-primary/40 bg-white/70 shadow-lg backdrop-blur-sm dark:bg-black/50"
-                      : "border-foreground/10 bg-white/40 dark:bg-black/30")
-                  }
+                      : "border-foreground/10 bg-white/40 dark:bg-black/30",
+                  )}
                 >
                   <div className="p-4 text-sm text-muted-foreground">
                     TODO: pillar body for <b>{p.key}</b>
