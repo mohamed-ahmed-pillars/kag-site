@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { FlowButton } from "@/components/ui/flow-button";
 
 type PillarKey = "ourBrands" | "privateLabel" | "customRecipe" | "export";
 
@@ -196,9 +197,34 @@ export default function WhatWeOfferSection() {
                       : "border-foreground/10 bg-white/40 dark:bg-black/30",
                   )}
                 >
-                  <div className="p-4 text-sm text-muted-foreground">
-                    TODO: pillar body for <b>{p.key}</b>
-                  </div>
+                  {p.key === "customRecipe" && (
+                    <StandardCard
+                      image="/recipe.jpg"
+                      title={t("pillars.customRecipe.title")}
+                      description={t("pillars.customRecipe.description")}
+                      items={t.raw("pillars.customRecipe.items") as string[]}
+                      ctaText={t("pillars.customRecipe.cta")}
+                      ctaHref="/contact"
+                      isActive={isActive}
+                    />
+                  )}
+                  {p.key === "export" && (
+                    <StandardCard
+                      image="/exportstrip.jpg"
+                      title={t("pillars.export.title")}
+                      description={t("pillars.export.description")}
+                      items={t.raw("pillars.export.items") as string[]}
+                      ctaText={t("pillars.export.cta")}
+                      ctaHref="/export"
+                      isActive={isActive}
+                    />
+                  )}
+                  {p.key === "ourBrands" && (
+                    <div className="p-4 text-sm text-muted-foreground">TODO: Our Brands</div>
+                  )}
+                  {p.key === "privateLabel" && (
+                    <div className="p-4 text-sm text-muted-foreground">TODO: Private Label</div>
+                  )}
                 </article>
               </div>
             );
@@ -206,5 +232,88 @@ export default function WhatWeOfferSection() {
         </div>
       </motion.div>
     </section>
+  );
+}
+
+type StandardCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  items: string[];
+  ctaText: string;
+  ctaHref: string;
+  isActive: boolean;
+};
+
+function StandardCard({
+  image,
+  title,
+  description,
+  items,
+  ctaText,
+  ctaHref,
+  isActive,
+}: StandardCardProps) {
+  return (
+    <>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={image}
+        alt=""
+        className="mb-4 h-72 w-full rounded-lg object-cover"
+        loading="lazy"
+      />
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <h3
+            className={cn(
+              "font-heading text-md font-medium leading-tight tracking-tight md:text-lg transition-colors duration-200",
+              isActive ? "text-primary" : "text-foreground/70",
+            )}
+          >
+            {title}
+          </h3>
+          <p
+            className={cn(
+              "text-xs leading-relaxed md:text-sm transition-all duration-300",
+              isActive
+                ? "text-muted-foreground line-clamp-none"
+                : "text-muted-foreground/80 line-clamp-2",
+            )}
+          >
+            {description}
+          </p>
+        </div>
+
+        <div
+          aria-hidden={!isActive}
+          className={cn(
+            "grid transition-all duration-500 ease-out",
+            isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+          )}
+        >
+          <div className="overflow-hidden">
+            <div className="space-y-4 pt-2">
+              <div className="rounded-lg border border-foreground/10 bg-white/50 p-4 dark:bg-black/30">
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex justify-end">
+                <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
