@@ -287,6 +287,7 @@ function StandardCard({
 
         <div
           aria-hidden={!isActive}
+          inert={!isActive}
           className={cn(
             "grid transition-all duration-500 ease-out",
             isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
