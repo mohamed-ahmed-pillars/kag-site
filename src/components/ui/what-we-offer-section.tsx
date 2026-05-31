@@ -251,20 +251,47 @@ const BRAND_LOGOS = [
 
 function BrandLogoCarousel() {
   const [i, setI] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || prefersReducedMotion) return;
     const id = setInterval(() => setI((v) => (v + 1) % BRAND_LOGOS.length), 3000);
     return () => clearInterval(id);
-  }, [prefersReducedMotion]);
+  }, [mounted, prefersReducedMotion]);
+
+  if (!mounted) {
+    return (
+      <div className="relative flex h-28 w-full items-center justify-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={BRAND_LOGOS[0].src}
+          alt={BRAND_LOGOS[0].alt}
+          loading="lazy"
+          decoding="async"
+          className="absolute h-24 w-auto object-contain drop-shadow-lg"
+        />
+      </div>
+    );
+  }
 
   if (prefersReducedMotion) {
     return (
       <div className="flex items-center justify-center gap-10">
         {BRAND_LOGOS.map((b) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={b.alt} src={b.src} alt={b.alt} className="h-24 w-auto object-contain" />
+          <img
+            key={b.src}
+            src={b.src}
+            alt={b.alt}
+            loading="lazy"
+            decoding="async"
+            className="h-24 w-auto object-contain"
+          />
         ))}
       </div>
     );
@@ -275,9 +302,11 @@ function BrandLogoCarousel() {
     <div className="relative flex h-28 w-full items-center justify-center">
       <AnimatePresence mode="wait">
         <motion.img
-          key={current.alt}
+          key={current.src}
           src={current.src}
           alt={current.alt}
+          loading="lazy"
+          decoding="async"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
