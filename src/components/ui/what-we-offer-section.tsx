@@ -239,10 +239,10 @@ export default function WhatWeOfferSection() {
                       tagline={t("pillars.privateLabel.tagline")}
                       paragraphs={t.raw("pillars.privateLabel.paragraphs") as string[]}
                       features={
-                        t.raw("pillars.privateLabel.features") as {
-                          title: string;
-                          desc: string;
-                        }[]
+                        t.raw("pillars.privateLabel.features") as Record<
+                          string,
+                          { title: string; desc: string }
+                        >
                       }
                       capabilitiesHeading={t("pillars.privateLabel.capabilitiesHeading")}
                       capabilities={t.raw("pillars.privateLabel.capabilities") as string[]}
@@ -509,14 +509,19 @@ function StandardCard({
   );
 }
 
-const PRIVATE_LABEL_FEATURE_ICONS: LucideIcon[] = [Factory, Leaf, Handshake, Globe];
+const PRIVATE_LABEL_FEATURES: { key: string; icon: LucideIcon }[] = [
+  { key: "manufacturing", icon: Factory },
+  { key: "ingredients",   icon: Leaf },
+  { key: "partnership",   icon: Handshake },
+  { key: "globalScale",   icon: Globe },
+];
 
 type PrivateLabelCardProps = {
   badge: string;
   title: string;
   tagline: string;
   paragraphs: string[];
-  features: { title: string; desc: string }[];
+  features: Record<string, { title: string; desc: string }>;
   capabilitiesHeading: string;
   capabilities: string[];
   cta: string;
@@ -587,11 +592,12 @@ function PrivateLabelCard({
             <div className="space-y-4 pt-2">
               {/* 2x2 feature grid */}
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {features.map((f, i) => {
-                  const Icon = PRIVATE_LABEL_FEATURE_ICONS[i] ?? Factory;
+                {PRIVATE_LABEL_FEATURES.map(({ key, icon: Icon }) => {
+                  const f = features[key];
+                  if (!f) return null;
                   return (
                     <div
-                      key={f.title}
+                      key={key}
                       className="flex items-start gap-3 rounded-lg border border-foreground/10 bg-white/50 p-3 dark:bg-black/30"
                     >
                       <div className="rounded-md bg-primary/10 p-2 text-primary">

@@ -61,12 +61,12 @@
           "We produce tailor-made private-label products for international clients and partners. From sourcing premium ingredients to state-of-the-art manufacturing, we prioritize quality at every step.",
           "As a trusted partner, we work closely with each client to develop and deliver customized private-label solutions aligned with their brand vision and market positioning."
         ],
-        "features": [
-          { "title": "State-of-the-Art Manufacturing", "desc": "Modern lines and automated production." },
-          { "title": "Premium Ingredients",            "desc": "Sourced through long-term grower partnerships." },
-          { "title": "Dedicated Partnership",          "desc": "Close collaboration on tailored solutions." },
-          { "title": "Global Scale",                   "desc": "International reach and distribution." }
-        ],
+        "features": {
+          "manufacturing": { "title": "State-of-the-Art Manufacturing", "desc": "Modern lines and automated production." },
+          "ingredients":   { "title": "Premium Ingredients",            "desc": "Sourced through long-term grower partnerships." },
+          "partnership":   { "title": "Dedicated Partnership",          "desc": "Close collaboration on tailored solutions." },
+          "globalScale":   { "title": "Global Scale",                   "desc": "International reach and distribution." }
+        },
         "capabilitiesHeading": "Our Capabilities",
         "capabilities": [
           "Custom Recipe Development",
