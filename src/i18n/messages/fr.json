@@ -1,31 +1,14 @@
 {
   "nav": {
-    "home": "",
-    "blog": "",
-    "export": "",
-    "products": "",
-    "contact": "",
-    "rfq": ""
-  },
-  "pages": {
-    "home": { "title": "" },
-    "blog": { "title": "" },
-    "export": { "title": "" },
-    "products": { "title": "" },
-    "contact": { "title": "" },
-    "rfq": { "title": "" }
-  },
-  "form": {
-    "name": "",
-    "email": "",
-    "company": "",
-    "phone": "",
-    "message": "",
-    "productInterest": "",
-    "quantity": "",
-    "details": "",
-    "submit": "",
-    "success": "",
-    "error": ""
+    "home": "Accueil",
+    "blog": "Blog",
+    "contact": "Contactez-nous",
+    "services": {
+      "label": "Services",
+      "ourBrands": "Nos Marques",
+      "privateLabel": "Marque Privée",
+      "customProduct": "Produit Personnalisé",
+      "export": "Exportation"
+    }
   }
 }
