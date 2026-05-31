@@ -264,12 +264,13 @@ export default function WhoWeAreSection() {
 
         {/* Certifications marquee */}
         <motion.div className="mt-24" variants={itemVariants}>
-          <h3 className="mb-6 text-center font-heading text-sm font-medium uppercase tracking-wider text-foreground/60">
+          <h3 id="cert-marquee-heading" className="mb-6 text-center font-heading text-sm font-medium uppercase tracking-wider text-foreground/60">
             {t("certifications.heading")}
           </h3>
 
           <div
-            aria-label="International certifications"
+            aria-labelledby="cert-marquee-heading"
+            role="region"
             className="group relative overflow-hidden"
           >
             {/* Left edge fade */}
