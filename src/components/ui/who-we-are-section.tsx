@@ -73,7 +73,40 @@ export default function WhoWeAreSection() {
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
       >
-        {/* Heading block — added in Task 4 */}
+        {/* Heading block */}
+        <motion.div
+          className="mb-6 flex flex-col items-center"
+          variants={itemVariants}
+        >
+          <motion.span
+            className="mb-2 flex items-center gap-2 font-medium text-primary"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Zap className="h-4 w-4" />
+            {t("eyebrow")}
+          </motion.span>
+
+          <h2 className="mb-4 text-center font-display text-4xl md:text-5xl">
+            {t("heading")}
+          </h2>
+
+          <motion.div
+            className="h-1 bg-secondary"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          />
+        </motion.div>
+
+        <motion.p
+          className="mx-auto mb-16 max-w-2xl text-center text-foreground/80"
+          variants={itemVariants}
+        >
+          {t("intro")}
+        </motion.p>
+
         {/* Pillar grid — added in Task 5 */}
         {/* Marquee — added in Task 6 */}
         {/* Value cards — added in Task 7 */}
