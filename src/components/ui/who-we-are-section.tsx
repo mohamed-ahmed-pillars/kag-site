@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Award, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const pillars = [
@@ -31,8 +30,6 @@ const values = [
   { key: "innovation", Icon: Sparkles },
   { key: "growth",     Icon: TrendingUp },
 ] as const;
-
-type PillarKey = (typeof pillars)[number]["key"];
 
 interface PillarItemProps {
   iconSrc: string;
