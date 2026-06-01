@@ -93,6 +93,52 @@
       }
     }
   },
+  "privateLabel": {
+    "section": {
+      "eyebrow": "PRIVATE LABEL",
+      "heading": "Built under your brand",
+      "intro": "End-to-end private-label production for retailers, distributors, and brand owners — recipe to retail shelf, under your label, ready for export."
+    },
+    "eyebrow": "Private Label",
+    "heading": "Your brand, built on our lines",
+    "description": "From recipe development and ingredient sourcing to modern manufacturing and export-ready packaging, KAG produces tailor-made private-label food products for retailers, distributors, and brand owners around the world — on time, on spec, on shelf.",
+    "stats": [
+      "Modern manufacturing",
+      "International standards",
+      "Global export"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Brief us on your brand",
+        "text": "Share your target market, flavor profile, and packaging vision — we translate it into a production-ready brief."
+      },
+      {
+        "id": "develop",
+        "title": "We develop and sample",
+        "text": "Our R&D team formulates the recipe, runs sensory and shelf-life tests, and ships samples for your sign-off."
+      },
+      {
+        "id": "produce",
+        "title": "Production at scale",
+        "text": "Automated lines, food-safety controls, and long-term grower partnerships deliver consistent batches under your label."
+      },
+      {
+        "id": "ship",
+        "title": "Branded and shipped",
+        "text": "Custom packaging, export documentation, and logistics partners get your product on shelf — wherever shelf is."
+      }
+    ],
+    "tabs": {
+      "production": "Production",
+      "packaging": "Packaging",
+      "export": "Export"
+    },
+    "cta": {
+      "primary": "Partner with KAG",
+      "secondary": "See our brands"
+    }
+  },
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
     "heading": "More than 50 products across our categories",

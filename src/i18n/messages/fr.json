@@ -93,6 +93,52 @@
       }
     }
   },
+  "privateLabel": {
+    "section": {
+      "eyebrow": "MARQUE PRIVÉE",
+      "heading": "Fabriqué sous votre marque",
+      "intro": "Production en marque privée de bout en bout pour distributeurs, détaillants et propriétaires de marques — de la recette au rayon, sous votre marque, prête à l'export."
+    },
+    "eyebrow": "Marque Privée",
+    "heading": "Votre marque, fabriquée sur nos lignes",
+    "description": "Du développement de la recette à l'approvisionnement, en passant par la fabrication moderne et l'emballage prêt à l'export, KAG produit des produits alimentaires en marque privée sur mesure pour les distributeurs, détaillants et propriétaires de marques — à temps, conformes, et en rayon.",
+    "stats": [
+      "Fabrication moderne",
+      "Normes internationales",
+      "Export mondial"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Présentez-nous votre marque",
+        "text": "Partagez votre marché cible, votre profil de saveur et votre vision d'emballage — nous le traduisons en brief prêt pour la production."
+      },
+      {
+        "id": "develop",
+        "title": "Développement et échantillonnage",
+        "text": "Notre équipe R&D formule la recette, mène les tests sensoriels et de durée de conservation, et vous envoie des échantillons à valider."
+      },
+      {
+        "id": "produce",
+        "title": "Production à l'échelle",
+        "text": "Lignes automatisées, contrôles de sécurité alimentaire et partenariats agricoles durables : des lots constants sous votre marque."
+      },
+      {
+        "id": "ship",
+        "title": "Marque et expédition",
+        "text": "Emballage personnalisé, documentation d'exportation et partenaires logistiques mettent votre produit en rayon — partout."
+      }
+    ],
+    "tabs": {
+      "production": "Production",
+      "packaging": "Emballage",
+      "export": "Export"
+    },
+    "cta": {
+      "primary": "Devenir partenaire",
+      "secondary": "Voir nos marques"
+    }
+  },
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
     "heading": "Plus de 50 produits répartis dans nos catégories",
