@@ -11,14 +11,12 @@ import { ChevronDown } from "lucide-react";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const heroVideos = [
-  "/applejam.mp4",
-  "/chilifavebeans.mp4",
+  "/sauce.mp4",
   "/favebeans.mp4",
   "/favebeanstehina.mp4",
+  "/chilifavebeans.mp4",
   "/mangojar.mp4",
-  "/sauce.mp4",
-  "/plable.mp4",
-  "/privatelable.mp4",
+  "/applejam.mp4",
 ] as const;
 
 interface ProductsHeroProps {
@@ -65,7 +63,7 @@ export default function ProductsHero({
   return (
     <section
       ref={sectionRef}
-      className="relative h-[80vh] w-full overflow-hidden"
+      className="relative h-screen w-full overflow-hidden"
     >
       <motion.video
         key={videoIdx}
