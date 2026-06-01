@@ -21,8 +21,9 @@ export async function listNewsPosts(locale: Locale): Promise<NewsPost[]> {
   let files: string[];
   try {
     files = await fs.readdir(dir);
-  } catch {
-    return [];
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw err;
   }
   const posts: NewsPost[] = [];
   for (const name of files) {
@@ -32,12 +33,12 @@ export async function listNewsPosts(locale: Locale): Promise<NewsPost[]> {
     posts.push({
       slug: name.replace(/\.mdx$/, ''),
       title: String(data.title ?? ''),
-      date: String(data.date ?? ''),
+      date: typeof data.date === 'string' ? data.date : '',
       excerpt: String(data.excerpt ?? ''),
       label: String(data.label ?? ''),
       image: String(data.image ?? ''),
       author: data.author ? String(data.author) : undefined,
     });
   }
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
