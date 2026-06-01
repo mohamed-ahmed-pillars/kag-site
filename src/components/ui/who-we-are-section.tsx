@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -200,7 +201,7 @@ export default function WhoWeAreSection() {
               ))}
           </div>
 
-          {/* Center: framed video */}
+          {/* Center: framed logo */}
           <div className="order-first mb-8 flex items-center justify-center md:order-none md:mb-0">
             <motion.div className="relative w-full max-w-xs" variants={itemVariants}>
               <motion.div
@@ -210,15 +211,12 @@ export default function WhoWeAreSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
-                <video
-                  src="/mangojar.mp4"
-                  poster="/mangojar.png"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-hidden="true"
+                <Image
+                  src="/Kag-Final Logo-0001.png"
+                  alt="KAG"
+                  width={800}
+                  height={1422}
+                  priority
                   className="block aspect-[9/16] w-full object-cover"
                 />
               </motion.div>
