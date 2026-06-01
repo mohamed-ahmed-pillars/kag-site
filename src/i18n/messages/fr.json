@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Accueil",
-    "blog": "Blog",
+    "news": "Actualités",
     "contact": "Contactez-nous",
     "services": {
       "label": "Services",
@@ -36,6 +36,13 @@
       "sub": "Parlez à notre équipe de la fabrication, de la marque privée, des recettes personnalisées ou de l'exportation.",
       "button": "Parler à notre équipe"
     }
+  },
+  "news": {
+    "eyebrow": "DEPUIS NOTRE SALLE DE PRESSE",
+    "heading": "Dernières Actualités",
+    "intro": "Étapes clés, certifications et lancements de produits dans nos activités de fabrication, marque privée et exportation chez KAG.",
+    "viewAll": "Voir toutes les actualités",
+    "readMore": "Lire la suite"
   },
   "whatWeOffer": {
     "eyebrow": "CE QUE NOUS OFFRONS",

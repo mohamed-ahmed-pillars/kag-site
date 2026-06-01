@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "blog": "Blog",
+    "news": "News",
     "contact": "Contact us",
     "services": {
       "label": "Services",
@@ -36,6 +36,13 @@
       "sub": "Talk to our team about manufacturing, private-label, custom recipes, or export.",
       "button": "Talk to our team"
     }
+  },
+  "news": {
+    "eyebrow": "FROM OUR NEWSROOM",
+    "heading": "Latest News",
+    "intro": "Milestones, certifications, and product launches from across KAG's manufacturing, private-label, and export operations.",
+    "viewAll": "View all news",
+    "readMore": "Read more"
   },
   "whatWeOffer": {
     "eyebrow": "WHAT WE OFFER",
