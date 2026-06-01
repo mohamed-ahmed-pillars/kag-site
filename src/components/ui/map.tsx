@@ -224,8 +224,29 @@ export function WorldMap({
           );
         })}
 
-        {uniquePoints.map((p, i) => {
-          const labelAbove = i % 2 === 0;
+        {(() => {
+          const origin = uniquePoints.find((u) => u.isOrigin);
+          return uniquePoints.map((p, i) => {
+          // Place each destination's label in the direction away from Cairo
+          // so clusters fan out instead of stacking on top of each other.
+          // Cairo's own label drops directly below its (larger) dot.
+          const LABEL_W = 80;
+          const LABEL_H = 22;
+          const RADIAL_OFFSET = 28;
+          let labelX: number;
+          let labelY: number;
+          if (p.isOrigin || !origin) {
+            labelX = p.x - LABEL_W / 2;
+            labelY = p.y + 14;
+          } else {
+            const dx = p.x - origin.x;
+            const dy = p.y - origin.y;
+            const dist = Math.hypot(dx, dy) || 1;
+            const cx = p.x + (dx / dist) * RADIAL_OFFSET;
+            const cy = p.y + (dy / dist) * RADIAL_OFFSET;
+            labelX = cx - LABEL_W / 2;
+            labelY = cy - LABEL_H / 2;
+          }
           const fill = p.isOrigin ? lineColor : secondaryColor;
           const baseR = p.isOrigin ? 6 : 3;
           const pulseR = p.isOrigin ? 18 : 12;
@@ -283,17 +304,17 @@ export function WorldMap({
 
               {showLabels && p.label && (
                 <motion.g
-                  initial={{ opacity: 0, y: labelAbove ? 5 : -5 }}
+                  initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 * i + 0.3, duration: 0.5 }}
                   className="pointer-events-none"
                 >
                   <foreignObject
-                    x={p.x - 40}
-                    y={labelAbove ? p.y - 28 : p.y + 8}
-                    width="80"
-                    height="22"
-                    className="block"
+                    x={labelX}
+                    y={labelY}
+                    width={LABEL_W}
+                    height={LABEL_H}
+                    className="block overflow-visible"
                   >
                     <div className="flex h-full items-center justify-center">
                       <span
@@ -311,7 +332,8 @@ export function WorldMap({
               )}
             </g>
           );
-        })}
+        });
+        })()}
       </svg>
 
       <AnimatePresence>
