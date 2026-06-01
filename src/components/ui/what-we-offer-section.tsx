@@ -2,7 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useInView,
+  AnimatePresence,
+  useReducedMotion,
+} from "framer-motion";
 import { Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "@/components/ui/flow-button";
@@ -142,39 +149,39 @@ export default function WhatWeOfferSection() {
         </motion.p>
 
         {/* Timeline body */}
-        <div className="mx-auto mt-16 max-w-5xl space-y-16 md:mt-24 md:space-y-24">
+        <div className="mx-auto mt-16 max-w-3xl space-y-16 md:mt-24 md:space-y-24">
           {PILLARS.map((p, index) => {
             const isActive = index === activeIndex;
             return (
               <div
                 key={p.key}
-                className="relative flex flex-col gap-6 md:flex-row md:gap-12"
+                className="relative flex flex-col gap-4 md:flex-row md:gap-16"
                 aria-current={isActive ? "step" : undefined}
               >
                 {/* Sticky title + description column */}
-                <div className="flex h-min w-full shrink-0 flex-col gap-3 md:sticky md:top-8 md:w-80">
+                <div className="flex h-min w-full shrink-0 flex-col gap-2 md:sticky md:top-8 md:w-64">
                   <div className="flex items-center gap-3">
                     <div
                       className={cn(
-                        "rounded-lg p-2.5 transition-colors duration-300",
+                        "rounded-lg p-2 transition-colors duration-300",
                         isActive
                           ? "bg-primary text-primary-foreground"
                           : "bg-muted text-muted-foreground",
                       )}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.icon} alt="" className="h-7 w-7 object-contain" />
+                      <img src={p.icon} alt="" className="h-6 w-6 object-contain" />
                     </div>
-                    <h3
+                    <span
                       className={cn(
-                        "font-heading text-xl font-semibold leading-tight tracking-tight transition-colors duration-300 md:text-2xl",
+                        "font-heading text-sm font-medium transition-colors duration-300",
                         isActive ? "text-primary" : "text-foreground",
                       )}
                     >
                       {t(`pillars.${p.key}.title`)}
-                    </h3>
+                    </span>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+                  <p className="text-xs leading-relaxed text-muted-foreground">
                     {t(`pillars.${p.key}.description`)}
                   </p>
                 </div>
@@ -201,8 +208,9 @@ export default function WhatWeOfferSection() {
                   )}
                 >
                   {p.key === "ourBrands" && (
-                    <StandardCard
-                      image="/ourbrandsbackground.webp"
+                    <OurBrandsCard
+                      title={t("pillars.ourBrands.title")}
+                      description={t("pillars.ourBrands.description")}
                       items={t.raw("pillars.ourBrands.items") as string[]}
                       ctaText={t("pillars.ourBrands.cta")}
                       ctaHref="/products"
@@ -212,6 +220,8 @@ export default function WhatWeOfferSection() {
                   {p.key === "privateLabel" && (
                     <StandardCard
                       image="/privatelable.jpg"
+                      title={t("pillars.privateLabel.title")}
+                      description={t("pillars.privateLabel.description")}
                       items={t.raw("pillars.privateLabel.items") as string[]}
                       ctaText={t("pillars.privateLabel.cta")}
                       ctaHref="/contact"
@@ -221,6 +231,8 @@ export default function WhatWeOfferSection() {
                   {p.key === "customRecipe" && (
                     <StandardCard
                       image="/recipe.jpg"
+                      title={t("pillars.customRecipe.title")}
+                      description={t("pillars.customRecipe.description")}
                       items={t.raw("pillars.customRecipe.items") as string[]}
                       ctaText={t("pillars.customRecipe.cta")}
                       ctaHref="/contact"
@@ -230,6 +242,8 @@ export default function WhatWeOfferSection() {
                   {p.key === "export" && (
                     <StandardCard
                       image="/exportstrip.jpg"
+                      title={t("pillars.export.title")}
+                      description={t("pillars.export.description")}
                       items={t.raw("pillars.export.items") as string[]}
                       ctaText={t("pillars.export.cta")}
                       ctaHref="/export"
@@ -246,15 +260,184 @@ export default function WhatWeOfferSection() {
   );
 }
 
-type StandardCardProps = {
-  image: string;
+const BRAND_LOGOS = [
+  { src: "/yamkers_logo.png", alt: "Yamkers" },
+  { src: "/tasbeka_logo.png", alt: "Tasbeka" },
+];
+
+function BrandLogoCarousel() {
+  const [i, setI] = useState(0);
+  const [mounted, setMounted] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || prefersReducedMotion) return;
+    const id = setInterval(() => setI((v) => (v + 1) % BRAND_LOGOS.length), 3000);
+    return () => clearInterval(id);
+  }, [mounted, prefersReducedMotion]);
+
+  if (!mounted) {
+    return (
+      <div className="relative flex h-64 w-full items-center justify-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={BRAND_LOGOS[0].src}
+          alt={BRAND_LOGOS[0].alt}
+          loading="lazy"
+          decoding="async"
+          className="absolute h-56 w-auto object-contain drop-shadow-lg"
+        />
+      </div>
+    );
+  }
+
+  if (prefersReducedMotion) {
+    return (
+      <div className="flex items-center justify-center gap-10">
+        {BRAND_LOGOS.map((b) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={b.src}
+            src={b.src}
+            alt={b.alt}
+            loading="lazy"
+            decoding="async"
+            className="h-56 w-auto object-contain"
+          />
+        ))}
+      </div>
+    );
+  }
+
+  const current = BRAND_LOGOS[i];
+  return (
+    <div className="relative flex h-64 w-full items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current.src}
+          src={current.src}
+          alt={current.alt}
+          loading="lazy"
+          decoding="async"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute h-56 w-auto object-contain drop-shadow-lg"
+        />
+      </AnimatePresence>
+    </div>
+  );
+}
+
+type OurBrandsCardProps = {
+  title: string;
+  description: string;
   items: string[];
   ctaText: string;
   ctaHref: string;
   isActive: boolean;
 };
 
-function StandardCard({ image, items, ctaText, ctaHref, isActive }: StandardCardProps) {
+function OurBrandsCard({
+  title,
+  description,
+  items,
+  ctaText,
+  ctaHref,
+  isActive,
+}: OurBrandsCardProps) {
+  return (
+    <>
+      <div
+        className="relative mb-4 h-72 w-full overflow-hidden rounded-lg bg-cover bg-center"
+        style={{ backgroundImage: "url('/ourbrandsbackground.webp')" }}
+      >
+        <div className="absolute inset-0 bg-white/70" />
+        <div className="relative z-10 flex h-full items-center justify-center p-6">
+          <BrandLogoCarousel />
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <h3
+            className={cn(
+              "font-heading text-md font-medium leading-tight tracking-tight md:text-lg transition-colors duration-200",
+              isActive ? "text-primary" : "text-foreground/70",
+            )}
+          >
+            {title}
+          </h3>
+          <p
+            className={cn(
+              "text-xs leading-relaxed md:text-sm transition-all duration-300",
+              isActive
+                ? "text-muted-foreground line-clamp-none"
+                : "text-muted-foreground/80 line-clamp-2",
+            )}
+          >
+            {description}
+          </p>
+        </div>
+
+        <div
+          aria-hidden={!isActive}
+          inert={!isActive}
+          className={cn(
+            "grid transition-all duration-500 ease-out",
+            isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+          )}
+        >
+          <div className="overflow-hidden">
+            <div className="space-y-4 pt-2">
+              <div className="rounded-lg border border-foreground/10 bg-white/50 p-4 dark:bg-black/30">
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex justify-end">
+                <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+type StandardCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  items: string[];
+  ctaText: string;
+  ctaHref: string;
+  isActive: boolean;
+};
+
+function StandardCard({
+  image,
+  title,
+  description,
+  items,
+  ctaText,
+  ctaHref,
+  isActive,
+}: StandardCardProps) {
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -264,32 +447,54 @@ function StandardCard({ image, items, ctaText, ctaHref, isActive }: StandardCard
         className="mb-4 h-72 w-full rounded-lg object-cover"
         loading="lazy"
       />
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <h3
+            className={cn(
+              "font-heading text-md font-medium leading-tight tracking-tight md:text-lg transition-colors duration-200",
+              isActive ? "text-primary" : "text-foreground/70",
+            )}
+          >
+            {title}
+          </h3>
+          <p
+            className={cn(
+              "text-xs leading-relaxed md:text-sm transition-all duration-300",
+              isActive
+                ? "text-muted-foreground line-clamp-none"
+                : "text-muted-foreground/80 line-clamp-2",
+            )}
+          >
+            {description}
+          </p>
+        </div>
 
-      <div
-        aria-hidden={!isActive}
-        inert={!isActive}
-        className={cn(
-          "grid transition-all duration-500 ease-out",
-          isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
-        )}
-      >
-        <div className="overflow-hidden">
-          <div className="space-y-4 pt-2">
-            <div className="rounded-lg border border-foreground/10 bg-white/50 p-4 dark:bg-black/30">
-              <ul className="space-y-2">
-                {items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-muted-foreground"
-                  >
-                    <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex justify-end">
-              <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
+        <div
+          aria-hidden={!isActive}
+          inert={!isActive}
+          className={cn(
+            "grid transition-all duration-500 ease-out",
+            isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+          )}
+        >
+          <div className="overflow-hidden">
+            <div className="space-y-4 pt-2">
+              <div className="rounded-lg border border-foreground/10 bg-white/50 p-4 dark:bg-black/30">
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex justify-end">
+                <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
+              </div>
             </div>
           </div>
         </div>
@@ -297,4 +502,3 @@ function StandardCard({ image, items, ctaText, ctaHref, isActive }: StandardCard
     </>
   );
 }
-
