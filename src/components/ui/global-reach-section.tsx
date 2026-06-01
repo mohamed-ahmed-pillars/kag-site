@@ -20,10 +20,9 @@ const DESTINATIONS: Destination[] = [
   { lat: 25.2048, lng: 55.2708, key: "dubai" },
   { lat: 24.7136, lng: 46.6753, key: "riyadh" },
   { lat: 31.9539, lng: 35.9106, key: "amman" },
-  { lat: 33.8938, lng: 35.5018, key: "beirut" },
+  { lat: 41.0082, lng: 28.9784, key: "istanbul" },
   // Europe
-  { lat: 51.5074, lng: -0.1278, key: "london" },
-  { lat: 51.9244, lng: 4.4777,  key: "rotterdam" },
+  { lat: 52.5200, lng: 13.4050, key: "berlin" },
   { lat: 48.8566, lng: 2.3522,  key: "paris" },
   // Africa
   { lat: -1.2921, lng: 36.8219, key: "nairobi" },
