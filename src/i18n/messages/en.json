@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Home",
+    "ourBrands": "Our Brands",
     "products": "Products",
     "news": "News",
     "contact": "Contact us",
     "services": {
       "label": "Services",
-      "ourBrands": "Our Brands",
       "privateLabel": "Private Label",
       "customProduct": "Custom Product",
       "export": "Export"
@@ -255,6 +255,44 @@
         "body": "If you have any questions about these Terms & Conditions, please contact us at our facility: Office 2B – 1st Floor, Building 4, Mivida Business Park 3, 5th Settlement, New Cairo, Egypt, or via email at wecare@kagegypt.com."
       }
     ]
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "OUR BRANDS",
+      "heading": "Yamkers",
+      "subhead": "Egypt's pantry, packed and ready for the world."
+    },
+    "catalog": {
+      "eyebrow": "CATALOG",
+      "heading": "Browse Products",
+      "intro": "Filter by category. Hover any pack to see specs, weights, and carton details."
+    },
+    "tabs": {
+      "all": "All",
+      "tomato_paste": "Tomato Paste",
+      "fava_beans": "Fava Beans",
+      "beans_peas": "Beans & Peas",
+      "canned_vegetables": "Canned Vegetables",
+      "jams": "Jams",
+      "juices": "Juices"
+    },
+    "card": {
+      "perCarton": "/carton",
+      "net": "Net",
+      "drained": "Drained",
+      "brand": {
+        "yamkers": "Yamkers",
+        "tasbeka": "Tasbeka"
+      },
+      "packaging": {
+        "tin": "Tin can",
+        "glass_jar": "Glass jar",
+        "plastic_cup": "Plastic cup",
+        "sachet": "Sachet",
+        "tetra_pak": "Tetra Pak"
+      }
+    },
+    "cta": "Explore Catalog"
   },
   "privacy": {
     "hero": {

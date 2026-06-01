@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Accueil",
+    "ourBrands": "Nos Marques",
     "products": "Produits",
     "news": "Actualités",
     "contact": "Contactez-nous",
     "services": {
       "label": "Services",
-      "ourBrands": "Nos Marques",
       "privateLabel": "Marque Privée",
       "customProduct": "Produit Personnalisé",
       "export": "Exportation"
@@ -255,6 +255,44 @@
         "body": "Pour toute question concernant ces conditions générales, contactez-nous à notre site : Bureau 2B – 1er étage, Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte, ou par e-mail à wecare@kagegypt.com."
       }
     ]
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "NOS MARQUES",
+      "heading": "Yamkers",
+      "subhead": "Le garde-manger égyptien, prêt pour le monde."
+    },
+    "catalog": {
+      "eyebrow": "CATALOGUE",
+      "heading": "Parcourir les produits",
+      "intro": "Filtrez par catégorie. Survolez une référence pour voir les spécifications, poids et conditionnement."
+    },
+    "tabs": {
+      "all": "Tous",
+      "tomato_paste": "Concentré de tomate",
+      "fava_beans": "Fèves",
+      "beans_peas": "Haricots et petits pois",
+      "canned_vegetables": "Légumes en conserve",
+      "jams": "Confitures",
+      "juices": "Jus"
+    },
+    "card": {
+      "perCarton": " /carton",
+      "net": "Net",
+      "drained": "Égoutté",
+      "brand": {
+        "yamkers": "Yamkers",
+        "tasbeka": "Tasbeka"
+      },
+      "packaging": {
+        "tin": "Boîte en fer-blanc",
+        "glass_jar": "Bocal en verre",
+        "plastic_cup": "Coupelle plastique",
+        "sachet": "Sachet",
+        "tetra_pak": "Brique Tetra Pak"
+      }
+    },
+    "cta": "Voir le catalogue"
   },
   "privacy": {
     "hero": {
