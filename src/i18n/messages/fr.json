@@ -95,17 +95,16 @@
   },
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
-    "heading": "Ce que contient chaque pot Yamkers",
-    "intro": "Six incontournables Yamkers du quotidien — produits en interne selon les normes internationales de sécurité alimentaire et prêts à rejoindre les garde-mangers égyptiens et internationaux.",
-    "previewLabel": "Survolez pour prévisualiser",
+    "heading": "Plus de 50 produits répartis dans nos catégories",
+    "intro": "Des sauces aux confitures, des jus aux fèves et bien plus encore — notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
     "cta": "Voir tous les produits",
     "items": {
-      "sauce":           { "name": "Yamkers Sauce Tomate",       "brand": "Yamkers" },
-      "favebeans":       { "name": "Yamkers Fèves",              "brand": "Yamkers" },
-      "favebeansTehina": { "name": "Yamkers Fèves au Tahini",    "brand": "Yamkers" },
-      "chiliFavebeans":  { "name": "Yamkers Fèves Piquantes",    "brand": "Yamkers" },
-      "mangoJar":        { "name": "Yamkers Confiture de Mangue","brand": "Yamkers" },
-      "appleJam":        { "name": "Yamkers Confiture de Pomme", "brand": "Yamkers" }
+      "sauce":           { "name": "Sauce Tomate",       "brand": "Yamkers" },
+      "favebeans":       { "name": "Fèves",              "brand": "Yamkers" },
+      "favebeansTehina": { "name": "Fèves au Tahini",    "brand": "Yamkers" },
+      "chiliFavebeans":  { "name": "Fèves Piquantes",    "brand": "Yamkers" },
+      "mangoJar":        { "name": "Confiture de Mangue","brand": "Yamkers" },
+      "appleJam":        { "name": "Confiture de Pomme", "brand": "Yamkers" }
     }
   }
 }

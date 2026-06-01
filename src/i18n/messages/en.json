@@ -95,17 +95,16 @@
   },
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
-    "heading": "What's in every Yamkers jar",
-    "intro": "Six everyday Yamkers favourites — produced in-house to international food-safety standards and ready for Egyptian and global pantries alike.",
-    "previewLabel": "Hover to preview",
+    "heading": "More than 50 products across our categories",
+    "intro": "From sauces and jams to juices, fava beans, and beyond — our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
     "cta": "See All Products",
     "items": {
-      "sauce":           { "name": "Yamkers Sauce",                  "brand": "Yamkers" },
-      "favebeans":       { "name": "Yamkers Fava Beans",             "brand": "Yamkers" },
-      "favebeansTehina": { "name": "Yamkers Fava Beans with Tehina", "brand": "Yamkers" },
-      "chiliFavebeans":  { "name": "Yamkers Chili Fava Beans",       "brand": "Yamkers" },
-      "mangoJar":        { "name": "Yamkers Mango Jar",              "brand": "Yamkers" },
-      "appleJam":        { "name": "Yamkers Apple Jam",              "brand": "Yamkers" }
+      "sauce":           { "name": "Sauce",                  "brand": "Yamkers" },
+      "favebeans":       { "name": "Fava Beans",             "brand": "Yamkers" },
+      "favebeansTehina": { "name": "Fava Beans with Tehina", "brand": "Yamkers" },
+      "chiliFavebeans":  { "name": "Chili Fava Beans",       "brand": "Yamkers" },
+      "mangoJar":        { "name": "Mango Jar",              "brand": "Yamkers" },
+      "appleJam":        { "name": "Apple Jam",              "brand": "Yamkers" }
     }
   }
 }

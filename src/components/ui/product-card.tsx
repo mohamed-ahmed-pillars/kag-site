@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { Play } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -12,7 +11,6 @@ type ProductCardProps = {
   imageUrl: string;
   videoUrl: string;
   themeColor: string;
-  previewLabel: string;
   className?: string;
 };
 
@@ -22,7 +20,6 @@ export function ProductCard({
   imageUrl,
   videoUrl,
   themeColor,
-  previewLabel,
   className,
 }: ProductCardProps) {
   const rootRef = React.useRef<HTMLDivElement>(null);
@@ -34,7 +31,7 @@ export function ProductCard({
     const v = videoRef.current;
     if (!v) return;
     if (isActive && !reducedMotion) {
-      v.play().catch(() => {});
+      v.play().catch(() => { });
     } else {
       v.pause();
       v.currentTime = 0;
@@ -89,8 +86,8 @@ export function ProductCard({
           src={imageUrl}
           alt={name}
           fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
 
         <video
@@ -112,7 +109,7 @@ export function ProductCard({
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, hsl(var(--theme-color) / 0.92), hsl(var(--theme-color) / 0.55) 30%, transparent 65%)",
+              "linear-gradient(to top, hsl(var(--theme-color) / 0.75), hsl(var(--theme-color) / 0.1) 35%, transparent 70%)",
           }}
         />
 
@@ -123,20 +120,6 @@ export function ProductCard({
           <h3 className="font-heading mt-2 text-2xl md:text-3xl font-bold tracking-tight">
             {name}
           </h3>
-
-          <div
-            className={cn(
-              "mt-6 flex items-center justify-between rounded-lg border px-4 py-3 backdrop-blur-md",
-              "bg-[hsl(var(--theme-color)/0.22)] border-[hsl(var(--theme-color)/0.4)]",
-              "transition-all duration-300",
-              "group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.55)]",
-            )}
-          >
-            <span className="text-sm font-semibold tracking-wide">
-              {previewLabel}
-            </span>
-            <Play className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </div>
         </div>
       </div>
     </div>

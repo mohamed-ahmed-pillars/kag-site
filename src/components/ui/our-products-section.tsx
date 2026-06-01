@@ -102,7 +102,7 @@ export default function OurProductsSection() {
             {t("heading")}
           </h2>
           <motion.div
-            className="h-1 bg-primary"
+            className="h-1 bg-secondary"
             initial={{ width: 0 }}
             animate={isInView ? { width: 96 } : { width: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -117,14 +117,14 @@ export default function OurProductsSection() {
         </motion.p>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8"
           variants={containerVariants}
         >
           {PRODUCTS.map((product) => (
             <motion.div
               key={product.key}
               variants={itemVariants}
-              className="h-[450px]"
+              className="aspect-video"
             >
               <ProductCard
                 brand={t(`items.${product.key}.brand`)}
@@ -132,7 +132,6 @@ export default function OurProductsSection() {
                 imageUrl={product.image}
                 videoUrl={product.video}
                 themeColor={product.themeColor}
-                previewLabel={t("previewLabel")}
               />
             </motion.div>
           ))}
