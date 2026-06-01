@@ -13,7 +13,7 @@ export async function generateStaticParams() {
     try {
       files = await fs.readdir(dir);
     } catch {
-      /* dir missing — no posts */
+      /* dir missing - no posts */
     }
     for (const name of files) {
       if (name.endsWith('.mdx')) out.push({ locale, slug: name.replace(/\.mdx$/, '') });

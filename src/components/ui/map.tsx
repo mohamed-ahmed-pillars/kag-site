@@ -104,7 +104,7 @@ export function WorldMap({
   const pauseTime = 2;
   const fullCycleDuration = totalAnimationTime + pauseTime;
 
-  // Deduplicate the points list — the origin (Cairo) is shared across every
+  // Deduplicate the points list - the origin (Cairo) is shared across every
   // arc, so without this we'd render its dot, pulse, and label N times stacked.
   // The first dot's start is treated as the origin; it renders last (on top)
   // and gets a larger, primary-colored marker.

@@ -81,7 +81,7 @@ export const defaultEntries: TimeLine_01Entry[] = [
     title: "Initial Pro Release",
     subtitle: "Version 1.5.0 • Oct 2024",
     description:
-      "Ruixen UI Pro is here — a premium set of components, templates, and utilities designed for production-grade applications.",
+      "Ruixen UI Pro is here - a premium set of components, templates, and utilities designed for production-grade applications.",
     items: [
       "Full Figma design kit",
       "Extended form components with validation",
@@ -103,7 +103,7 @@ export const defaultEntries: TimeLine_01Entry[] = [
  */
 export default function TimeLine_01({
   title = "Ruixen UI Release Notes",
-  description = "Stay up to date with the latest components, features, and performance enhancements in Ruixen UI — built to help you design and ship faster.",
+  description = "Stay up to date with the latest components, features, and performance enhancements in Ruixen UI - built to help you design and ship faster.",
   entries = defaultEntries,
 }: TimeLine_01Props) {
   const [activeIndex, setActiveIndex] = useState(0);

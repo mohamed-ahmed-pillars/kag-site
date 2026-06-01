@@ -13,7 +13,7 @@
     }
   },
   "footer": {
-    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des fèves — pensé pour les communautés locales et les marchés mondiaux.",
+    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des fèves - pensé pour les communautés locales et les marchés mondiaux.",
     "quickLinks": "Liens rapides",
     "services": "Services",
     "contactUs": "Contactez-nous",
@@ -30,21 +30,21 @@
   "whoWeAre": {
     "eyebrow": "NOTRE HISTOIRE",
     "heading": "Qui Sommes-Nous",
-    "intro": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des produits alimentaires de confiance — des sauces tomate et confitures aux jus et aux fèves. Nous construisons à la fois pour les communautés locales et les marchés mondiaux, ancrés dans trois valeurs : Qualité. Innovation. Croissance.",
+    "intro": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des produits alimentaires de confiance - des sauces tomate et confitures aux jus et aux fèves. Nous construisons à la fois pour les communautés locales et les marchés mondiaux, ancrés dans trois valeurs : Qualité. Innovation. Croissance.",
     "pillars": {
-      "manufacturing":   { "title": "Fabrication",              "description": "Sauces tomate, confitures, jus, fèves — produits en interne selon les normes internationales de sécurité alimentaire." },
+      "manufacturing":   { "title": "Fabrication",              "description": "Sauces tomate, confitures, jus, fèves - produits en interne selon les normes internationales de sécurité alimentaire." },
       "privateLabel":    { "title": "Marque Privée",            "description": "Nous fabriquons sous votre marque, avec une qualité constante aux volumes exigés par la distribution." },
-      "customRecipe":    { "title": "Recette Personnalisée",    "description": "Apportez-nous un profil de saveur ou un marché cible — nous développons la recette, l'échantillonnons et la mettons à l'échelle." },
+      "customRecipe":    { "title": "Recette Personnalisée",    "description": "Apportez-nous un profil de saveur ou un marché cible - nous développons la recette, l'échantillonnons et la mettons à l'échelle." },
       "distribution":    { "title": "Distribution & Négoce",    "description": "Un réseau commercial qui achemine les produits alimentaires de manière fiable à travers l'Égypte et vers les marchés régionaux." },
-      "export":          { "title": "Exportation",              "description": "Les produits KAG sur les étagères à l'étranger — en partenariat avec des importateurs qui valorisent l'origine égyptienne et un approvisionnement constant." },
+      "export":          { "title": "Exportation",              "description": "Les produits KAG sur les étagères à l'étranger - en partenariat avec des importateurs qui valorisent l'origine égyptienne et un approvisionnement constant." },
       "quality":         { "title": "Qualité & Sécurité Alimentaire", "description": "Chaque lot passe par des contrôles qualité documentés afin que ce qui sort de notre usine corresponde au cahier des charges." }
     },
     "certifications": {
       "heading": "Soutenu par des normes internationales"
     },
     "values": {
-      "quality":     { "title": "Qualité",     "description": "Sauces tomate, confitures et jus élaborés selon les normes internationales de sécurité alimentaire — chaque lot, chaque marché." },
-      "innovation":  { "title": "Innovation",  "description": "De nouvelles recettes, de nouveaux emballages, de nouveaux partenariats — nous faisons évoluer ce que KAG met en rayon pour rester pertinent." },
+      "quality":     { "title": "Qualité",     "description": "Sauces tomate, confitures et jus élaborés selon les normes internationales de sécurité alimentaire - chaque lot, chaque marché." },
+      "innovation":  { "title": "Innovation",  "description": "De nouvelles recettes, de nouveaux emballages, de nouveaux partenariats - nous faisons évoluer ce que KAG met en rayon pour rester pertinent." },
       "growth":      { "title": "Croissance",  "description": "Construit en Égypte pour le monde : nous développons KAG, nos partenaires de marque privée et les réseaux commerciaux qui transportent nos produits." }
     },
     "cta": {
@@ -63,16 +63,16 @@
   "whatWeOffer": {
     "eyebrow": "CE QUE NOUS OFFRONS",
     "heading": "Quatre piliers, une promesse",
-    "intro": "De nos propres marques familiales à la production en marque privée, en passant par les recettes sur mesure et l'exportation mondiale — chaque pilier repose sur l'engagement de KAG envers la qualité, la cohérence et le partenariat.",
+    "intro": "De nos propres marques familiales à la production en marque privée, en passant par les recettes sur mesure et l'exportation mondiale - chaque pilier repose sur l'engagement de KAG envers la qualité, la cohérence et le partenariat.",
     "rfq": "Demander un devis",
     "pillars": {
       "ourBrands": {
         "title": "Nos Marques",
-        "description": "Les marques familiales de KAG — Yamkers et Tasbeka — couvrant les sauces tomate, les confitures, les jus et les fèves pour les tables égyptiennes du quotidien.",
+        "description": "Les marques familiales de KAG - Yamkers et Tasbeka - couvrant les sauces tomate, les confitures, les jus et les fèves pour les tables égyptiennes du quotidien.",
         "summary": "Deux marques égyptiennes appréciées, une source de confiance pour les essentiels du quotidien.",
         "items": [
-          "Yamkers — sauces, confitures, jus & fèves",
-          "Tasbeka — essentiels du garde-manger pour le quotidien",
+          "Yamkers - sauces, confitures, jus & fèves",
+          "Tasbeka - essentiels du garde-manger pour le quotidien",
           "Élaborés selon les normes internationales de sécurité alimentaire",
           "Distribués à travers l'Égypte et exportés régionalement"
         ],
@@ -80,8 +80,8 @@
       },
       "privateLabel": {
         "title": "Marque Privée",
-        "description": "Nous produisons des produits sur mesure en marque privée pour des clients internationaux — fabrication moderne, ingrédients premium et qualité constante à grande échelle.",
-        "summary": "Votre marque sur nos lignes — fabrication premium à l'échelle du commerce de détail.",
+        "description": "Nous produisons des produits sur mesure en marque privée pour des clients internationaux - fabrication moderne, ingrédients premium et qualité constante à grande échelle.",
+        "summary": "Votre marque sur nos lignes - fabrication premium à l'échelle du commerce de détail.",
         "items": [
           "Recette et emballage personnalisés",
           "Lignes de production modernes et automatisées",
@@ -92,8 +92,8 @@
       },
       "customRecipe": {
         "title": "Recette Personnalisée",
-        "description": "Apportez-nous un profil de saveur, un marché cible ou une référence concurrente — notre équipe R&D développe, échantillonne et met à l'échelle la recette qui vous correspond.",
-        "summary": "Du concept au produit prêt pour le rayon — une R&D qui livre.",
+        "description": "Apportez-nous un profil de saveur, un marché cible ou une référence concurrente - notre équipe R&D développe, échantillonne et met à l'échelle la recette qui vous correspond.",
+        "summary": "Du concept au produit prêt pour le rayon - une R&D qui livre.",
         "items": [
           "Profilage des saveurs & formulation",
           "Tests sensoriels & de durée de conservation",
@@ -104,7 +104,7 @@
       },
       "export": {
         "title": "Exportation",
-        "description": "Les produits KAG traversent les frontières de manière fiable — soutenus par la documentation d'exportation, des partenaires logistiques et des importateurs qui valorisent un approvisionnement constant.",
+        "description": "Les produits KAG traversent les frontières de manière fiable - soutenus par la documentation d'exportation, des partenaires logistiques et des importateurs qui valorisent un approvisionnement constant.",
         "summary": "Qualité égyptienne, livrée dans le monde entier avec un approvisionnement fiable.",
         "items": [
           "Marchés régionaux et mondiaux établis",
@@ -120,11 +120,11 @@
     "section": {
       "eyebrow": "MARQUE PRIVÉE",
       "heading": "Fabriqué sous votre marque",
-      "intro": "Production en marque privée de bout en bout pour distributeurs, détaillants et propriétaires de marques — de la recette au rayon, sous votre marque, prête à l'export."
+      "intro": "Production en marque privée de bout en bout pour distributeurs, détaillants et propriétaires de marques - de la recette au rayon, sous votre marque, prête à l'export."
     },
     "eyebrow": "Marque Privée",
     "heading": "Votre marque, fabriquée sur nos lignes",
-    "description": "Du développement de la recette à l'approvisionnement, en passant par la fabrication moderne et l'emballage prêt à l'export, KAG produit des produits alimentaires en marque privée sur mesure pour les distributeurs, détaillants et propriétaires de marques — à temps, conformes, et en rayon.",
+    "description": "Du développement de la recette à l'approvisionnement, en passant par la fabrication moderne et l'emballage prêt à l'export, KAG produit des produits alimentaires en marque privée sur mesure pour les distributeurs, détaillants et propriétaires de marques - à temps, conformes, et en rayon.",
     "stats": [
       "Fabrication moderne",
       "Normes internationales",
@@ -134,7 +134,7 @@
       {
         "id": "brief",
         "title": "Présentez-nous votre marque",
-        "text": "Partagez votre marché cible, votre profil de saveur et votre vision d'emballage — nous le traduisons en brief prêt pour la production."
+        "text": "Partagez votre marché cible, votre profil de saveur et votre vision d'emballage - nous le traduisons en brief prêt pour la production."
       },
       {
         "id": "develop",
@@ -149,7 +149,7 @@
       {
         "id": "ship",
         "title": "Marque et expédition",
-        "text": "Emballage personnalisé, documentation d'exportation et partenaires logistiques mettent votre produit en rayon — partout."
+        "text": "Emballage personnalisé, documentation d'exportation et partenaires logistiques mettent votre produit en rayon - partout."
       }
     ],
     "tabs": {
@@ -166,7 +166,7 @@
     "section": {
       "eyebrow": "RAYONNEMENT MONDIAL",
       "heading": "Export",
-      "intro": "La qualité égyptienne livrée dans le monde entier — les produits KAG voyagent en toute fiabilité au-delà des frontières, soutenus par notre documentation d'exportation, nos partenaires logistiques et des importateurs qui font confiance à un approvisionnement constant."
+      "intro": "La qualité égyptienne livrée dans le monde entier - les produits KAG voyagent en toute fiabilité au-delà des frontières, soutenus par notre documentation d'exportation, nos partenaires logistiques et des importateurs qui font confiance à un approvisionnement constant."
     },
     "eyebrow": "Export",
     "heading": {
@@ -174,7 +174,7 @@
       "accent": "allées mondiales.",
       "trail": ""
     },
-    "description": "Du Caire aux rayons de détail du Golfe, d'Afrique et d'ailleurs — nous travaillons avec des importateurs qui valorisent l'origine égyptienne, des lots constants et des livraisons à temps au volume du commerce de détail.",
+    "description": "Du Caire aux rayons de détail du Golfe, d'Afrique et d'ailleurs - nous travaillons avec des importateurs qui valorisent l'origine égyptienne, des lots constants et des livraisons à temps au volume du commerce de détail.",
     "features": [
       "Marchés régionaux et mondiaux établis",
       "Documentation d'exportation et partenaires logistiques",
@@ -190,7 +190,7 @@
     "section": {
       "eyebrow": "PRÉSENCE MONDIALE",
       "heading": "Portée mondiale",
-      "intro": "Depuis notre base de production à l'est du Caire, les produits KAG sont livrés à des distributeurs, détaillants et partenaires de la restauration sur quatre continents — avec la documentation, la logistique et la régularité qu'exige une chaîne d'approvisionnement transfrontalière."
+      "intro": "Depuis notre base de production à l'est du Caire, les produits KAG sont livrés à des distributeurs, détaillants et partenaires de la restauration sur quatre continents - avec la documentation, la logistique et la régularité qu'exige une chaîne d'approvisionnement transfrontalière."
     },
     "origin": { "label": "Le Caire" },
     "destinations": {
@@ -215,7 +215,7 @@
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
     "heading": "Plus de 50 produits répartis dans nos catégories",
-    "intro": "Des sauces aux confitures, des jus aux fèves et bien plus encore — notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
+    "intro": "Des sauces aux confitures, des jus aux fèves et bien plus encore - notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
     "cta": "Voir tous les produits",
     "items": {
       "sauce":           { "name": "Sauce Tomate",       "brand": "Yamkers" },

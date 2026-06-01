@@ -13,7 +13,7 @@
     }
   },
   "footer": {
-    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and fava beans — built for local communities and global markets.",
+    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and fava beans - built for local communities and global markets.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactUs": "Contact Us",
@@ -30,21 +30,21 @@
   "whoWeAre": {
     "eyebrow": "OUR STORY",
     "heading": "Who We Are",
-    "intro": "KAG is an Egyptian food group producing, distributing, and exporting trusted food products — from tomato sauces and jams to juices and fava beans. We build for both local communities and global markets, grounded in three values: Quality. Innovation. Growth.",
+    "intro": "KAG is an Egyptian food group producing, distributing, and exporting trusted food products - from tomato sauces and jams to juices and fava beans. We build for both local communities and global markets, grounded in three values: Quality. Innovation. Growth.",
     "pillars": {
-      "manufacturing":   { "title": "Manufacturing",          "description": "Tomato sauces, jams, juices, fava beans — produced in-house to international food-safety standards." },
+      "manufacturing":   { "title": "Manufacturing",          "description": "Tomato sauces, jams, juices, fava beans - produced in-house to international food-safety standards." },
       "privateLabel":    { "title": "Private Labeling",       "description": "We manufacture under your brand, with consistent quality at the volumes retail demands." },
-      "customRecipe":    { "title": "Custom Recipe",          "description": "Bring us a flavor profile or a target market — we develop the recipe, sample it, and scale it." },
+      "customRecipe":    { "title": "Custom Recipe",          "description": "Bring us a flavor profile or a target market - we develop the recipe, sample it, and scale it." },
       "distribution":    { "title": "Distribution & Trading", "description": "A trade network that moves food goods reliably across Egypt and into regional markets." },
-      "export":          { "title": "Export",                 "description": "KAG products on shelves abroad — partnering with importers who value Egyptian origin and consistent supply." },
+      "export":          { "title": "Export",                 "description": "KAG products on shelves abroad - partnering with importers who value Egyptian origin and consistent supply." },
       "quality":         { "title": "Quality & Food Safety",  "description": "Every batch passes through documented quality controls so what leaves our factory matches the spec." }
     },
     "certifications": {
       "heading": "Backed by international standards"
     },
     "values": {
-      "quality":     { "title": "Quality",     "description": "Tomato sauces, jams, and juices crafted to international food-safety standards — every batch, every market." },
-      "innovation":  { "title": "Innovation",  "description": "New recipes, new packaging, new partnerships — we evolve what KAG puts on the shelf so it stays relevant." },
+      "quality":     { "title": "Quality",     "description": "Tomato sauces, jams, and juices crafted to international food-safety standards - every batch, every market." },
+      "innovation":  { "title": "Innovation",  "description": "New recipes, new packaging, new partnerships - we evolve what KAG puts on the shelf so it stays relevant." },
       "growth":      { "title": "Growth",      "description": "Built in Egypt for the world: we grow KAG, our private-label partners, and the trade networks that carry our food." }
     },
     "cta": {
@@ -63,16 +63,16 @@
   "whatWeOffer": {
     "eyebrow": "WHAT WE OFFER",
     "heading": "Four pillars, one promise",
-    "intro": "From our own household brands to private-label production, bespoke recipes, and global export — every pillar is built on KAG's commitment to quality, consistency, and partnership.",
+    "intro": "From our own household brands to private-label production, bespoke recipes, and global export - every pillar is built on KAG's commitment to quality, consistency, and partnership.",
     "rfq": "Request a Quote",
     "pillars": {
       "ourBrands": {
         "title": "Our Brands",
-        "description": "KAG's own household brands — Yamkers and Tasbeka — covering tomato sauces, jams, juices, and fava beans for everyday Egyptian tables.",
+        "description": "KAG's own household brands - Yamkers and Tasbeka - covering tomato sauces, jams, juices, and fava beans for everyday Egyptian tables.",
         "summary": "Two beloved Egyptian brands, one trusted source for everyday pantry staples.",
         "items": [
-          "Yamkers — sauces, jams, juices & fava beans",
-          "Tasbeka — pantry essentials for everyday tables",
+          "Yamkers - sauces, jams, juices & fava beans",
+          "Tasbeka - pantry essentials for everyday tables",
           "Crafted to international food-safety standards",
           "Distributed across Egypt and exported regionally"
         ],
@@ -80,8 +80,8 @@
       },
       "privateLabel": {
         "title": "Private Labeling",
-        "description": "We produce tailor-made private-label products for international clients — modern manufacturing, premium ingredients, and consistent quality at scale.",
-        "summary": "Your brand on our lines — premium manufacturing at retail scale.",
+        "description": "We produce tailor-made private-label products for international clients - modern manufacturing, premium ingredients, and consistent quality at scale.",
+        "summary": "Your brand on our lines - premium manufacturing at retail scale.",
         "items": [
           "Custom recipe & packaging",
           "Modern, automated production lines",
@@ -92,8 +92,8 @@
       },
       "customRecipe": {
         "title": "Custom Recipe",
-        "description": "Bring us a flavor profile, a target market, or a competitor benchmark — our R&D team develops, samples, and scales the recipe that fits.",
-        "summary": "From concept to shelf-ready product — R&D that delivers.",
+        "description": "Bring us a flavor profile, a target market, or a competitor benchmark - our R&D team develops, samples, and scales the recipe that fits.",
+        "summary": "From concept to shelf-ready product - R&D that delivers.",
         "items": [
           "Flavor profiling & formulation",
           "Sensory & shelf-life testing",
@@ -104,7 +104,7 @@
       },
       "export": {
         "title": "Export",
-        "description": "KAG products move reliably across borders — backed by export documentation, logistics partners, and importers who value consistent supply.",
+        "description": "KAG products move reliably across borders - backed by export documentation, logistics partners, and importers who value consistent supply.",
         "summary": "Egyptian quality, delivered worldwide with reliable supply.",
         "items": [
           "Established regional & global markets",
@@ -120,11 +120,11 @@
     "section": {
       "eyebrow": "PRIVATE LABEL",
       "heading": "Built under your brand",
-      "intro": "End-to-end private-label production for retailers, distributors, and brand owners — recipe to retail shelf, under your label, ready for export."
+      "intro": "End-to-end private-label production for retailers, distributors, and brand owners - recipe to retail shelf, under your label, ready for export."
     },
     "eyebrow": "Private Label",
     "heading": "Your brand, built on our lines",
-    "description": "From recipe development and ingredient sourcing to modern manufacturing and export-ready packaging, KAG produces tailor-made private-label food products for retailers, distributors, and brand owners around the world — on time, on spec, on shelf.",
+    "description": "From recipe development and ingredient sourcing to modern manufacturing and export-ready packaging, KAG produces tailor-made private-label food products for retailers, distributors, and brand owners around the world - on time, on spec, on shelf.",
     "stats": [
       "Modern manufacturing",
       "International standards",
@@ -134,7 +134,7 @@
       {
         "id": "brief",
         "title": "Brief us on your brand",
-        "text": "Share your target market, flavor profile, and packaging vision — we translate it into a production-ready brief."
+        "text": "Share your target market, flavor profile, and packaging vision - we translate it into a production-ready brief."
       },
       {
         "id": "develop",
@@ -149,7 +149,7 @@
       {
         "id": "ship",
         "title": "Branded and shipped",
-        "text": "Custom packaging, export documentation, and logistics partners get your product on shelf — wherever shelf is."
+        "text": "Custom packaging, export documentation, and logistics partners get your product on shelf - wherever shelf is."
       }
     ],
     "tabs": {
@@ -166,7 +166,7 @@
     "section": {
       "eyebrow": "GLOBAL REACH",
       "heading": "Export",
-      "intro": "Egyptian quality, delivered worldwide — KAG products travel reliably across borders, backed by export documentation, logistics partners, and importers who trust consistent supply."
+      "intro": "Egyptian quality, delivered worldwide - KAG products travel reliably across borders, backed by export documentation, logistics partners, and importers who trust consistent supply."
     },
     "eyebrow": "Export",
     "heading": {
@@ -174,7 +174,7 @@
       "accent": "global aisles.",
       "trail": ""
     },
-    "description": "From Cairo to retail floors across the Gulf, Africa, and beyond — we partner with importers who value Egyptian origin, consistent batches, and on-time delivery at retail volume.",
+    "description": "From Cairo to retail floors across the Gulf, Africa, and beyond - we partner with importers who value Egyptian origin, consistent batches, and on-time delivery at retail volume.",
     "features": [
       "Established regional & global markets",
       "Export documentation & logistics partners",
@@ -190,7 +190,7 @@
     "section": {
       "eyebrow": "WORLDWIDE PRESENCE",
       "heading": "Global Reach",
-      "intro": "From our manufacturing base east of Cairo, KAG products travel to retailers, distributors, and food-service partners across four continents — with the documentation, logistics, and consistency that cross-border supply demands."
+      "intro": "From our manufacturing base east of Cairo, KAG products travel to retailers, distributors, and food-service partners across four continents - with the documentation, logistics, and consistency that cross-border supply demands."
     },
     "origin": { "label": "Cairo" },
     "destinations": {
@@ -215,7 +215,7 @@
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
     "heading": "More than 50 products across our categories",
-    "intro": "From sauces and jams to juices, fava beans, and beyond — our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
+    "intro": "From sauces and jams to juices, fava beans, and beyond - our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
     "cta": "See All Products",
     "items": {
       "sauce":           { "name": "Sauce",                  "brand": "Yamkers" },

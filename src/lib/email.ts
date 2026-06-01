@@ -7,7 +7,7 @@ function getClient(): Resend {
     if (process.env.NODE_ENV === 'production') {
       throw new Error('RESEND_API_KEY is required in production');
     }
-    console.warn('[email] RESEND_API_KEY is not set — emails will fail');
+    console.warn('[email] RESEND_API_KEY is not set - emails will fail');
     return new Resend('re_placeholder');
   }
   return new Resend(key);
@@ -57,7 +57,7 @@ export async function sendRfqEmail(data: RfqInput): Promise<void> {
   const { error } = await getClient().emails.send({
     from,
     to,
-    subject: `[RFQ] ${data.company} — ${data.productInterest}`,
+    subject: `[RFQ] ${data.company} - ${data.productInterest}`,
     text: body,
     replyTo: data.email,
   });

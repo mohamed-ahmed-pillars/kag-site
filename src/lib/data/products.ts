@@ -46,8 +46,8 @@ export const products: Product[] = [
   {
     id: 1, slug: "tomato-paste-400g-tin", brand: "yamkers", category: "tomato_paste",
     nameEn: "Tomato Paste 400 g Tin", nameAr: "صلصة طماطم 400 جرام",
-    descriptionEn: "Rich 28–30 % tomato paste in a 400 g tin — base for sauces, soups, and stews.",
-    descriptionAr: "صلصة طماطم 400 جرام بتركيز 28-30٪ — أساس للصلصات والشوربات والطواجن.",
+    descriptionEn: "Rich 28–30 % tomato paste in a 400 g tin - base for sauces, soups, and stews.",
+    descriptionAr: "صلصة طماطم 400 جرام بتركيز 28-30٪ - أساس للصلصات والشوربات والطواجن.",
     image: "/Products/400 g.png",
     specs: { netWeight: "400 g", netWeightAr: "400 جرام", concentration: "28–30 %" },
     packaging: { type: "tin", unitsPerCarton: 12, shipping: "shrink_wrap" },
@@ -100,7 +100,7 @@ export const products: Product[] = [
   {
     id: 7, slug: "tomato-paste-60g-tin", brand: "yamkers", category: "tomato_paste",
     nameEn: "Tomato Paste 60 g Tin", nameAr: "صلصة طماطم 60 جرام",
-    descriptionEn: "Compact 60 g tin — perfect for single recipes or lunchboxes.",
+    descriptionEn: "Compact 60 g tin - perfect for single recipes or lunchboxes.",
     descriptionAr: "علبة صغيرة 60 جرام مناسبة لوصفة واحدة.",
     image: "/Products/Yam tomato paste 60g.png",
     specs: { netWeight: "60 g", netWeightAr: "60 جرام", concentration: "28–30 %" },
@@ -109,7 +109,7 @@ export const products: Product[] = [
   {
     id: 8, slug: "tomato-paste-50g-sachet", brand: "yamkers", category: "tomato_paste",
     nameEn: "Tomato Paste 50 g Sachet", nameAr: "صلصة طماطم 50 جرام ظرف",
-    descriptionEn: "50 g tear-open sachet, 28–30 % paste — pantry- and travel-friendly.",
+    descriptionEn: "50 g tear-open sachet, 28–30 % paste - pantry- and travel-friendly.",
     descriptionAr: "ظرف 50 جرام بتركيز 28-30٪ مناسب للسفر.",
     image: "/Products/sachet.png",
     specs: { netWeight: "50 g", netWeightAr: "50 جرام", concentration: "28–30 %" },
@@ -128,7 +128,7 @@ export const products: Product[] = [
   // ── Fava Beans ───────────────────────────────────────────────────
   {
     id: 10, slug: "fava-beans-plain-3kg", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans Plain — 3 kg", nameAr: "فول مدمس سادة 3 كجم",
+    nameEn: "Fava Beans Plain - 3 kg", nameAr: "فول مدمس سادة 3 كجم",
     descriptionEn: "Yamkers fava beans, plain, in a 3 kg foodservice tin (1.95 kg drained).",
     descriptionAr: "فول مدمس سادة 3 كجم (المصفى 1.95 كجم).",
     image: "/Products/3 kg.png",
@@ -137,8 +137,8 @@ export const products: Product[] = [
   },
   {
     id: 11, slug: "fava-beans-plain-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans Plain — 400 g", nameAr: "فول مدمس سادة 400 جرام",
-    descriptionEn: "Classic plain fava beans, 400 g tin (260 g drained) — ready to heat and serve.",
+    nameEn: "Fava Beans Plain - 400 g", nameAr: "فول مدمس سادة 400 جرام",
+    descriptionEn: "Classic plain fava beans, 400 g tin (260 g drained) - ready to heat and serve.",
     descriptionAr: "فول مدمس سادة 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-Plain copy.png",
     specs: { netWeight: "400 g", netWeightAr: "400 جرام", drainedWeight: "260 g", drainedWeightAr: "260 جرام" },
@@ -146,7 +146,7 @@ export const products: Product[] = [
   },
   {
     id: 12, slug: "fava-beans-hot-chili-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans with Hot Chili — 400 g", nameAr: "فول مدمس بالشطة الحارة 400 جرام",
+    nameEn: "Fava Beans with Hot Chili - 400 g", nameAr: "فول مدمس بالشطة الحارة 400 جرام",
     descriptionEn: "Fava beans simmered with red hot chili, 400 g tin (260 g drained).",
     descriptionAr: "فول مدمس بالشطة الحمراء 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-Hot Chili copy - Copy.png",
@@ -155,7 +155,7 @@ export const products: Product[] = [
   },
   {
     id: 13, slug: "fava-beans-tahini-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans with Tahini — 400 g", nameAr: "فول مدمس بالطحينة 400 جرام",
+    nameEn: "Fava Beans with Tahini - 400 g", nameAr: "فول مدمس بالطحينة 400 جرام",
     descriptionEn: "Creamy fava beans blended with tahini, 400 g tin (260 g drained).",
     descriptionAr: "فول مدمس بالطحينة 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-Tahini copy.png",
@@ -164,7 +164,7 @@ export const products: Product[] = [
   },
   {
     id: 14, slug: "fava-beans-sunflower-oil-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans with Sunflower Oil — 400 g", nameAr: "فول مدمس بزيت عباد الشمس 400 جرام",
+    nameEn: "Fava Beans with Sunflower Oil - 400 g", nameAr: "فول مدمس بزيت عباد الشمس 400 جرام",
     descriptionEn: "Plain fava beans finished with sunflower oil, 400 g tin (260 g drained).",
     descriptionAr: "فول مدمس بزيت عباد الشمس 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-Oil copy - Copy.png",
@@ -173,7 +173,7 @@ export const products: Product[] = [
   },
   {
     id: 15, slug: "fava-beans-olive-oil-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans with Olive Oil — 400 g", nameAr: "فول مدمس بزيت الزيتون 400 جرام",
+    nameEn: "Fava Beans with Olive Oil - 400 g", nameAr: "فول مدمس بزيت الزيتون 400 جرام",
     descriptionEn: "Fava beans finished with olive oil, 400 g tin (260 g drained).",
     descriptionAr: "فول مدمس بزيت الزيتون 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-Olive Oil copy.png",
@@ -182,7 +182,7 @@ export const products: Product[] = [
   },
   {
     id: 16, slug: "fava-beans-tomato-sauce-400g", brand: "yamkers", category: "fava_beans",
-    nameEn: "Fava Beans in Tomato Sauce — 400 g", nameAr: "فول مدمس بالصلصة 400 جرام",
+    nameEn: "Fava Beans in Tomato Sauce - 400 g", nameAr: "فول مدمس بالصلصة 400 جرام",
     descriptionEn: "Fava beans in tomato sauce, 400 g tin (260 g drained).",
     descriptionAr: "فول مدمس بالصلصة 400 جرام (المصفى 260 جرام).",
     image: "/Products/Tin Can-tomato copy.png",
@@ -193,7 +193,7 @@ export const products: Product[] = [
   // ── Beans & Peas ─────────────────────────────────────────────────
   {
     id: 17, slug: "white-beans-400g", brand: "yamkers", category: "beans_peas",
-    nameEn: "White Beans — 400 g", nameAr: "فاصولياء بيضاء 400 جرام",
+    nameEn: "White Beans - 400 g", nameAr: "فاصولياء بيضاء 400 جرام",
     descriptionEn: "Plain white beans, 400 g tin (260 g drained).",
     descriptionAr: "فاصولياء بيضاء 400 جرام (المصفى 260 جرام).",
     image: null,
@@ -202,7 +202,7 @@ export const products: Product[] = [
   },
   {
     id: 18, slug: "white-beans-tomato-sauce-400g", brand: "yamkers", category: "beans_peas",
-    nameEn: "White Beans in Tomato Sauce — 400 g", nameAr: "فاصولياء بيضاء بالصلصة 400 جرام",
+    nameEn: "White Beans in Tomato Sauce - 400 g", nameAr: "فاصولياء بيضاء بالصلصة 400 جرام",
     descriptionEn: "White beans in tomato sauce, 400 g tin (260 g drained).",
     descriptionAr: "فاصولياء بيضاء بالصلصة 400 جرام (المصفى 260 جرام).",
     image: null,
@@ -211,7 +211,7 @@ export const products: Product[] = [
   },
   {
     id: 19, slug: "red-beans-400g", brand: "yamkers", category: "beans_peas",
-    nameEn: "Red Beans — 400 g", nameAr: "فاصولياء حمراء 400 جرام",
+    nameEn: "Red Beans - 400 g", nameAr: "فاصولياء حمراء 400 جرام",
     descriptionEn: "Red kidney beans, 400 g tin (260 g drained).",
     descriptionAr: "فاصولياء حمراء 400 جرام (المصفى 260 جرام).",
     image: null,
@@ -220,7 +220,7 @@ export const products: Product[] = [
   },
   {
     id: 20, slug: "green-peas-400g", brand: "yamkers", category: "beans_peas",
-    nameEn: "Green Peas — 400 g", nameAr: "بازلاء خضراء 400 جرام",
+    nameEn: "Green Peas - 400 g", nameAr: "بازلاء خضراء 400 جرام",
     descriptionEn: "Tender garden peas, 400 g tin (240 g drained).",
     descriptionAr: "بازلاء خضراء 400 جرام (المصفى 240 جرام).",
     image: null,
@@ -229,7 +229,7 @@ export const products: Product[] = [
   },
   {
     id: 21, slug: "peas-tomato-sauce-400g", brand: "yamkers", category: "beans_peas",
-    nameEn: "Peas in Tomato Sauce — 400 g", nameAr: "بازلاء بالصلصة 400 جرام",
+    nameEn: "Peas in Tomato Sauce - 400 g", nameAr: "بازلاء بالصلصة 400 جرام",
     descriptionEn: "Green peas simmered in tomato sauce, 400 g tin (240 g drained).",
     descriptionAr: "بازلاء بالصلصة 400 جرام (المصفى 240 جرام).",
     image: null,
@@ -240,7 +240,7 @@ export const products: Product[] = [
   // ── Canned Vegetables ────────────────────────────────────────────
   {
     id: 22, slug: "sweet-corn-400g", brand: "yamkers", category: "canned_vegetables",
-    nameEn: "Sweet Corn — 400 g", nameAr: "ذرة حلوة 400 جرام",
+    nameEn: "Sweet Corn - 400 g", nameAr: "ذرة حلوة 400 جرام",
     descriptionEn: "Whole-kernel sweet corn, 400 g tin (244 g drained).",
     descriptionAr: "ذرة حلوة 400 جرام (المصفى 244 جرام).",
     image: null,
@@ -249,8 +249,8 @@ export const products: Product[] = [
   },
   {
     id: 23, slug: "chickpeas-400g", brand: "yamkers", category: "canned_vegetables",
-    nameEn: "Chickpeas — 400 g", nameAr: "حمص 400 جرام",
-    descriptionEn: "Cooked chickpeas, 400 g tin (260 g drained) — ready for hummus or salad.",
+    nameEn: "Chickpeas - 400 g", nameAr: "حمص 400 جرام",
+    descriptionEn: "Cooked chickpeas, 400 g tin (260 g drained) - ready for hummus or salad.",
     descriptionAr: "حمص 400 جرام (المصفى 260 جرام).",
     image: null,
     specs: { netWeight: "400 g", netWeightAr: "400 جرام", drainedWeight: "260 g", drainedWeightAr: "260 جرام" },
@@ -258,7 +258,7 @@ export const products: Product[] = [
   },
   {
     id: 24, slug: "chickpeas-tahini-400g", brand: "yamkers", category: "canned_vegetables",
-    nameEn: "Chickpeas with Tahini — 400 g", nameAr: "حمص بالطحينة 400 جرام",
+    nameEn: "Chickpeas with Tahini - 400 g", nameAr: "حمص بالطحينة 400 جرام",
     descriptionEn: "Chickpeas blended with tahini, 400 g tin (260 g drained).",
     descriptionAr: "حمص بالطحينة 400 جرام (المصفى 260 جرام).",
     image: null,
@@ -267,7 +267,7 @@ export const products: Product[] = [
   },
   {
     id: 25, slug: "green-okra-400g", brand: "yamkers", category: "canned_vegetables",
-    nameEn: "Green Okra — 400 g", nameAr: "بامية خضراء 400 جرام",
+    nameEn: "Green Okra - 400 g", nameAr: "بامية خضراء 400 جرام",
     descriptionEn: "Tender green okra, 400 g tin (240 g drained).",
     descriptionAr: "بامية خضراء 400 جرام (المصفى 240 جرام).",
     image: null,
@@ -275,11 +275,11 @@ export const products: Product[] = [
     packaging: { type: "tin", unitsPerCarton: 24, shipping: "shrink_wrap" },
   },
 
-  // ── Jams — 30 g plastic portion cups ─────────────────────────────
+  // ── Jams - 30 g plastic portion cups ─────────────────────────────
   {
     id: 26, slug: "fig-jam-30g-cup", brand: "yamkers", category: "jams",
     nameEn: "Fig Jam 30 g Cup", nameAr: "مربى تين 30 جرام كأس",
-    descriptionEn: "Single-portion fig jam, 30 g cup — hotel and HORECA breakfast staple.",
+    descriptionEn: "Single-portion fig jam, 30 g cup - hotel and HORECA breakfast staple.",
     descriptionAr: "مربى تين 30 جرام كأس بلاستيك.",
     image: "/Products/fig Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
@@ -358,7 +358,7 @@ export const products: Product[] = [
     packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
   },
 
-  // ── Jams — 360 g glass jars ──────────────────────────────────────
+  // ── Jams - 360 g glass jars ──────────────────────────────────────
   {
     id: 35, slug: "fig-jam-360g-jar", brand: "yamkers", category: "jams",
     nameEn: "Fig Jam 360 g Jar", nameAr: "مربى تين 360 جرام برطمان",

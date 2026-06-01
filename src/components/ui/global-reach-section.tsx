@@ -154,21 +154,28 @@ export default function GlobalReachSection() {
           {stats.map(({ icon: Icon, value, label }, i) => (
             <motion.div
               key={i}
-              className="group flex items-center gap-4 rounded-xl border border-primary/10 bg-card/60 p-6 backdrop-blur-sm transition-colors hover:border-primary/30"
-              variants={itemVariants}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group flex flex-col items-center rounded-xl bg-white/50 p-6 text-center backdrop-blur-sm transition-colors duration-300 hover:bg-white"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, delay: i * 0.1 },
+                },
+              }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+              <motion.div
+                className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/5 text-primary transition-colors duration-300 group-hover:bg-primary/10"
+                whileHover={{ rotate: 360, transition: { duration: 0.8 } }}
+              >
                 <Icon className="h-6 w-6" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-3xl font-bold leading-none text-primary">
-                  {value}
-                </span>
-                <span className="mt-1 text-sm text-foreground/70">
-                  {label}
-                </span>
-              </div>
+              </motion.div>
+              <span className="font-display text-3xl font-bold leading-none text-primary">
+                {value}
+              </span>
+              <p className="mt-2 text-sm text-foreground/70">{label}</p>
+              <motion.div className="mt-3 h-0.5 w-10 bg-secondary transition-all duration-300 group-hover:w-16" />
             </motion.div>
           ))}
         </motion.div>
