@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView, AnimatePresence, useReducedMotion } from "framer-motion";
-import { Factory, Globe, Handshake, Leaf, Zap } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "@/components/ui/flow-button";
 import { buttonVariants } from "@/components/ui/button";
@@ -233,20 +232,13 @@ export default function WhatWeOfferSection() {
                     />
                   )}
                   {p.key === "privateLabel" && (
-                    <PrivateLabelCard
-                      badge={t("pillars.privateLabel.badge")}
+                    <StandardCard
+                      image="/privatelable.jpg"
                       title={t("pillars.privateLabel.title")}
-                      tagline={t("pillars.privateLabel.tagline")}
-                      paragraphs={t.raw("pillars.privateLabel.paragraphs") as string[]}
-                      features={
-                        t.raw("pillars.privateLabel.features") as Record<
-                          string,
-                          { title: string; desc: string }
-                        >
-                      }
-                      capabilitiesHeading={t("pillars.privateLabel.capabilitiesHeading")}
-                      capabilities={t.raw("pillars.privateLabel.capabilities") as string[]}
-                      cta={t("pillars.privateLabel.cta")}
+                      description={t("pillars.privateLabel.description")}
+                      items={t.raw("pillars.privateLabel.items") as string[]}
+                      ctaText={t("pillars.privateLabel.cta")}
+                      ctaHref="/contact"
                       isActive={isActive}
                     />
                   )}
@@ -509,134 +501,3 @@ function StandardCard({
   );
 }
 
-const PRIVATE_LABEL_FEATURES: { key: string; icon: LucideIcon }[] = [
-  { key: "manufacturing", icon: Factory },
-  { key: "ingredients",   icon: Leaf },
-  { key: "partnership",   icon: Handshake },
-  { key: "globalScale",   icon: Globe },
-];
-
-type PrivateLabelCardProps = {
-  badge: string;
-  title: string;
-  tagline: string;
-  paragraphs: string[];
-  features: Record<string, { title: string; desc: string }>;
-  capabilitiesHeading: string;
-  capabilities: string[];
-  cta: string;
-  isActive: boolean;
-};
-
-function PrivateLabelCard({
-  badge,
-  title,
-  tagline,
-  paragraphs,
-  features,
-  capabilitiesHeading,
-  capabilities,
-  cta,
-  isActive,
-}: PrivateLabelCardProps) {
-  return (
-    <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/privatelable.jpg"
-        alt=""
-        className="mb-4 h-72 w-full rounded-lg object-cover"
-        loading="lazy"
-      />
-
-      <div className="space-y-4">
-        <div className="space-y-3">
-          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-            {badge}
-          </span>
-
-          <h3
-            className={cn(
-              "font-heading text-md font-medium leading-tight tracking-tight md:text-lg transition-colors duration-200",
-              isActive ? "text-primary" : "text-foreground/70",
-            )}
-          >
-            {title}
-          </h3>
-
-          <p className="italic text-secondary text-sm font-medium">{tagline}</p>
-
-          <div
-            className={cn(
-              "space-y-3 text-xs leading-relaxed md:text-sm transition-all duration-300",
-              isActive
-                ? "text-muted-foreground line-clamp-none"
-                : "line-clamp-2 text-muted-foreground/80",
-            )}
-          >
-            {paragraphs.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
-        </div>
-
-        <div
-          aria-hidden={!isActive}
-          inert={!isActive}
-          className={cn(
-            "grid transition-all duration-500 ease-out",
-            isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
-          )}
-        >
-          <div className="overflow-hidden">
-            <div className="space-y-4 pt-2">
-              {/* 2x2 feature grid */}
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {PRIVATE_LABEL_FEATURES.map(({ key, icon: Icon }) => {
-                  const f = features[key];
-                  if (!f) return null;
-                  return (
-                    <div
-                      key={key}
-                      className="flex items-start gap-3 rounded-lg border border-foreground/10 bg-white/50 p-3 dark:bg-black/30"
-                    >
-                      <div className="rounded-md bg-primary/10 p-2 text-primary">
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-medium text-foreground">{f.title}</div>
-                        <div className="text-xs text-muted-foreground">{f.desc}</div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Capabilities list */}
-              <div className="rounded-lg border border-foreground/10 bg-white/50 p-4 dark:bg-black/30">
-                <div className="mb-2 font-heading text-sm font-semibold text-foreground">
-                  {capabilitiesHeading}
-                </div>
-                <ul className="space-y-2">
-                  {capabilities.map((c) => (
-                    <li
-                      key={c}
-                      className="flex items-start gap-2 text-sm text-muted-foreground"
-                    >
-                      <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span className="leading-relaxed">{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex justify-end">
-                <FlowButton href="/contact" text={cta} className="px-6 py-2" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
