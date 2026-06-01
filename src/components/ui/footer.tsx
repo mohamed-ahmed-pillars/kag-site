@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { ArrowUp, Heart, Mail as MailIcon, MapPin, Phone } from 'lucide-react';
+import { ArrowUp, Mail as MailIcon, MapPin, Phone } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 
 type Href = React.ComponentProps<typeof Link>['href'];
@@ -240,7 +240,6 @@ export function Footer() {
           >
             Technology Pillars
           </a>
-          <Heart className="mx-1 h-4 w-4 animate-pulse text-red-600" />
         </div>
       </div>
     </footer>
