@@ -12,6 +12,7 @@ interface MapProps {
   dots?: Array<{ start: LatLng; end: LatLng }>;
   lineColor?: string;
   dotColor?: string;
+  secondaryColor?: string;
   showLabels?: boolean;
   animationDuration?: number;
   loop?: boolean;
@@ -22,6 +23,7 @@ export function WorldMap({
   dots = [],
   lineColor = "#374c9b",
   dotColor = "#374c9b66",
+  secondaryColor = "#d5de24",
   showLabels = true,
   animationDuration = 2,
   loop = true,
@@ -98,18 +100,27 @@ export function WorldMap({
 
   // Deduplicate the points list — the origin (Cairo) is shared across every
   // arc, so without this we'd render its dot, pulse, and label N times stacked.
+  // The first dot's start is treated as the origin; it renders last (on top)
+  // and gets a larger, primary-colored marker.
   const uniquePoints = useMemo(() => {
-    const seen = new Map<string, { x: number; y: number; label?: string }>();
+    type P = { x: number; y: number; label?: string; isOrigin: boolean };
+    const seen = new Map<string, P>();
+    const originKey =
+      dots.length > 0
+        ? `${dots[0].start.lat.toFixed(4)},${dots[0].start.lng.toFixed(4)}`
+        : null;
     for (const d of dots) {
       for (const ll of [d.start, d.end]) {
         const key = `${ll.lat.toFixed(4)},${ll.lng.toFixed(4)}`;
         if (!seen.has(key)) {
           const { x, y } = projectPoint(ll.lat, ll.lng);
-          seen.set(key, { x, y, label: ll.label });
+          seen.set(key, { x, y, label: ll.label, isOrigin: key === originKey });
         }
       }
     }
-    return Array.from(seen.values());
+    return Array.from(seen.values()).sort(
+      (a, b) => Number(a.isOrigin) - Number(b.isOrigin),
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dots, map]);
 
@@ -215,6 +226,9 @@ export function WorldMap({
 
         {uniquePoints.map((p, i) => {
           const labelAbove = i % 2 === 0;
+          const fill = p.isOrigin ? lineColor : secondaryColor;
+          const baseR = p.isOrigin ? 6 : 3;
+          const pulseR = p.isOrigin ? 18 : 12;
           return (
             <g key={`point-${i}`}>
               <motion.g
@@ -227,22 +241,31 @@ export function WorldMap({
                 <circle
                   cx={p.x}
                   cy={p.y}
-                  r="3"
-                  fill={lineColor}
+                  r={baseR}
+                  fill={fill}
                   filter="url(#glow)"
                   className="drop-shadow-lg"
                 />
+                {p.isOrigin && (
+                  <circle
+                    cx={p.x}
+                    cy={p.y}
+                    r={baseR - 2}
+                    fill="white"
+                    opacity="0.85"
+                  />
+                )}
                 <circle
                   cx={p.x}
                   cy={p.y}
-                  r="3"
-                  fill={lineColor}
+                  r={baseR}
+                  fill={fill}
                   opacity="0.5"
                 >
                   <animate
                     attributeName="r"
-                    from="3"
-                    to="12"
+                    from={baseR}
+                    to={pulseR}
                     dur="2s"
                     begin={`${(i % 4) * 0.4}s`}
                     repeatCount="indefinite"
@@ -273,7 +296,13 @@ export function WorldMap({
                     className="block"
                   >
                     <div className="flex h-full items-center justify-center">
-                      <span className="rounded border border-primary/20 bg-card/95 px-1.5 py-0.5 text-[10px] font-semibold text-foreground shadow-sm whitespace-nowrap">
+                      <span
+                        className={
+                          p.isOrigin
+                            ? "whitespace-nowrap rounded border border-primary/40 bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground shadow-md"
+                            : "whitespace-nowrap rounded border border-primary/20 bg-card/95 px-1.5 py-0.5 text-[10px] font-semibold text-foreground shadow-sm"
+                        }
+                      >
                         {p.label}
                       </span>
                     </div>
