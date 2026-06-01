@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import Image from "next/image";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -80,12 +79,15 @@ function PillarItem({
   );
 }
 
+const heroVideos = ["/1.mp4", "/2.mp4", "/3.mp4", "/4.mp4"] as const;
+
 export default function WhoWeAreSection() {
   const t = useTranslations("whoWeAre");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
   const valuesRef = useRef<HTMLDivElement>(null);
   const isValuesInView = useInView(valuesRef, { once: false, amount: 0.3 });
+  const [videoIdx, setVideoIdx] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -211,12 +213,17 @@ export default function WhoWeAreSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
-                <Image
-                  src="/Kag-Final Logo-0001.png"
-                  alt="KAG"
-                  width={800}
-                  height={1422}
-                  priority
+                <video
+                  key={videoIdx}
+                  src={heroVideos[videoIdx]}
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-hidden="true"
+                  onEnded={() =>
+                    setVideoIdx((i) => (i + 1) % heroVideos.length)
+                  }
                   className="block aspect-[9/16] w-full object-cover"
                 />
               </motion.div>
