@@ -12,7 +12,6 @@ import { LanguageSelector } from "@/components/ui/language-selector-dropdown";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const serviceItems = [
-  { key: "ourBrands", href: "/services/our-brands" },
   { key: "privateLabel", href: "/services/private-label" },
   { key: "customProduct", href: "/services/custom-product" },
   { key: "export", href: "/services/export" },
@@ -100,6 +99,10 @@ export function Header() {
         <div className="hidden items-center gap-5 md:flex">
           <Link href="/" className={buttonVariants({ variant: "ghost" })}>
             {t("home")}
+          </Link>
+
+          <Link href="/products" className={buttonVariants({ variant: "ghost" })}>
+            {t("ourBrands")}
           </Link>
 
           <div
@@ -192,6 +195,17 @@ export function Header() {
               })}
             >
               {t("home")}
+            </Link>
+
+            <Link
+              href="/products"
+              onClick={closeMobile}
+              className={buttonVariants({
+                variant: "ghost",
+                className: "justify-start",
+              })}
+            >
+              {t("ourBrands")}
             </Link>
 
             <button
