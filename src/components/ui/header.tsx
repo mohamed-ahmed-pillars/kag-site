@@ -150,8 +150,8 @@ export function Header() {
             )}
           </div>
 
-          <Link href="/blog" className={buttonVariants({ variant: "ghost" })}>
-            {t("blog")}
+          <Link href="/news" className={buttonVariants({ variant: "ghost" })}>
+            {t("news")}
           </Link>
 
           <FlowButton href="/contact" text={t("contact")} className="px-8 py-2.5" />
@@ -233,14 +233,14 @@ export function Header() {
             )}
 
             <Link
-              href="/blog"
+              href="/news"
               onClick={closeMobile}
               className={buttonVariants({
                 variant: "ghost",
                 className: "justify-start",
               })}
             >
-              {t("blog")}
+              {t("news")}
             </Link>
 
             <div className="pt-2">
