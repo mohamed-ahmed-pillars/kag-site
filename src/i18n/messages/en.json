@@ -11,6 +11,21 @@
       "export": "Export"
     }
   },
+  "footer": {
+    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and fava beans — built for local communities and global markets.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactUs": "Contact Us",
+    "company": "Company",
+    "address": "10th of Ramadan City, Industrial Zone, Sharkia Governorate, Egypt",
+    "phoneServiceLabel": "Service",
+    "phoneSuggestionsLabel": "Suggestions",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved.",
+    "madeBy": "Made by",
+    "scrollTop": "Scroll to top"
+  },
   "whoWeAre": {
     "eyebrow": "OUR STORY",
     "heading": "Who We Are",

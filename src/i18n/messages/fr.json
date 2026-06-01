@@ -11,6 +11,21 @@
       "export": "Exportation"
     }
   },
+  "footer": {
+    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des fèves — pensé pour les communautés locales et les marchés mondiaux.",
+    "quickLinks": "Liens rapides",
+    "services": "Services",
+    "contactUs": "Contactez-nous",
+    "company": "Entreprise",
+    "address": "10th of Ramadan City, Zone industrielle, Gouvernorat de Charkia, Égypte",
+    "phoneServiceLabel": "Service",
+    "phoneSuggestionsLabel": "Suggestions",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "rights": "Tous droits réservés.",
+    "madeBy": "Réalisé par",
+    "scrollTop": "Retour en haut"
+  },
   "whoWeAre": {
     "eyebrow": "NOTRE HISTOIRE",
     "heading": "Qui Sommes-Nous",
