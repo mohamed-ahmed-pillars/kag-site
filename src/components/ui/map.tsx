@@ -6,6 +6,7 @@ import DottedMap from "dotted-map";
 import Image from "next/image";
 
 type LatLng = { lat: number; lng: number; label?: string };
+type Region = { lat: { min: number; max: number }; lng: { min: number; max: number } };
 
 interface MapProps {
   dots?: Array<{ start: LatLng; end: LatLng }>;
@@ -14,6 +15,7 @@ interface MapProps {
   showLabels?: boolean;
   animationDuration?: number;
   loop?: boolean;
+  region?: Region;
 }
 
 export function WorldMap({
@@ -23,13 +25,19 @@ export function WorldMap({
   showLabels = true,
   animationDuration = 2,
   loop = true,
+  region,
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
 
   const map = useMemo(
-    () => new DottedMap({ height: 100, grid: "diagonal" }),
-    [],
+    () =>
+      new DottedMap({
+        height: 100,
+        grid: "diagonal",
+        ...(region ? { region } : {}),
+      }),
+    [region],
   );
 
   const svgMap = useMemo(
@@ -43,16 +51,35 @@ export function WorldMap({
     [map, dotColor],
   );
 
-  // dotted-map uses a Mercator projection with a cropped region (not the full
-  // -90/+90 lat range), so we must use map.getPin() to project lat/lng into
-  // the SVG's coordinate space (map.image.width × map.image.height) and then
-  // scale to our 800×400 overlay viewBox so all the existing SVG sizes
-  // (circle radii, curve offsets, label boxes) stay correct.
+  // dotted-map uses a Mercator projection with a cropped region, so we use
+  // map.getPin() (which returns coords in the SVG's own width×height space).
+  // The next/image renders that SVG with object-contain inside our overlay's
+  // 800×400 viewBox, so we replicate object-contain math here: fit the image
+  // to the overlay while preserving its aspect ratio, then offset.
+  const VB_W = 800;
+  const VB_H = 400;
+  const { width: imgW, height: imgH } = map.image;
+  const imgAspect = imgW / imgH;
+  const vbAspect = VB_W / VB_H;
+  let renderedW: number;
+  let renderedH: number;
+  if (imgAspect >= vbAspect) {
+    renderedW = VB_W;
+    renderedH = VB_W / imgAspect;
+  } else {
+    renderedH = VB_H;
+    renderedW = VB_H * imgAspect;
+  }
+  const offsetX = (VB_W - renderedW) / 2;
+  const offsetY = (VB_H - renderedH) / 2;
+
   const projectPoint = (lat: number, lng: number) => {
     const pin = map.getPin({ lat, lng });
     if (!pin) return { x: 0, y: 0 };
-    const { width, height } = map.image;
-    return { x: (pin.x / width) * 800, y: (pin.y / height) * 400 };
+    return {
+      x: offsetX + (pin.x / imgW) * renderedW,
+      y: offsetY + (pin.y / imgH) * renderedH,
+    };
   };
 
   const createCurvedPath = (
@@ -68,6 +95,23 @@ export function WorldMap({
   const totalAnimationTime = dots.length * staggerDelay + animationDuration;
   const pauseTime = 2;
   const fullCycleDuration = totalAnimationTime + pauseTime;
+
+  // Deduplicate the points list — the origin (Cairo) is shared across every
+  // arc, so without this we'd render its dot, pulse, and label N times stacked.
+  const uniquePoints = useMemo(() => {
+    const seen = new Map<string, { x: number; y: number; label?: string }>();
+    for (const d of dots) {
+      for (const ll of [d.start, d.end]) {
+        const key = `${ll.lat.toFixed(4)},${ll.lng.toFixed(4)}`;
+        if (!seen.has(key)) {
+          const { x, y } = projectPoint(ll.lat, ll.lng);
+          seen.set(key, { x, y, label: ll.label });
+        }
+      }
+    }
+    return Array.from(seen.values());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dots, map]);
 
   return (
     <div className="relative aspect-[2/1] w-full overflow-hidden rounded-2xl bg-card/40 font-sans md:aspect-[2.5/1] lg:aspect-[2/1]">
@@ -169,149 +213,73 @@ export function WorldMap({
           );
         })}
 
-        {dots.map((dot, i) => {
-          const startPoint = projectPoint(dot.start.lat, dot.start.lng);
-          const endPoint = projectPoint(dot.end.lat, dot.end.lng);
-
+        {uniquePoints.map((p, i) => {
+          const labelAbove = i % 2 === 0;
           return (
-            <g key={`points-group-${i}`}>
-              {/* Start point */}
-              <g key={`start-${i}`}>
-                <motion.g
-                  onHoverStart={() =>
-                    setHoveredLocation(dot.start.label || `Location ${i}`)
-                  }
-                  onHoverEnd={() => setHoveredLocation(null)}
-                  className="cursor-pointer"
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            <g key={`point-${i}`}>
+              <motion.g
+                onHoverStart={() => setHoveredLocation(p.label || `Location ${i}`)}
+                onHoverEnd={() => setHoveredLocation(null)}
+                className="cursor-pointer"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r="3"
+                  fill={lineColor}
+                  filter="url(#glow)"
+                  className="drop-shadow-lg"
+                />
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r="3"
+                  fill={lineColor}
+                  opacity="0.5"
                 >
-                  <circle
-                    cx={startPoint.x}
-                    cy={startPoint.y}
-                    r="3"
-                    fill={lineColor}
-                    filter="url(#glow)"
-                    className="drop-shadow-lg"
+                  <animate
+                    attributeName="r"
+                    from="3"
+                    to="12"
+                    dur="2s"
+                    begin={`${(i % 4) * 0.4}s`}
+                    repeatCount="indefinite"
                   />
-                  <circle
-                    cx={startPoint.x}
-                    cy={startPoint.y}
-                    r="3"
-                    fill={lineColor}
-                    opacity="0.5"
-                  >
-                    <animate
-                      attributeName="r"
-                      from="3"
-                      to="12"
-                      dur="2s"
-                      begin="0s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      from="0.6"
-                      to="0"
-                      dur="2s"
-                      begin="0s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                </motion.g>
+                  <animate
+                    attributeName="opacity"
+                    from="0.6"
+                    to="0"
+                    dur="2s"
+                    begin={`${(i % 4) * 0.4}s`}
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </motion.g>
 
-                {showLabels && dot.start.label && (
-                  <motion.g
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 * i + 0.3, duration: 0.5 }}
-                    className="pointer-events-none"
-                  >
-                    <foreignObject
-                      x={startPoint.x - 50}
-                      y={startPoint.y - 35}
-                      width="100"
-                      height="30"
-                      className="block"
-                    >
-                      <div className="flex h-full items-center justify-center">
-                        <span className="rounded-md border border-primary/15 bg-card/95 px-2 py-0.5 text-xs font-medium text-foreground shadow-sm">
-                          {dot.start.label}
-                        </span>
-                      </div>
-                    </foreignObject>
-                  </motion.g>
-                )}
-              </g>
-
-              {/* End point */}
-              <g key={`end-${i}`}>
+              {showLabels && p.label && (
                 <motion.g
-                  onHoverStart={() =>
-                    setHoveredLocation(dot.end.label || `Destination ${i}`)
-                  }
-                  onHoverEnd={() => setHoveredLocation(null)}
-                  className="cursor-pointer"
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  initial={{ opacity: 0, y: labelAbove ? 5 : -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 * i + 0.3, duration: 0.5 }}
+                  className="pointer-events-none"
                 >
-                  <circle
-                    cx={endPoint.x}
-                    cy={endPoint.y}
-                    r="3"
-                    fill={lineColor}
-                    filter="url(#glow)"
-                    className="drop-shadow-lg"
-                  />
-                  <circle
-                    cx={endPoint.x}
-                    cy={endPoint.y}
-                    r="3"
-                    fill={lineColor}
-                    opacity="0.5"
+                  <foreignObject
+                    x={p.x - 40}
+                    y={labelAbove ? p.y - 28 : p.y + 8}
+                    width="80"
+                    height="22"
+                    className="block"
                   >
-                    <animate
-                      attributeName="r"
-                      from="3"
-                      to="12"
-                      dur="2s"
-                      begin="0.5s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      from="0.6"
-                      to="0"
-                      dur="2s"
-                      begin="0.5s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="rounded border border-primary/20 bg-card/95 px-1.5 py-0.5 text-[10px] font-semibold text-foreground shadow-sm whitespace-nowrap">
+                        {p.label}
+                      </span>
+                    </div>
+                  </foreignObject>
                 </motion.g>
-
-                {showLabels && dot.end.label && (
-                  <motion.g
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 * i + 0.5, duration: 0.5 }}
-                    className="pointer-events-none"
-                  >
-                    <foreignObject
-                      x={endPoint.x - 50}
-                      y={endPoint.y - 35}
-                      width="100"
-                      height="30"
-                      className="block"
-                    >
-                      <div className="flex h-full items-center justify-center">
-                        <span className="rounded-md border border-primary/15 bg-card/95 px-2 py-0.5 text-xs font-medium text-foreground shadow-sm">
-                          {dot.end.label}
-                        </span>
-                      </div>
-                    </foreignObject>
-                  </motion.g>
-                )}
-              </g>
+              )}
             </g>
           );
         })}

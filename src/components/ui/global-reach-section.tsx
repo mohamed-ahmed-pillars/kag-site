@@ -8,7 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { Boxes, Globe2, Users } from "lucide-react";
+import { Boxes, Globe2, MapPinned, Users } from "lucide-react";
 import { WorldMap } from "@/components/ui/map";
 
 const CAIRO = { lat: 30.0084, lng: 31.5333, label: "Cairo" } as const;
@@ -70,10 +70,19 @@ export default function GlobalReachSection() {
   }));
 
   const stats = [
-    { icon: Boxes,  value: t("stats.products.value"),  label: t("stats.products.label") },
-    { icon: Globe2, value: t("stats.markets.value"),   label: t("stats.markets.label") },
-    { icon: Users,  value: t("stats.clients.value"),   label: t("stats.clients.label") },
+    { icon: Boxes,     value: t("stats.products.value"),   label: t("stats.products.label") },
+    { icon: MapPinned, value: t("stats.markets.value"),    label: t("stats.markets.label") },
+    { icon: Users,     value: t("stats.clients.value"),    label: t("stats.clients.label") },
+    { icon: Globe2,    value: t("stats.continents.value"), label: t("stats.continents.label") },
   ];
+
+  // Crop the dotted-map to the regions we actually export to so destinations
+  // spread further apart. The bounds are tuned to a ~2:1 aspect ratio so the
+  // dotted-map SVG and our 800×400 overlay align without distortion.
+  const mapRegion = {
+    lat: { min: -30, max: 55 },
+    lng: { min: -100, max: 100 },
+  };
 
   return (
     <section
@@ -131,11 +140,16 @@ export default function GlobalReachSection() {
           className="overflow-hidden rounded-2xl border border-primary/10 bg-card/60 p-3 shadow-lg backdrop-blur-sm sm:p-4"
           variants={itemVariants}
         >
-          <WorldMap dots={dots} lineColor="#374c9b" dotColor="#374c9b66" />
+          <WorldMap
+            dots={dots}
+            lineColor="#374c9b"
+            dotColor="#374c9b66"
+            region={mapRegion}
+          />
         </motion.div>
 
         <motion.div
-          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
+          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           variants={itemVariants}
         >
           {stats.map(({ icon: Icon, value, label }, i) => (

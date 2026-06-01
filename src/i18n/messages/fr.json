@@ -184,9 +184,10 @@
       "saoPaulo": "São Paulo"
     },
     "stats": {
-      "products": { "value": "50+",  "label": "Produits toutes catégories" },
-      "markets":  { "value": "20+",  "label": "Marchés à l'export" },
-      "clients":  { "value": "270+", "label": "Clients & partenaires" }
+      "products":   { "value": "50+",  "label": "Produits toutes catégories" },
+      "markets":    { "value": "20+",  "label": "Marchés à l'export" },
+      "clients":    { "value": "270+", "label": "Clients & partenaires" },
+      "continents": { "value": "4",    "label": "Continents desservis" }
     }
   },
   "ourProducts": {

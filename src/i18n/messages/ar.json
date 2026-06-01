@@ -184,9 +184,10 @@
       "saoPaulo": "ساو باولو"
     },
     "stats": {
-      "products": { "value": "+50",  "label": "منتج عبر الفئات" },
-      "markets":  { "value": "+20",  "label": "سوق تصدير حول العالم" },
-      "clients":  { "value": "+270", "label": "عميل وشريك توزيع" }
+      "products":   { "value": "+50",  "label": "منتج عبر الفئات" },
+      "markets":    { "value": "+20",  "label": "سوق تصدير حول العالم" },
+      "clients":    { "value": "+270", "label": "عميل وشريك توزيع" },
+      "continents": { "value": "4",    "label": "قارات نخدمها" }
     }
   },
   "ourProducts": {
