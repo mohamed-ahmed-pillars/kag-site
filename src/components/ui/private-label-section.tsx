@@ -33,8 +33,8 @@ type TabMedia =
 
 const TABS: TabMedia[] = [
   { value: "production", type: "video", src: "/privatelable.mp4" },
-  { value: "packaging",  type: "image", src: "/privatelable.jpg" },
-  { value: "export",     type: "image", src: "/exportstrip.jpg" },
+  { value: "packaging", type: "image", src: "/privatelable.jpg" },
+  { value: "export", type: "image", src: "/exportstrip.jpg" },
 ];
 
 export default function PrivateLabelSection() {
@@ -123,133 +123,133 @@ export default function PrivateLabelSection() {
         </motion.p>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 lg:gap-14">
-        {/* LEFT */}
-        <div className="md:col-span-6">
-          <motion.div variants={itemVariants}>
-            <Badge
-              variant="outline"
-              className="mb-6 h-7 rounded-full border-primary/30 px-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary"
-            >
-              {t("eyebrow")}
-            </Badge>
-          </motion.div>
+          {/* LEFT */}
+          <div className="md:col-span-6">
+            <motion.div variants={itemVariants}>
+              <Badge
+                variant="outline"
+                className="mb-6 h-7 rounded-full border-primary/30 px-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary"
+              >
+                {t("eyebrow")}
+              </Badge>
+            </motion.div>
 
-          <motion.h2
-            className="font-heading text-balance text-4xl font-bold leading-[1.0] tracking-tight text-primary sm:text-5xl md:text-6xl"
-            variants={itemVariants}
-          >
-            {t("heading")}
-          </motion.h2>
-
-          <motion.p
-            className="mt-6 max-w-xl text-foreground/80 leading-relaxed"
-            variants={itemVariants}
-          >
-            {t("description")}
-          </motion.p>
-
-          {stats.length > 0 && (
-            <motion.div
-              className="mt-6 flex flex-wrap gap-2"
+            <motion.h2
+              className="font-heading text-balance text-4xl font-bold leading-[1.0] tracking-tight text-primary sm:text-5xl md:text-6xl"
               variants={itemVariants}
             >
-              {stats.map((s, i) => (
-                <Badge
-                  key={i}
-                  variant="secondary"
-                  className="h-7 rounded-full bg-primary/10 px-3 text-xs font-medium text-primary"
-                >
-                  {s}
-                </Badge>
-              ))}
-            </motion.div>
-          )}
+              {t("heading")}
+            </motion.h2>
 
-          <motion.div className="mt-10 max-w-xl" variants={itemVariants}>
-            <Accordion defaultValue={steps[0] ? [steps[0].id] : []} className="w-full">
-              {steps.map((step) => (
-                <AccordionItem key={step.id} value={step.id}>
-                  <AccordionTrigger className="text-start text-base font-semibold text-foreground">
-                    {step.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm text-foreground/70 leading-relaxed">
-                    {step.text}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <motion.p
+              className="mt-6 max-w-xl text-foreground/80 leading-relaxed"
+              variants={itemVariants}
+            >
+              {t("description")}
+            </motion.p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <FlowButton
-                href="/contact"
-                text={t("cta.primary")}
-                variant="primary"
-              />
-              <FlowButton
-                href="/products"
-                text={t("cta.secondary")}
-                variant="secondary"
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* RIGHT */}
-        <motion.div className="md:col-span-6" variants={itemVariants}>
-          <div className="relative overflow-hidden rounded-2xl border border-primary/10 bg-card shadow-lg">
-            <Tabs defaultValue={TABS[0].value} className="relative h-full w-full">
-              <div className="relative h-[480px] w-full sm:h-[560px] lg:h-[680px]">
-                {TABS.map((tab, idx) => (
-                  <TabsContent
-                    key={tab.value}
-                    value={tab.value}
-                    className="absolute inset-0 m-0 h-full w-full"
+            {stats.length > 0 && (
+              <motion.div
+                className="mt-6 flex flex-wrap gap-2"
+                variants={itemVariants}
+              >
+                {stats.map((s, i) => (
+                  <Badge
+                    key={i}
+                    variant="secondary"
+                    className="h-7 rounded-full bg-primary/10 px-3 text-xs font-medium text-primary"
                   >
-                    {tab.type === "video" ? (
-                      <video
-                        src={tab.src}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        aria-hidden="true"
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <Image
-                        src={tab.src}
-                        alt={t(`tabs.${tab.value}`)}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover"
-                        priority={idx === 0}
-                      />
-                    )}
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
-                    />
-                  </TabsContent>
+                    {s}
+                  </Badge>
                 ))}
-              </div>
+              </motion.div>
+            )}
 
-              <div className="pointer-events-auto absolute inset-x-0 bottom-4 z-10 flex w-full justify-center px-4">
-                <TabsList className="flex h-24 w-auto items-center gap-1 rounded-full bg-muted px-4">
-                  {TABS.map((tab) => (
-                    <TabsTrigger
+            <motion.div className="mt-10 max-w-xl" variants={itemVariants}>
+              <Accordion defaultValue={steps[0] ? [steps[0].id] : []} className="w-full">
+                {steps.map((step) => (
+                  <AccordionItem key={step.id} value={step.id}>
+                    <AccordionTrigger className="text-start text-base font-semibold text-foreground">
+                      {step.title}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-foreground/70 leading-relaxed">
+                      {step.text}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <FlowButton
+                  href="/contact"
+                  text={t("cta.primary")}
+                  variant="primary"
+                />
+                <FlowButton
+                  href="/products"
+                  text={t("cta.secondary")}
+                  variant="secondary"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* RIGHT */}
+          <motion.div className="md:col-span-6" variants={itemVariants}>
+            <div className="relative overflow-hidden rounded-2xl border border-primary/10 bg-card shadow-lg">
+              <Tabs defaultValue={TABS[0].value} className="relative h-full w-full">
+                <div className="relative h-[480px] w-full sm:h-[560px] lg:h-[680px]">
+                  {TABS.map((tab, idx) => (
+                    <TabsContent
                       key={tab.value}
                       value={tab.value}
-                      className="h-auto flex-none rounded-full px-5 py-2 text-sm font-medium text-foreground/70 data-active:bg-primary data-active:text-primary-foreground"
+                      className="absolute inset-0 m-0 h-full w-full"
                     >
-                      {t(`tabs.${tab.value}`)}
-                    </TabsTrigger>
+                      {tab.type === "video" ? (
+                        <video
+                          src={tab.src}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          preload="metadata"
+                          aria-hidden="true"
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <Image
+                          src={tab.src}
+                          alt={t(`tabs.${tab.value}`)}
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
+                          priority={idx === 0}
+                        />
+                      )}
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
+                      />
+                    </TabsContent>
                   ))}
-                </TabsList>
-              </div>
-            </Tabs>
-          </div>
-        </motion.div>
+                </div>
+
+                <div className="pointer-events-auto absolute inset-x-0 bottom-4 z-10 flex w-full justify-center px-4">
+                  <TabsList className="flex w-auto items-center gap-1 rounded-full bg-muted px-4 group-data-horizontal/tabs:h-16">
+                    {TABS.map((tab) => (
+                      <TabsTrigger
+                        key={tab.value}
+                        value={tab.value}
+                        className="h-8 flex-none rounded-full px-5 py-2 text-sm font-medium text-foreground/70 data-active:bg-primary data-active:text-primary-foreground"
+                      >
+                        {t(`tabs.${tab.value}`)}
+                      </TabsTrigger>
+                    ))}
+                  </TabsList>
+                </div>
+              </Tabs>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
