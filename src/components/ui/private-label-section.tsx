@@ -235,7 +235,7 @@ export default function PrivateLabelSection() {
                 </div>
 
                 <div className="pointer-events-auto absolute inset-x-0 bottom-4 z-10 flex w-full justify-center px-4">
-                  <TabsList className="flex w-auto items-center gap-1 rounded-full bg-muted px-4 group-data-horizontal/tabs:h-16">
+                  <TabsList className="flex w-auto items-center gap-1 rounded-full bg-muted px-4 group-data-horizontal/tabs:h-12">
                     {TABS.map((tab) => (
                       <TabsTrigger
                         key={tab.value}
