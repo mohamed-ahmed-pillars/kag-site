@@ -238,7 +238,6 @@ export default function WhatWeOfferSection() {
                       items={t.raw("pillars.customRecipe.items") as string[]}
                       ctaText={t("pillars.customRecipe.cta")}
                       ctaHref="/contact"
-                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -250,7 +249,6 @@ export default function WhatWeOfferSection() {
                       items={t.raw("pillars.export.items") as string[]}
                       ctaText={t("pillars.export.cta")}
                       ctaHref="/export"
-                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -415,7 +413,14 @@ function OurBrandsCard({
                 </ul>
               </div>
               <div className="flex flex-wrap justify-end gap-3">
-                <FlowButton href="/rfq" text={rfqText} className="px-6 py-2" />
+                {rfqText && (
+                  <FlowButton
+                    href="/rfq"
+                    text={rfqText}
+                    variant="secondary"
+                    className="px-6 py-2"
+                  />
+                )}
                 <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
               </div>
             </div>
@@ -433,7 +438,7 @@ type StandardCardProps = {
   items: string[];
   ctaText: string;
   ctaHref: string;
-  rfqText: string;
+  rfqText?: string;
   isActive: boolean;
 };
 
@@ -502,7 +507,14 @@ function StandardCard({
                 </ul>
               </div>
               <div className="flex flex-wrap justify-end gap-3">
-                <FlowButton href="/rfq" text={rfqText} className="px-6 py-2" />
+                {rfqText && (
+                  <FlowButton
+                    href="/rfq"
+                    text={rfqText}
+                    variant="secondary"
+                    className="px-6 py-2"
+                  />
+                )}
                 <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
               </div>
             </div>
