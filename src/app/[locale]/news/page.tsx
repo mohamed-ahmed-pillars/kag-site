@@ -7,7 +7,7 @@ import { routing, type Locale } from '@/i18n/routing';
 type BlogPost = { slug: string; title: string; date: string; excerpt: string };
 
 async function listPosts(locale: Locale): Promise<BlogPost[]> {
-  const dir = path.join(process.cwd(), 'src', 'content', 'blog', locale);
+  const dir = path.join(process.cwd(), 'src', 'content', 'news', locale);
   let files: string[];
   try {
     files = await fs.readdir(dir);

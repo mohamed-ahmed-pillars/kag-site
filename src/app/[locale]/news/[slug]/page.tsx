@@ -8,7 +8,7 @@ import { routing, type Locale } from '@/i18n/routing';
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
   for (const locale of routing.locales) {
-    const dir = path.join(process.cwd(), 'src', 'content', 'blog', locale);
+    const dir = path.join(process.cwd(), 'src', 'content', 'news', locale);
     let files: string[] = [];
     try {
       files = await fs.readdir(dir);
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 async function loadPost(locale: Locale, slug: string): Promise<ComponentType | null> {
   try {
-    const mod = await import(`@/content/blog/${locale}/${slug}.mdx`);
+    const mod = await import(`@/content/news/${locale}/${slug}.mdx`);
     return mod.default as ComponentType;
   } catch {
     return null;
