@@ -274,14 +274,14 @@ function BrandLogoCarousel() {
 
   if (!mounted) {
     return (
-      <div className="relative flex h-28 w-full items-center justify-center">
+      <div className="relative flex h-64 w-full items-center justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={BRAND_LOGOS[0].src}
           alt={BRAND_LOGOS[0].alt}
           loading="lazy"
           decoding="async"
-          className="absolute h-24 w-auto object-contain drop-shadow-lg"
+          className="absolute h-56 w-auto object-contain drop-shadow-lg"
         />
       </div>
     );
@@ -298,7 +298,7 @@ function BrandLogoCarousel() {
             alt={b.alt}
             loading="lazy"
             decoding="async"
-            className="h-24 w-auto object-contain"
+            className="h-56 w-auto object-contain"
           />
         ))}
       </div>
@@ -307,7 +307,7 @@ function BrandLogoCarousel() {
 
   const current = BRAND_LOGOS[i];
   return (
-    <div className="relative flex h-28 w-full items-center justify-center">
+    <div className="relative flex h-64 w-full items-center justify-center">
       <AnimatePresence mode="wait">
         <motion.img
           key={current.src}
@@ -319,7 +319,7 @@ function BrandLogoCarousel() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="absolute h-24 w-auto object-contain drop-shadow-lg"
+          className="absolute h-56 w-auto object-contain drop-shadow-lg"
         />
       </AnimatePresence>
     </div>
@@ -346,10 +346,10 @@ function OurBrandsCard({
   return (
     <>
       <div
-        className="relative mb-4 h-72 w-full overflow-hidden rounded-lg bg-cover bg-center"
+        className="relative mb-4 h-96 w-full overflow-hidden rounded-lg bg-cover bg-center"
         style={{ backgroundImage: "url('/ourbrandsbackground.webp')" }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-white/70" />
         <div className="relative z-10 flex h-full items-center justify-center p-6">
           <BrandLogoCarousel />
         </div>
