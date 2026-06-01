@@ -235,12 +235,12 @@ export default function PrivateLabelSection() {
               </div>
 
               <div className="pointer-events-auto absolute inset-x-0 bottom-4 z-10 flex w-full justify-center px-4">
-                <TabsList className="flex h-auto w-auto gap-1 rounded-xl border border-white/15 bg-background/70 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <TabsList className="flex h-auto w-auto gap-1 rounded-full bg-muted p-1.5">
                   {TABS.map((tab) => (
                     <TabsTrigger
                       key={tab.value}
                       value={tab.value}
-                      className="h-auto flex-none rounded-lg px-4 py-2 text-sm font-medium data-active:bg-primary data-active:text-primary-foreground"
+                      className="h-auto flex-none rounded-full px-5 py-2 text-sm font-medium text-foreground/70 data-active:bg-foreground data-active:text-background data-active:shadow-md"
                     >
                       {t(`tabs.${tab.value}`)}
                     </TabsTrigger>
