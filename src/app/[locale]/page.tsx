@@ -5,6 +5,7 @@ import WhatWeOfferSection from '@/components/ui/what-we-offer-section';
 import OurProductsSection from '@/components/ui/our-products-section';
 import PrivateLabelSection from '@/components/ui/private-label-section';
 import ExportSection from '@/components/ui/export-section';
+import GlobalReachSection from '@/components/ui/global-reach-section';
 
 export default async function HomePage({
   params,
@@ -21,6 +22,7 @@ export default async function HomePage({
       <OurProductsSection />
       <PrivateLabelSection />
       <ExportSection />
+      <GlobalReachSection />
     </main>
   );
 }

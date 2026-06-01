@@ -163,6 +163,33 @@
       "secondary": "Découvrir les produits"
     }
   },
+  "globalReach": {
+    "section": {
+      "eyebrow": "PRÉSENCE MONDIALE",
+      "heading": "Portée mondiale",
+      "intro": "Depuis notre base de production à l'est du Caire, les produits KAG sont livrés à des distributeurs, détaillants et partenaires de la restauration sur quatre continents — avec la documentation, la logistique et la régularité qu'exige une chaîne d'approvisionnement transfrontalière."
+    },
+    "origin": { "label": "Le Caire" },
+    "destinations": {
+      "dubai": "Dubaï",
+      "riyadh": "Riyad",
+      "amman": "Amman",
+      "beirut": "Beyrouth",
+      "london": "Londres",
+      "rotterdam": "Rotterdam",
+      "paris": "Paris",
+      "nairobi": "Nairobi",
+      "lagos": "Lagos",
+      "casablanca": "Casablanca",
+      "saoPaulo": "São Paulo"
+    },
+    "regions": [
+      { "name": "Moyen-Orient", "countries": "Émirats arabes unis · Arabie saoudite · Jordanie · Liban" },
+      { "name": "Europe",       "countries": "Royaume-Uni · Pays-Bas · France" },
+      { "name": "Afrique",      "countries": "Kenya · Nigéria · Maroc" },
+      { "name": "Amérique du Sud","countries": "Brésil" }
+    ]
+  },
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
     "heading": "Plus de 50 produits répartis dans nos catégories",

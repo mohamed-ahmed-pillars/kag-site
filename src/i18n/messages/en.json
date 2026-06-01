@@ -163,6 +163,33 @@
       "secondary": "Explore Products"
     }
   },
+  "globalReach": {
+    "section": {
+      "eyebrow": "WORLDWIDE PRESENCE",
+      "heading": "Global Reach",
+      "intro": "From our manufacturing base east of Cairo, KAG products travel to retailers, distributors, and food-service partners across four continents — with the documentation, logistics, and consistency that cross-border supply demands."
+    },
+    "origin": { "label": "Cairo" },
+    "destinations": {
+      "dubai": "Dubai",
+      "riyadh": "Riyadh",
+      "amman": "Amman",
+      "beirut": "Beirut",
+      "london": "London",
+      "rotterdam": "Rotterdam",
+      "paris": "Paris",
+      "nairobi": "Nairobi",
+      "lagos": "Lagos",
+      "casablanca": "Casablanca",
+      "saoPaulo": "São Paulo"
+    },
+    "regions": [
+      { "name": "Middle East", "countries": "UAE · Saudi Arabia · Jordan · Lebanon" },
+      { "name": "Europe",      "countries": "United Kingdom · Netherlands · France" },
+      { "name": "Africa",      "countries": "Kenya · Nigeria · Morocco" },
+      { "name": "South America","countries": "Brazil" }
+    ]
+  },
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
     "heading": "More than 50 products across our categories",
