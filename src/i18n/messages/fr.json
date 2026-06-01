@@ -92,5 +92,20 @@
         "cta": "Atteindre les marchés mondiaux"
       }
     }
+  },
+  "ourProducts": {
+    "eyebrow": "NOS PRODUITS",
+    "heading": "Ce que contient chaque pot Yamkers",
+    "intro": "Six incontournables Yamkers du quotidien — produits en interne selon les normes internationales de sécurité alimentaire et prêts à rejoindre les garde-mangers égyptiens et internationaux.",
+    "previewLabel": "Survolez pour prévisualiser",
+    "cta": "Voir tous les produits",
+    "items": {
+      "sauce":           { "name": "Yamkers Sauce Tomate",       "brand": "Yamkers" },
+      "favebeans":       { "name": "Yamkers Fèves",              "brand": "Yamkers" },
+      "favebeansTehina": { "name": "Yamkers Fèves au Tahini",    "brand": "Yamkers" },
+      "chiliFavebeans":  { "name": "Yamkers Fèves Piquantes",    "brand": "Yamkers" },
+      "mangoJar":        { "name": "Yamkers Confiture de Mangue","brand": "Yamkers" },
+      "appleJam":        { "name": "Yamkers Confiture de Pomme", "brand": "Yamkers" }
+    }
   }
 }

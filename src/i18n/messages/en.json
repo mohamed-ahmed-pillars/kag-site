@@ -92,5 +92,20 @@
         "cta": "Reach Global Markets"
       }
     }
+  },
+  "ourProducts": {
+    "eyebrow": "OUR PRODUCTS",
+    "heading": "What's in every Yamkers jar",
+    "intro": "Six everyday Yamkers favourites — produced in-house to international food-safety standards and ready for Egyptian and global pantries alike.",
+    "previewLabel": "Hover to preview",
+    "cta": "See All Products",
+    "items": {
+      "sauce":           { "name": "Yamkers Sauce",                  "brand": "Yamkers" },
+      "favebeans":       { "name": "Yamkers Fava Beans",             "brand": "Yamkers" },
+      "favebeansTehina": { "name": "Yamkers Fava Beans with Tehina", "brand": "Yamkers" },
+      "chiliFavebeans":  { "name": "Yamkers Chili Fava Beans",       "brand": "Yamkers" },
+      "mangoJar":        { "name": "Yamkers Mango Jar",              "brand": "Yamkers" },
+      "appleJam":        { "name": "Yamkers Apple Jam",              "brand": "Yamkers" }
+    }
   }
 }
