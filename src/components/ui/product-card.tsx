@@ -35,7 +35,7 @@ function Chip({
   const cls =
     tone === "spec"
       ? "bg-secondary/20 text-secondary"
-      : "bg-primary/30 text-primary-foreground";
+      : "bg-white/15 text-white";
   return (
     <span
       className={`rounded-full px-2 py-1 text-[11px] leading-none font-medium ${cls}`}
@@ -96,7 +96,7 @@ export default function ProductCard({
         )}
       </CardHoverRevealMain>
 
-      <CardHoverRevealContent className="space-y-3 rounded-2xl bg-zinc-900/75 text-zinc-50">
+      <CardHoverRevealContent className="space-y-3 rounded-2xl bg-primary/75 text-white">
         <div className="flex items-center gap-2">
           <Image
             src={brandLogos[product.brand]}
@@ -105,13 +105,13 @@ export default function ProductCard({
             height={20}
             className="h-5 w-5 object-contain"
           />
-          <span className="rounded-full bg-zinc-800 px-2 py-0.5 text-[10px] uppercase tracking-wider">
+          <span className="rounded-full bg-white/15 px-2 py-0.5 text-[10px] uppercase tracking-wider">
             {labels.brand[product.brand]}
           </span>
         </div>
 
         <h3 className="text-base font-semibold leading-tight">{name}</h3>
-        <p className="text-xs leading-relaxed text-zinc-50/75">{description}</p>
+        <p className="text-xs leading-relaxed text-white/75">{description}</p>
 
         <div className="flex flex-wrap gap-1.5">
           <Chip tone="spec">
