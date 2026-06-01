@@ -8,7 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { Globe2 } from "lucide-react";
+import { Boxes, Globe2, Users } from "lucide-react";
 import { WorldMap } from "@/components/ui/map";
 
 const CAIRO = { lat: 30.0084, lng: 31.5333, label: "Cairo" } as const;
@@ -69,7 +69,11 @@ export default function GlobalReachSection() {
     end: { lat: d.lat, lng: d.lng, label: t(`destinations.${d.key}`) },
   }));
 
-  const regions = t.raw("regions") as Array<{ name: string; countries: string }>;
+  const stats = [
+    { icon: Boxes,  value: t("stats.products.value"),  label: t("stats.products.label") },
+    { icon: Globe2, value: t("stats.markets.value"),   label: t("stats.markets.label") },
+    { icon: Users,  value: t("stats.clients.value"),   label: t("stats.clients.label") },
+  ];
 
   return (
     <section
@@ -131,21 +135,26 @@ export default function GlobalReachSection() {
         </motion.div>
 
         <motion.div
-          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
           variants={itemVariants}
         >
-          {regions.map((r, i) => (
+          {stats.map(({ icon: Icon, value, label }, i) => (
             <motion.div
               key={i}
-              className="group rounded-xl border border-primary/10 bg-card/60 p-5 backdrop-blur-sm transition-colors hover:border-primary/30"
+              className="group flex items-center gap-4 rounded-xl border border-primary/10 bg-card/60 p-6 backdrop-blur-sm transition-colors hover:border-primary/30"
               variants={itemVariants}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
-              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                {r.name}
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+                <Icon className="h-6 w-6" />
               </div>
-              <div className="text-sm text-foreground/80 leading-relaxed">
-                {r.countries}
+              <div className="flex flex-col">
+                <span className="font-display text-3xl font-bold leading-none text-primary">
+                  {value}
+                </span>
+                <span className="mt-1 text-sm text-foreground/70">
+                  {label}
+                </span>
               </div>
             </motion.div>
           ))}

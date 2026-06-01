@@ -183,12 +183,11 @@
       "casablanca": "Casablanca",
       "saoPaulo": "São Paulo"
     },
-    "regions": [
-      { "name": "Middle East", "countries": "UAE · Saudi Arabia · Jordan · Lebanon" },
-      { "name": "Europe",      "countries": "United Kingdom · Netherlands · France" },
-      { "name": "Africa",      "countries": "Kenya · Nigeria · Morocco" },
-      { "name": "South America","countries": "Brazil" }
-    ]
+    "stats": {
+      "products": { "value": "50+",  "label": "Products across categories" },
+      "markets":  { "value": "20+",  "label": "Export markets worldwide" },
+      "clients":  { "value": "270+", "label": "Clients & retail partners" }
+    }
   },
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",

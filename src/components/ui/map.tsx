@@ -43,10 +43,16 @@ export function WorldMap({
     [map, dotColor],
   );
 
+  // dotted-map uses a Mercator projection with a cropped region (not the full
+  // -90/+90 lat range), so we must use map.getPin() to project lat/lng into
+  // the SVG's coordinate space (map.image.width × map.image.height) and then
+  // scale to our 800×400 overlay viewBox so all the existing SVG sizes
+  // (circle radii, curve offsets, label boxes) stay correct.
   const projectPoint = (lat: number, lng: number) => {
-    const x = (lng + 180) * (800 / 360);
-    const y = (90 - lat) * (400 / 180);
-    return { x, y };
+    const pin = map.getPin({ lat, lng });
+    if (!pin) return { x: 0, y: 0 };
+    const { width, height } = map.image;
+    return { x: (pin.x / width) * 800, y: (pin.y / height) * 400 };
   };
 
   const createCurvedPath = (
@@ -67,7 +73,7 @@ export function WorldMap({
     <div className="relative aspect-[2/1] w-full overflow-hidden rounded-2xl bg-card/40 font-sans md:aspect-[2.5/1] lg:aspect-[2/1]">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="pointer-events-none h-full w-full select-none object-cover [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
+        className="pointer-events-none h-full w-full select-none object-contain [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
         alt="world map"
         height={495}
         width={1056}
