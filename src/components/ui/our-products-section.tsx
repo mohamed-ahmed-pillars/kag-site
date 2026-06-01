@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import { Zap } from "lucide-react";
 import { FlowButton } from "@/components/ui/flow-button";
-import { ProductCard } from "@/components/ui/product-card";
+import { FeaturedProductCard } from "@/components/ui/featured-product-card";
 
 type ProductKey =
   | "sauce"
@@ -126,7 +126,7 @@ export default function OurProductsSection() {
               variants={itemVariants}
               className="aspect-video"
             >
-              <ProductCard
+              <FeaturedProductCard
                 brand={t(`items.${product.key}.brand`)}
                 name={t(`items.${product.key}.name`)}
                 imageUrl={product.image}

@@ -1,127 +1,140 @@
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
-import { useReducedMotion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import {
+  CardHoverReveal,
+  CardHoverRevealContent,
+  CardHoverRevealMain,
+} from "@/components/ui/reveal-on-hover";
+import type { Product } from "@/lib/data/products";
 
-type ProductCardProps = {
-  brand: string;
-  name: string;
-  imageUrl: string;
-  videoUrl: string;
-  themeColor: string;
-  className?: string;
+interface ProductCardProps {
+  product: Product;
+  locale: string;
+  labels: {
+    brand: Record<Product["brand"], string>;
+    packaging: Record<Product["packaging"]["type"], string>;
+    perCarton: string;
+    net: string;
+    drained: string;
+  };
+}
+
+const brandLogos: Record<Product["brand"], string> = {
+  yamkers: "/yamkers_logo.png",
+  tasbeka: "/tasbeka_logo.png",
 };
 
-export function ProductCard({
-  brand,
-  name,
-  imageUrl,
-  videoUrl,
-  themeColor,
-  className,
-}: ProductCardProps) {
-  const rootRef = React.useRef<HTMLDivElement>(null);
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-  const reducedMotion = useReducedMotion();
-  const [isActive, setIsActive] = React.useState(false);
+function Chip({
+  children,
+  tone,
+}: {
+  children: React.ReactNode;
+  tone: "spec" | "pack";
+}) {
+  const cls =
+    tone === "spec"
+      ? "bg-secondary/20 text-secondary"
+      : "bg-primary/30 text-primary-foreground";
+  return (
+    <span
+      className={`rounded-full px-2 py-1 text-[11px] leading-none font-medium ${cls}`}
+    >
+      {children}
+    </span>
+  );
+}
 
-  React.useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (isActive && !reducedMotion) {
-      v.play().catch(() => { });
-    } else {
-      v.pause();
-      v.currentTime = 0;
-    }
-  }, [isActive, reducedMotion]);
-
-  React.useEffect(() => {
-    if (reducedMotion) return;
-    const isCoarse =
-      typeof window !== "undefined" &&
-      window.matchMedia("(pointer: coarse)").matches;
-    if (!isCoarse) return;
-    const node = rootRef.current;
-    if (!node) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          setIsActive(entry.isIntersecting);
-        }
-      },
-      { threshold: 0.6 },
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, [reducedMotion]);
-
-  const onPointerEnter = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (e.pointerType === "mouse") setIsActive(true);
-  };
-  const onPointerLeave = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (e.pointerType === "mouse") setIsActive(false);
-  };
-
+function Placeholder({ name }: { name: string }) {
   return (
     <div
-      ref={rootRef}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
-      style={{ "--theme-color": themeColor } as React.CSSProperties}
-      className={cn("group h-full w-full", className)}
+      className="relative h-full w-full bg-cover bg-center"
+      style={{ backgroundImage: "url('/bg6.jpg')" }}
+      role="img"
+      aria-label={name}
     >
-      <div
-        className={cn(
-          "relative block h-full w-full overflow-hidden rounded-2xl",
-          "shadow-[0_0_40px_-15px_hsl(var(--theme-color)/0.5)]",
-          "transition-all duration-500 ease-out",
-          "group-hover:scale-[1.03]",
-          "group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.65)]",
-        )}
-      >
+      <div className="absolute inset-0 bg-primary/40" />
+      <div className="absolute inset-0 flex items-center justify-center">
         <Image
-          src={imageUrl}
-          alt={name}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          src="/navbarLogo.svg"
+          alt=""
+          width={140}
+          height={48}
+          className="opacity-50"
         />
-
-        <video
-          ref={videoRef}
-          src={videoUrl}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-          className={cn(
-            "absolute inset-0 h-full w-full object-cover transition-opacity duration-500",
-            isActive ? "opacity-100" : "opacity-0",
-          )}
-        />
-
-        <div
-          aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, hsl(var(--theme-color) / 0.75), hsl(var(--theme-color) / 0.1) 35%, transparent 70%)",
-          }}
-        />
-
-        <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/85">
-            {brand}
-          </span>
-          <h3 className="font-heading mt-2 text-2xl md:text-3xl font-bold tracking-tight">
-            {name}
-          </h3>
-        </div>
       </div>
     </div>
+  );
+}
+
+export default function ProductCard({
+  product,
+  locale,
+  labels,
+}: ProductCardProps) {
+  const isAr = locale === "ar";
+  const name = isAr ? product.nameAr : product.nameEn;
+  const description = isAr ? product.descriptionAr : product.descriptionEn;
+  const netWeight = isAr ? product.specs.netWeightAr : product.specs.netWeight;
+  const drained = isAr
+    ? product.specs.drainedWeightAr
+    : product.specs.drainedWeight;
+
+  return (
+    <CardHoverReveal className="aspect-[4/5] w-full rounded-2xl border border-primary/10 bg-card shadow-sm">
+      <CardHoverRevealMain>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={name}
+            fill
+            sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+          />
+        ) : (
+          <Placeholder name={name} />
+        )}
+      </CardHoverRevealMain>
+
+      <CardHoverRevealContent className="space-y-3 rounded-2xl bg-zinc-900/75 text-zinc-50">
+        <div className="flex items-center gap-2">
+          <Image
+            src={brandLogos[product.brand]}
+            alt=""
+            width={20}
+            height={20}
+            className="h-5 w-5 object-contain"
+          />
+          <span className="rounded-full bg-zinc-800 px-2 py-0.5 text-[10px] uppercase tracking-wider">
+            {labels.brand[product.brand]}
+          </span>
+        </div>
+
+        <h3 className="text-base font-semibold leading-tight">{name}</h3>
+        <p className="text-xs leading-relaxed text-zinc-50/75">{description}</p>
+
+        <div className="flex flex-wrap gap-1.5">
+          <Chip tone="spec">
+            {labels.net} {netWeight}
+          </Chip>
+          {drained && (
+            <Chip tone="spec">
+              {labels.drained} {drained}
+            </Chip>
+          )}
+          {product.specs.concentration && (
+            <Chip tone="spec">{product.specs.concentration}</Chip>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          <Chip tone="pack">{labels.packaging[product.packaging.type]}</Chip>
+          <Chip tone="pack">
+            {product.packaging.unitsPerCarton}
+            {labels.perCarton}
+          </Chip>
+        </div>
+      </CardHoverRevealContent>
+    </CardHoverReveal>
   );
 }
