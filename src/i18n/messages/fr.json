@@ -254,5 +254,47 @@
         "body": "Pour toute question concernant ces conditions générales, contactez-nous à notre site : 10th of Ramadan City, Zone industrielle, Gouvernorat de Charkia, Égypte, ou par e-mail à wecare@kagegypt.com."
       }
     ]
+  },
+  "privacy": {
+    "hero": {
+      "badge": "Mentions légales",
+      "title": "Politique de confidentialité",
+      "subtitle": "Votre vie privée nous tient à cœur. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "lastUpdated": "Dernière mise à jour : avril 2026",
+    "sections": [
+      {
+        "title": "Informations que nous collectons",
+        "body": "Nous collectons les informations que vous nous fournissez directement, notamment vos nom, adresse e-mail, numéro de téléphone, informations sur votre entreprise et tout message envoyé lors de votre prise de contact ou d'une demande de devis."
+      },
+      {
+        "title": "Comment nous utilisons vos informations",
+        "body": "Nous utilisons les informations collectées pour répondre à vos demandes, traiter les devis, envoyer des bulletins et des mises à jour (avec votre accord), améliorer notre site et nos services, et nous conformer à nos obligations légales."
+      },
+      {
+        "title": "Partage des informations",
+        "body": "Nous ne vendons, n'échangeons ni ne transférons vos données personnelles à des tiers sans votre consentement, sauf lorsque la loi l'exige ou pour protéger nos droits et la sécurité d'autrui."
+      },
+      {
+        "title": "Sécurité des données",
+        "body": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos données personnelles contre tout accès, altération, divulgation ou destruction non autorisés. Aucune méthode de transmission sur Internet n'étant sûre à 100 %, nous ne pouvons toutefois garantir une sécurité absolue."
+      },
+      {
+        "title": "Cookies",
+        "body": "Notre site peut utiliser des cookies pour améliorer votre expérience de navigation. Vous pouvez choisir de désactiver les cookies via les paramètres de votre navigateur, ce qui peut toutefois affecter certaines fonctionnalités du site."
+      },
+      {
+        "title": "Vos droits",
+        "body": "Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles à tout moment. Vous pouvez également vous désabonner de nos communications à tout moment en nous contactant directement ou via le lien de désabonnement présent dans nos e-mails."
+      },
+      {
+        "title": "Informations de contact",
+        "body": "Pour toute demande ou question relative à la confidentialité, contactez-nous à : 10th of Ramadan City, Zone industrielle, Gouvernorat de Charkia, Égypte, ou par e-mail à wecare@kagegypt.com."
+      },
+      {
+        "title": "Mises à jour de la politique",
+        "body": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une nouvelle date de révision. Nous vous encourageons à consulter cette politique périodiquement."
+      }
+    ]
   }
 }
