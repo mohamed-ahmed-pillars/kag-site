@@ -139,6 +139,30 @@
       "secondary": "See our brands"
     }
   },
+  "export": {
+    "section": {
+      "eyebrow": "GLOBAL REACH",
+      "heading": "Export",
+      "intro": "Egyptian quality, delivered worldwide — KAG products travel reliably across borders, backed by export documentation, logistics partners, and importers who trust consistent supply."
+    },
+    "eyebrow": "Export",
+    "heading": {
+      "lead": "Egyptian shelves,",
+      "accent": "global aisles.",
+      "trail": ""
+    },
+    "description": "From Cairo to retail floors across the Gulf, Africa, and beyond — we partner with importers who value Egyptian origin, consistent batches, and on-time delivery at retail volume.",
+    "features": [
+      "Established regional & global markets",
+      "Export documentation & logistics partners",
+      "Trusted importer & distributor network",
+      "Egyptian-origin consistency at scale"
+    ],
+    "cta": {
+      "primary": "Reach Global Markets",
+      "secondary": "Explore Products"
+    }
+  },
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
     "heading": "More than 50 products across our categories",

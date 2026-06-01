@@ -139,6 +139,30 @@
       "secondary": "Voir nos marques"
     }
   },
+  "export": {
+    "section": {
+      "eyebrow": "RAYONNEMENT MONDIAL",
+      "heading": "Export",
+      "intro": "La qualité égyptienne livrée dans le monde entier — les produits KAG voyagent en toute fiabilité au-delà des frontières, soutenus par notre documentation d'exportation, nos partenaires logistiques et des importateurs qui font confiance à un approvisionnement constant."
+    },
+    "eyebrow": "Export",
+    "heading": {
+      "lead": "Rayons égyptiens,",
+      "accent": "allées mondiales.",
+      "trail": ""
+    },
+    "description": "Du Caire aux rayons de détail du Golfe, d'Afrique et d'ailleurs — nous travaillons avec des importateurs qui valorisent l'origine égyptienne, des lots constants et des livraisons à temps au volume du commerce de détail.",
+    "features": [
+      "Marchés régionaux et mondiaux établis",
+      "Documentation d'exportation et partenaires logistiques",
+      "Réseau de confiance d'importateurs et de distributeurs",
+      "Constance de l'origine égyptienne à grande échelle"
+    ],
+    "cta": {
+      "primary": "Atteindre les marchés mondiaux",
+      "secondary": "Découvrir les produits"
+    }
+  },
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
     "heading": "Plus de 50 produits répartis dans nos catégories",
