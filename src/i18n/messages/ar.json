@@ -44,17 +44,17 @@
     "pillars": {
       "ourBrands": {
         "title": "Our Brands",
-        "subtitle": "Yamkers & Tasbeka",
-        "description": "Two trusted household names crafted in Egypt — covering tomato sauces, jams, juices, and fava beans for everyday tables.",
-        "categories": ["Sauces", "Jams", "Juices", "Fava Beans"],
-        "cta": {
-          "primary": "See Our Products",
-          "secondary": "Request a Quote"
-        }
+        "description": "KAG's own household brands — Yamkers and Tasbeka — covering tomato sauces, jams, juices, and fava beans for everyday Egyptian tables.",
+        "items": [
+          "Yamkers — sauces, jams, juices & fava beans",
+          "Tasbeka — pantry essentials for everyday tables",
+          "Crafted to international food-safety standards",
+          "Distributed across Egypt and exported regionally"
+        ],
+        "cta": "See Our Products"
       },
       "privateLabel": {
         "title": "Private Labeling",
-        "subtitle": "Your brand, our expertise",
         "description": "We produce tailor-made private-label products for international clients — modern manufacturing, premium ingredients, and consistent quality at scale.",
         "items": [
           "Custom recipe & packaging",
@@ -66,7 +66,6 @@
       },
       "customRecipe": {
         "title": "Custom Recipe",
-        "subtitle": "From flavor brief to shelf",
         "description": "Bring us a flavor profile, a target market, or a competitor benchmark — our R&D team develops, samples, and scales the recipe that fits.",
         "items": [
           "Flavor profiling & formulation",
@@ -78,7 +77,6 @@
       },
       "export": {
         "title": "Export",
-        "subtitle": "Egyptian origin, global shelves",
         "description": "KAG products move reliably across borders — backed by export documentation, logistics partners, and importers who value consistent supply.",
         "items": [
           "Established regional & global markets",
