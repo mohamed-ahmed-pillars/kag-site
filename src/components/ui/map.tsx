@@ -88,8 +88,14 @@ export function WorldMap({
     start: { x: number; y: number },
     end: { x: number; y: number },
   ) => {
+    // Bow proportional to chord length, capped, so short arcs to Paris/Berlin
+    // don't visually detour over London/Rotterdam.
+    const dx = end.x - start.x;
+    const dy = end.y - start.y;
+    const chord = Math.hypot(dx, dy);
+    const bow = Math.min(chord * 0.18, 28);
     const midX = (start.x + end.x) / 2;
-    const midY = Math.min(start.y, end.y) - 50;
+    const midY = Math.min(start.y, end.y) - bow;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
@@ -246,6 +252,12 @@ export function WorldMap({
             const cy = p.y + (dy / dist) * RADIAL_OFFSET;
             labelX = cx - LABEL_W / 2;
             labelY = cy - LABEL_H / 2;
+            // If the radial position would clip the top edge (e.g. Berlin
+            // near the map's lat max), drop the label below the dot instead.
+            if (labelY < 4) {
+              labelX = p.x - LABEL_W / 2;
+              labelY = p.y + 10;
+            }
           }
           const fill = p.isOrigin ? lineColor : secondaryColor;
           const baseR = p.isOrigin ? 6 : 3;
