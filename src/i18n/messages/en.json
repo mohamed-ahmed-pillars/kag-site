@@ -41,10 +41,12 @@
     "eyebrow": "WHAT WE OFFER",
     "heading": "Four pillars, one promise",
     "intro": "From our own household brands to private-label production, bespoke recipes, and global export — every pillar is built on KAG's commitment to quality, consistency, and partnership.",
+    "rfq": "Request a Quote",
     "pillars": {
       "ourBrands": {
         "title": "Our Brands",
         "description": "KAG's own household brands — Yamkers and Tasbeka — covering tomato sauces, jams, juices, and fava beans for everyday Egyptian tables.",
+        "summary": "Two beloved Egyptian brands, one trusted source for everyday pantry staples.",
         "items": [
           "Yamkers — sauces, jams, juices & fava beans",
           "Tasbeka — pantry essentials for everyday tables",
@@ -56,6 +58,7 @@
       "privateLabel": {
         "title": "Private Labeling",
         "description": "We produce tailor-made private-label products for international clients — modern manufacturing, premium ingredients, and consistent quality at scale.",
+        "summary": "Your brand on our lines — premium manufacturing at retail scale.",
         "items": [
           "Custom recipe & packaging",
           "Modern, automated production lines",
@@ -67,6 +70,7 @@
       "customRecipe": {
         "title": "Custom Recipe",
         "description": "Bring us a flavor profile, a target market, or a competitor benchmark — our R&D team develops, samples, and scales the recipe that fits.",
+        "summary": "From concept to shelf-ready product — R&D that delivers.",
         "items": [
           "Flavor profiling & formulation",
           "Sensory & shelf-life testing",
@@ -78,6 +82,7 @@
       "export": {
         "title": "Export",
         "description": "KAG products move reliably across borders — backed by export documentation, logistics partners, and importers who value consistent supply.",
+        "summary": "Egyptian quality, delivered worldwide with reliable supply.",
         "items": [
           "Established regional & global markets",
           "Logistics & export documentation",

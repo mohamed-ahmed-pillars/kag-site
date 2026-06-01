@@ -210,10 +210,11 @@ export default function WhatWeOfferSection() {
                   {p.key === "ourBrands" && (
                     <OurBrandsCard
                       title={t("pillars.ourBrands.title")}
-                      description={t("pillars.ourBrands.description")}
+                      summary={t("pillars.ourBrands.summary")}
                       items={t.raw("pillars.ourBrands.items") as string[]}
                       ctaText={t("pillars.ourBrands.cta")}
                       ctaHref="/products"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -221,10 +222,11 @@ export default function WhatWeOfferSection() {
                     <StandardCard
                       image="/privatelable.jpg"
                       title={t("pillars.privateLabel.title")}
-                      description={t("pillars.privateLabel.description")}
+                      summary={t("pillars.privateLabel.summary")}
                       items={t.raw("pillars.privateLabel.items") as string[]}
                       ctaText={t("pillars.privateLabel.cta")}
                       ctaHref="/contact"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -232,10 +234,11 @@ export default function WhatWeOfferSection() {
                     <StandardCard
                       image="/recipe.jpg"
                       title={t("pillars.customRecipe.title")}
-                      description={t("pillars.customRecipe.description")}
+                      summary={t("pillars.customRecipe.summary")}
                       items={t.raw("pillars.customRecipe.items") as string[]}
                       ctaText={t("pillars.customRecipe.cta")}
                       ctaHref="/contact"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -243,10 +246,11 @@ export default function WhatWeOfferSection() {
                     <StandardCard
                       image="/exportstrip.jpg"
                       title={t("pillars.export.title")}
-                      description={t("pillars.export.description")}
+                      summary={t("pillars.export.summary")}
                       items={t.raw("pillars.export.items") as string[]}
                       ctaText={t("pillars.export.cta")}
                       ctaHref="/export"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -336,19 +340,21 @@ function BrandLogoCarousel() {
 
 type OurBrandsCardProps = {
   title: string;
-  description: string;
+  summary: string;
   items: string[];
   ctaText: string;
   ctaHref: string;
+  rfqText: string;
   isActive: boolean;
 };
 
 function OurBrandsCard({
   title,
-  description,
+  summary,
   items,
   ctaText,
   ctaHref,
+  rfqText,
   isActive,
 }: OurBrandsCardProps) {
   return (
@@ -381,7 +387,7 @@ function OurBrandsCard({
                 : "text-muted-foreground/80 line-clamp-2",
             )}
           >
-            {description}
+            {summary}
           </p>
         </div>
 
@@ -408,7 +414,8 @@ function OurBrandsCard({
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-end">
+              <div className="flex flex-wrap justify-end gap-3">
+                <FlowButton href="/rfq" text={rfqText} className="px-6 py-2" />
                 <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
               </div>
             </div>
@@ -422,20 +429,22 @@ function OurBrandsCard({
 type StandardCardProps = {
   image: string;
   title: string;
-  description: string;
+  summary: string;
   items: string[];
   ctaText: string;
   ctaHref: string;
+  rfqText: string;
   isActive: boolean;
 };
 
 function StandardCard({
   image,
   title,
-  description,
+  summary,
   items,
   ctaText,
   ctaHref,
+  rfqText,
   isActive,
 }: StandardCardProps) {
   return (
@@ -465,7 +474,7 @@ function StandardCard({
                 : "text-muted-foreground/80 line-clamp-2",
             )}
           >
-            {description}
+            {summary}
           </p>
         </div>
 
@@ -492,7 +501,8 @@ function StandardCard({
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-end">
+              <div className="flex flex-wrap justify-end gap-3">
+                <FlowButton href="/rfq" text={rfqText} className="px-6 py-2" />
                 <FlowButton href={ctaHref} text={ctaText} className="px-6 py-2" />
               </div>
             </div>

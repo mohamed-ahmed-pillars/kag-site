@@ -41,10 +41,12 @@
     "eyebrow": "CE QUE NOUS OFFRONS",
     "heading": "Quatre piliers, une promesse",
     "intro": "De nos propres marques familiales à la production en marque privée, en passant par les recettes sur mesure et l'exportation mondiale — chaque pilier repose sur l'engagement de KAG envers la qualité, la cohérence et le partenariat.",
+    "rfq": "Demander un devis",
     "pillars": {
       "ourBrands": {
         "title": "Nos Marques",
         "description": "Les marques familiales de KAG — Yamkers et Tasbeka — couvrant les sauces tomate, les confitures, les jus et les fèves pour les tables égyptiennes du quotidien.",
+        "summary": "Deux marques égyptiennes appréciées, une source de confiance pour les essentiels du quotidien.",
         "items": [
           "Yamkers — sauces, confitures, jus & fèves",
           "Tasbeka — essentiels du garde-manger pour le quotidien",
@@ -56,6 +58,7 @@
       "privateLabel": {
         "title": "Marque Privée",
         "description": "Nous produisons des produits sur mesure en marque privée pour des clients internationaux — fabrication moderne, ingrédients premium et qualité constante à grande échelle.",
+        "summary": "Votre marque sur nos lignes — fabrication premium à l'échelle du commerce de détail.",
         "items": [
           "Recette et emballage personnalisés",
           "Lignes de production modernes et automatisées",
@@ -67,6 +70,7 @@
       "customRecipe": {
         "title": "Recette Personnalisée",
         "description": "Apportez-nous un profil de saveur, un marché cible ou une référence concurrente — notre équipe R&D développe, échantillonne et met à l'échelle la recette qui vous correspond.",
+        "summary": "Du concept au produit prêt pour le rayon — une R&D qui livre.",
         "items": [
           "Profilage des saveurs & formulation",
           "Tests sensoriels & de durée de conservation",
@@ -78,6 +82,7 @@
       "export": {
         "title": "Exportation",
         "description": "Les produits KAG traversent les frontières de manière fiable — soutenus par la documentation d'exportation, des partenaires logistiques et des importateurs qui valorisent un approvisionnement constant.",
+        "summary": "Qualité égyptienne, livrée dans le monde entier avec un approvisionnement fiable.",
         "items": [
           "Marchés régionaux et mondiaux établis",
           "Logistique & documentation d'exportation",
