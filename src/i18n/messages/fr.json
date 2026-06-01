@@ -224,5 +224,35 @@
       "mangoJar":        { "name": "Confiture de Mangue","brand": "Yamkers" },
       "appleJam":        { "name": "Confiture de Pomme", "brand": "Yamkers" }
     }
+  },
+  "terms": {
+    "hero": {
+      "badge": "Mentions légales",
+      "title": "Conditions générales",
+      "subtitle": "Veuillez lire attentivement ces conditions avant d'utiliser notre site et nos services."
+    },
+    "lastUpdated": "Dernière mise à jour : avril 2026",
+    "sections": [
+      {
+        "title": "Acceptation des conditions",
+        "body": "En accédant à ce site et en l'utilisant, vous acceptez d'être lié par les termes et dispositions du présent accord. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site."
+      },
+      {
+        "title": "Licence d'utilisation",
+        "body": "Vous êtes autorisé à télécharger temporairement une copie des contenus du site KAG pour un usage personnel et non commercial. Il s'agit d'une concession de licence, et non d'un transfert de propriété. Dans le cadre de cette licence, vous ne pouvez pas modifier ou copier les contenus, les utiliser à des fins commerciales, tenter de décompiler ou de désosser tout logiciel présent sur le site, supprimer toute mention de droits d'auteur, ni transférer les contenus à un tiers."
+      },
+      {
+        "title": "Avertissement",
+        "body": "Les contenus du site KAG sont fournis « en l'état ». KAG ne fournit aucune garantie, explicite ou implicite, et décline toute autre garantie, notamment les garanties implicites de qualité marchande, d'adéquation à un usage particulier ou de non-violation de la propriété intellectuelle."
+      },
+      {
+        "title": "Limitations de responsabilité",
+        "body": "En aucun cas KAG ou ses fournisseurs ne pourront être tenus responsables de dommages (y compris, sans limitation, les pertes de données ou de profits, ou l'interruption d'activité) résultant de l'utilisation ou de l'incapacité d'utiliser les contenus du site KAG, même si KAG ou un représentant autorisé a été informé verbalement ou par écrit de la possibilité de tels dommages."
+      },
+      {
+        "title": "Informations de contact",
+        "body": "Pour toute question concernant ces conditions générales, contactez-nous à notre site : 10th of Ramadan City, Zone industrielle, Gouvernorat de Charkia, Égypte, ou par e-mail à wecare@kagegypt.com."
+      }
+    ]
   }
 }
