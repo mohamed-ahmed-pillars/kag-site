@@ -6,6 +6,7 @@ import OurProductsSection from '@/components/ui/our-products-section';
 import PrivateLabelSection from '@/components/ui/private-label-section';
 import ExportSection from '@/components/ui/export-section';
 import GlobalReachSection from '@/components/ui/global-reach-section';
+import NewsSection from '@/components/ui/news-section';
 
 export default async function HomePage({
   params,
@@ -23,6 +24,7 @@ export default async function HomePage({
       <PrivateLabelSection />
       <ExportSection />
       <GlobalReachSection />
+      <NewsSection locale={locale} />
     </main>
   );
 }
