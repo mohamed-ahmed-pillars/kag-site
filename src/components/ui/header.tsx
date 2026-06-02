@@ -97,11 +97,11 @@ export function Header() {
         </Link>
 
         <div className="hidden items-center gap-5 md:flex">
-          <Link href="/" className={buttonVariants({ variant: "ghost" })}>
+          <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "text-primary hover:text-primary")}>
             {t("home")}
           </Link>
 
-          <Link href="/products" className={buttonVariants({ variant: "ghost" })}>
+          <Link href="/products" className={cn(buttonVariants({ variant: "ghost" }), "text-primary hover:text-primary")}>
             {t("ourBrands")}
           </Link>
 
@@ -113,7 +113,7 @@ export function Header() {
             <button
               onClick={() => setServicesOpen((s) => !s)}
               onFocus={openServices}
-              className={cn(buttonVariants({ variant: "ghost" }), "gap-1")}
+              className={cn(buttonVariants({ variant: "ghost" }), "gap-1 text-primary hover:text-primary")}
               aria-haspopup="menu"
               aria-expanded={servicesOpen}
             >
@@ -143,7 +143,7 @@ export function Header() {
                       href={s.href}
                       role="menuitem"
                       onClick={() => setServicesOpen(false)}
-                      className="block px-3 py-2 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors"
+                      className="block px-3 py-2 text-sm text-primary hover:bg-primary/10 transition-colors"
                     >
                       {t(`services.${s.key}`)}
                     </Link>
@@ -153,7 +153,7 @@ export function Header() {
             )}
           </div>
 
-          <Link href="/news" className={buttonVariants({ variant: "ghost" })}>
+          <Link href="/news" className={cn(buttonVariants({ variant: "ghost" }), "text-primary hover:text-primary")}>
             {t("news")}
           </Link>
 
@@ -191,7 +191,7 @@ export function Header() {
               onClick={closeMobile}
               className={buttonVariants({
                 variant: "ghost",
-                className: "justify-start",
+                className: "justify-start text-primary hover:text-primary",
               })}
             >
               {t("home")}
@@ -202,7 +202,7 @@ export function Header() {
               onClick={closeMobile}
               className={buttonVariants({
                 variant: "ghost",
-                className: "justify-start",
+                className: "justify-start text-primary hover:text-primary",
               })}
             >
               {t("ourBrands")}
@@ -213,7 +213,7 @@ export function Header() {
               className={cn(
                 buttonVariants({
                   variant: "ghost",
-                  className: "justify-start",
+                  className: "justify-start text-primary hover:text-primary",
                 }),
                 "w-full"
               )}
@@ -237,7 +237,7 @@ export function Header() {
                     onClick={closeMobile}
                     className={buttonVariants({
                       variant: "ghost",
-                      className: "justify-start",
+                      className: "justify-start text-primary hover:text-primary",
                     })}
                   >
                     {t(`services.${s.key}`)}
@@ -251,7 +251,7 @@ export function Header() {
               onClick={closeMobile}
               className={buttonVariants({
                 variant: "ghost",
-                className: "justify-start",
+                className: "justify-start text-primary hover:text-primary",
               })}
             >
               {t("news")}
