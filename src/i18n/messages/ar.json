@@ -499,6 +499,7 @@
         "dap": "DAP"
       },
       "fields": {
+        "isExport":            { "label": "هل هذا طلب تصدير؟", "options": { "export": "تصدير (خارج مصر)", "domestic": "محلي (داخل مصر)" } },
         "method":              { "label": "طريقة الشحن" },
         "destinationPort":     { "label": "ميناء / مدينة الوصول", "placeholder": "مثال: جدة، فيليكستو، ممباسا" },
         "estimatedDate":       { "label": "التاريخ المتوقع" },

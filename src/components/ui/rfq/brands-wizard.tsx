@@ -37,6 +37,7 @@ export function BrandsWizard({ preselectProductId }: Props) {
     defaultValues: {
       companyName: '', contactName: '', email: '', phone: '', country: '', address: '',
       products: [{ productId: preselectProductId ?? '', quantity: 1, notes: '' }],
+      isExport: undefined as unknown as boolean,
       shippingMethod: undefined, destinationPort: '', estimatedDate: '', specialRequirements: '',
       exportCertifications: [],
       hp: '',

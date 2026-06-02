@@ -499,6 +499,7 @@
         "dap": "DAP"
       },
       "fields": {
+        "isExport":             { "label": "Is this an export order?", "options": { "export": "Export (outside Egypt)", "domestic": "Domestic (inside Egypt)" } },
         "method":               { "label": "Shipping method" },
         "destinationPort":      { "label": "Destination port / city", "placeholder": "e.g. Felixstowe, Jeddah, Mombasa" },
         "estimatedDate":        { "label": "Estimated date" },

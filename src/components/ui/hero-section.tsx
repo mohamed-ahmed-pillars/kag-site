@@ -99,7 +99,12 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex justify-center">
-            <FlowButton text="Discover More" />
+            <FlowButton
+              text="Discover More"
+              onClick={() => {
+                sectionRef.current?.nextElementSibling?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            />
           </motion.div>
         </motion.div>
       </motion.div>

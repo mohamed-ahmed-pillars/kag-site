@@ -499,6 +499,7 @@
         "dap": "DAP"
       },
       "fields": {
+        "isExport":            { "label": "S'agit-il d'une commande d'export ?", "options": { "export": "Export (hors Égypte)", "domestic": "Domestique (en Égypte)" } },
         "method":              { "label": "Méthode d'expédition" },
         "destinationPort":     { "label": "Port / ville de destination", "placeholder": "ex. Marseille, Jeddah, Mombasa" },
         "estimatedDate":       { "label": "Date estimée" },

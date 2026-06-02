@@ -80,11 +80,16 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
       )}
 
       <Card title={t('sections.shipping')}>
-        <Row label={tSh('method.label')}              value={v.shippingMethod ? tMethods(v.shippingMethod) : undefined} />
+        <Row label={tSh('isExport.label')}            value={v.isExport ? tSh('isExport.options.export') : tSh('isExport.options.domestic')} />
+        {v.isExport && (
+          <Row label={tSh('method.label')}            value={v.shippingMethod ? tMethods(v.shippingMethod) : undefined} />
+        )}
         <Row label={tSh('destinationPort.label')}     value={v.destinationPort} />
         <Row label={tSh('estimatedDate.label')}       value={v.estimatedDate} />
         <Row label={tSh('specialRequirements.label')} value={v.specialRequirements} />
-        <Row label={tLabels('exportCerts')}           value={(v.exportCertifications ?? []).join(', ') || undefined} />
+        {v.isExport && (
+          <Row label={tLabels('exportCerts')}         value={(v.exportCertifications ?? []).join(', ') || undefined} />
+        )}
       </Card>
     </motion.section>
   );

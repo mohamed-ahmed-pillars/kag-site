@@ -7,7 +7,6 @@ import type { ShippingStepInput } from '@/lib/schemas';
 import { TextField } from './text-field';
 import { Chip } from './chip';
 import { stepVariant } from './motion';
-import { isEgypt } from '@/lib/i18n/country';
 
 const METHODS = ['fob', 'cif', 'exw', 'dap'] as const;
 const EXPORT_CERTS = ['halal', 'euOrganic', 'sfda', 'fda', 'jas', 'nsf', 'other'] as const;
@@ -18,16 +17,23 @@ export function ShippingStep() {
   const tCerts = useTranslations('rfq.shipping.exportCerts.chips');
   const tErrors = useTranslations('rfq.errors');
   const { register, setValue, formState: { errors } } = useFormContext<ShippingStepInput>();
-  const country = useWatch({ name: 'country' });
+  const isExport = useWatch({ name: 'isExport' }) as boolean | undefined;
   const method = useWatch({ name: 'shippingMethod' });
   const selectedCerts = (useWatch({ name: 'exportCertifications' }) as string[] | undefined) ?? [];
-  const showExportField = !isEgypt(country);
 
   const toggleCert = (id: string) => {
     if (selectedCerts.includes(id)) {
       setValue('exportCertifications', selectedCerts.filter((c) => c !== id), { shouldDirty: true });
     } else {
       setValue('exportCertifications', [...selectedCerts, id], { shouldDirty: true });
+    }
+  };
+
+  const setExport = (value: boolean) => {
+    setValue('isExport', value, { shouldDirty: true, shouldValidate: true });
+    if (!value) {
+      setValue('shippingMethod', undefined, { shouldDirty: true });
+      setValue('exportCertifications', [], { shouldDirty: true });
     }
   };
 
@@ -39,7 +45,20 @@ export function ShippingStep() {
         <p className="text-sm text-primary/70">{t('intro')}</p>
       </header>
 
-      {!isEgypt(country) && (
+      <div className="space-y-3">
+        <span id="rfq-isExport-label" className="text-xs uppercase tracking-wider text-primary/70">{t('fields.isExport.label')}</span>
+        <div role="radiogroup" aria-labelledby="rfq-isExport-label" className="grid grid-cols-2 gap-3">
+          <Chip role="radio" selected={isExport === true} onClick={() => setExport(true)}>
+            {t('fields.isExport.options.export')}
+          </Chip>
+          <Chip role="radio" selected={isExport === false} onClick={() => setExport(false)}>
+            {t('fields.isExport.options.domestic')}
+          </Chip>
+        </div>
+        {errors.isExport && <span className="text-xs text-red-500">{tErrors('required')}</span>}
+      </div>
+
+      {isExport === true && (
         <div className="space-y-3">
           <span id="rfq-method-label" className="text-xs uppercase tracking-wider text-primary/70">{t('fields.method.label')}</span>
           <div role="radiogroup" aria-labelledby="rfq-method-label" className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -73,7 +92,7 @@ export function ShippingStep() {
         />
       </div>
 
-      {showExportField && (
+      {isExport === true && (
         <div className="space-y-3 rounded-2xl border border-primary/10 bg-card/60 p-5">
           <h3 className="font-display text-base font-bold text-primary">{t('exportCerts.heading')}</h3>
           <p className="text-xs text-primary/70">{t('exportCerts.intro')}</p>
@@ -90,4 +109,4 @@ export function ShippingStep() {
   );
 }
 
-export const SHIPPING_FIELDS = ['shippingMethod', 'destinationPort', 'estimatedDate', 'specialRequirements', 'exportCertifications'] as const;
+export const SHIPPING_FIELDS = ['isExport', 'shippingMethod', 'destinationPort', 'estimatedDate', 'specialRequirements', 'exportCertifications'] as const;

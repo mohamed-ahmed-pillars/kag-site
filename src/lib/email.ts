@@ -63,13 +63,14 @@ function renderContactBlock(data: { companyName: string; contactName: string; em
   ].join('\n');
 }
 
-function renderShippingBlock(data: { shippingMethod?: string; destinationPort: string; estimatedDate?: string; specialRequirements?: string; exportCertifications?: string[] }): string {
+function renderShippingBlock(data: { isExport: boolean; shippingMethod?: string; destinationPort: string; estimatedDate?: string; specialRequirements?: string; exportCertifications?: string[] }): string {
   const lines: string[] = [];
-  if (data.shippingMethod) lines.push(`Method: ${data.shippingMethod.toUpperCase()}`);
+  lines.push(`Export: ${data.isExport ? 'yes' : 'no'}`);
+  if (data.isExport && data.shippingMethod) lines.push(`Method: ${data.shippingMethod.toUpperCase()}`);
   lines.push(`Destination: ${data.destinationPort}`);
   lines.push(`Estimated date: ${data.estimatedDate || '-'}`);
   lines.push(`Special requirements: ${data.specialRequirements || '-'}`);
-  if (data.exportCertifications && data.exportCertifications.length > 0) {
+  if (data.isExport && data.exportCertifications && data.exportCertifications.length > 0) {
     lines.push(`Required certifications: ${data.exportCertifications.join(', ')}`);
   }
   return lines.join('\n');
