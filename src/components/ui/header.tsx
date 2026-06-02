@@ -12,7 +12,6 @@ import { LanguageSelector } from "@/components/ui/language-selector-dropdown";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const serviceItems = [
-  { key: "privateLabel", href: "/services/private-label" },
   { key: "customProduct", href: "/services/custom-product" },
   { key: "export", href: "/services/export" },
 ] as const;
