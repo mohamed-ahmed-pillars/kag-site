@@ -14,7 +14,7 @@ import { FlowButton } from "@/components/ui/flow-button";
 const serviceItems = [
   { key: "privateLabel", href: "/private-label" },
   { key: "customProduct", href: "/services/custom-product" },
-  { key: "export", href: "/services/export" },
+  { key: "export", href: "/export" },
 ] as const;
 
 const HOVER_CLOSE_DELAY = 150;

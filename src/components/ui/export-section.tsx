@@ -131,7 +131,7 @@ export default function ExportSection() {
               variants={itemVariants}
             >
               <FlowButton
-                href="/contact"
+                href="/export"
                 text={t("cta.primary")}
                 variant="primary"
               />
