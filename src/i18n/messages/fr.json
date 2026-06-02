@@ -12,6 +12,17 @@
       "export": "Exportation"
     }
   },
+  "home": {
+    "hero": {
+      "eyebrow": "Bienvenue chez KAG",
+      "heading": {
+        "line1": "Une qualité façonnée",
+        "line2": "Au-delà des frontières"
+      },
+      "subhead": "De la ferme à la table, nous livrons des produits d'excellence et une histoire de qualité aux quatre coins du monde.",
+      "cta": "En savoir plus"
+    }
+  },
   "footer": {
     "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des fèves - pensé pour les communautés locales et les marchés mondiaux.",
     "quickLinks": "Liens rapides",

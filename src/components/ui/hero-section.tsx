@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   motion,
   useScroll,
@@ -13,6 +14,7 @@ import { FlowButton } from "@/components/ui/flow-button";
 const heroVideos = ["/1.mp4", "/2.mp4", "/3.mp4", "/4.mp4", "/testvid.mp4"] as const;
 
 export default function HeroSection() {
+  const t = useTranslations("home.hero");
   const sectionRef = useRef<HTMLElement>(null);
   const [videoIdx, setVideoIdx] = useState(0);
 
@@ -78,29 +80,28 @@ export default function HeroSection() {
             variants={itemVariants}
             className="mb-4 block text-xs font-medium uppercase tracking-[0.3em] text-white/80 md:text-sm"
           >
-            Welcome to KAG
+            {t("eyebrow")}
           </motion.span>
 
           <motion.h1
             variants={itemVariants}
             className="mb-6 text-4xl font-light leading-tight md:text-6xl lg:text-7xl"
           >
-            Crafting Quality
+            {t("heading.line1")}
             <br />
-            Beyond Borders
+            {t("heading.line2")}
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="mx-auto mb-10 max-w-xl text-base text-white/80 md:text-lg"
           >
-            From farm to table, we deliver premium products and a story of
-            excellence to every corner of the world.
+            {t("subhead")}
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex justify-center">
             <FlowButton
-              text="Discover More"
+              text={t("cta")}
               onClick={() => {
                 sectionRef.current?.nextElementSibling?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}

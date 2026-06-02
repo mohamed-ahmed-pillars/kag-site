@@ -12,6 +12,17 @@
       "export": "Export"
     }
   },
+  "home": {
+    "hero": {
+      "eyebrow": "Welcome to KAG",
+      "heading": {
+        "line1": "Crafting Quality",
+        "line2": "Beyond Borders"
+      },
+      "subhead": "From farm to table, we deliver premium products and a story of excellence to every corner of the world.",
+      "cta": "Discover More"
+    }
+  },
   "footer": {
     "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and fava beans - built for local communities and global markets.",
     "quickLinks": "Quick Links",
