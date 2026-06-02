@@ -12,6 +12,7 @@ import { LanguageSelector } from "@/components/ui/language-selector-dropdown";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const serviceItems = [
+  { key: "privateLabel", href: "/private-label" },
   { key: "customProduct", href: "/services/custom-product" },
   { key: "export", href: "/services/export" },
 ] as const;
@@ -102,10 +103,6 @@ export function Header() {
 
           <Link href="/products" className={buttonVariants({ variant: "ghost" })}>
             {t("ourBrands")}
-          </Link>
-
-          <Link href="/private-label" className={buttonVariants({ variant: "ghost" })}>
-            {t("privateLabel")}
           </Link>
 
           <div
@@ -209,17 +206,6 @@ export function Header() {
               })}
             >
               {t("ourBrands")}
-            </Link>
-
-            <Link
-              href="/private-label"
-              onClick={closeMobile}
-              className={buttonVariants({
-                variant: "ghost",
-                className: "justify-start",
-              })}
-            >
-              {t("privateLabel")}
             </Link>
 
             <button

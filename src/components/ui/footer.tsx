@@ -9,15 +9,15 @@ type Href = React.ComponentProps<typeof Link>['href'];
 
 const quickLinks: { key: string; href: Href }[] = [
   { key: 'home', href: '/' },
-  { key: 'products', href: '/#our-products' },
+  { key: 'products', href: '/products' },
   { key: 'news', href: '/news' },
   { key: 'contact', href: '/contact' },
 ];
 
 const serviceLinks: { key: string; href: Href }[] = [
-  { key: 'privateLabel', href: '/#private-label' },
-  { key: 'customProduct', href: '/#what-we-offer' },
-  { key: 'export', href: '/#export' },
+  { key: 'privateLabel', href: '/private-label' },
+  { key: 'customProduct', href: '/services/custom-product' },
+  { key: 'export', href: '/services/export' },
 ];
 
 const companyLinks: { key: 'terms' | 'privacy'; href: Href }[] = [
