@@ -110,7 +110,6 @@ export default function PrivateLabelProcess({
         </motion.p>
 
         <div className="relative">
-          {/* Center spine on md+; left spine on mobile */}
           <div className="pointer-events-none absolute inset-y-0 left-6 w-0.5 bg-primary/20 md:left-1/2 md:-translate-x-1/2" />
 
           <ol className="space-y-12">
@@ -125,14 +124,12 @@ export default function PrivateLabelProcess({
                   viewport={{ once: false, amount: 0.3 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  {/* Number circle */}
-                  <div className="absolute left-6 top-0 z-10 -translate-x-1/2 md:left-1/2">
+                  <div className="absolute left-6 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 md:left-1/2">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary font-display text-lg font-bold text-primary shadow-md">
                       {i + 1}
                     </div>
                   </div>
 
-                  {/* Step card - left side on odd, right side on even (md+); always right of spine on mobile */}
                   <div
                     className={`ps-16 md:ps-0 ${
                       isLeft ? "md:col-start-1 md:pe-12 md:text-end" : "md:col-start-2 md:ps-12"
