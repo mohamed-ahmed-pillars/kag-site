@@ -233,6 +233,83 @@
       "button": "Request a quote"
     }
   },
+  "exportPage": {
+    "hero": {
+      "eyebrow": "EXPORT",
+      "heading": "Egyptian quality, world-ready supply",
+      "subhead": "Containers leave our gate with documentation, certifications, and Incoterms that move through customs without friction - so your shelves stay stocked.",
+      "cta": "Explore capabilities"
+    },
+    "capabilities": {
+      "eyebrow": "CAPABILITIES",
+      "heading": "Everything an importer needs in one supplier",
+      "intro": "Six pillars that make KAG a calm supply line from Cairo to your warehouse - no improvising at the border, no surprises at the port.",
+      "items": {
+        "volume":        { "title": "Volume capacity",        "description": "FCL throughput across sauces, jams, juices, and fava beans - production scheduled to your reorder cadence and seasonal demand." },
+        "branded":       { "title": "Private label & branded","description": "Ship our Yamkers brand or your own private label - same plant, same QA team, same export documentation." },
+        "formats":       { "title": "Packaging formats",      "description": "Tin, glass, PET, and pouch in retail and food-service sizes - tailored to your shelf, your margin, and your customs regime." },
+        "regulatory":    { "title": "Regulatory dossiers",    "description": "Country-specific labels, ingredient declarations, nutritional panels, COA, and destination certificates - prepared by our compliance team." },
+        "shelfLife":     { "title": "Cold chain & dry",       "description": "Ambient-stable lines for long-haul lanes; cold-chain handling when your destination market requires it." },
+        "documentation": { "title": "Export documentation",   "description": "Certificate of origin, commercial invoice, packing list, halal, and health certificates - handled in-house and synchronized with your forwarder." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESS",
+      "heading": "How an export order moves",
+      "intro": "Six stages from first email to delivered container - documented at every step so nothing stalls in transit.",
+      "steps": {
+        "rfq":        { "title": "RFQ",                  "description": "Send us volumes, target markets, and packaging - we respond with indicative pricing and a sampling plan within two business days." },
+        "samples":    { "title": "Samples",              "description": "Sealed samples ship to your office or lab for tasting, regulatory checks, and label proofing - lead time five to seven business days." },
+        "po":         { "title": "PO & documents",       "description": "Lock the spec, sign the PO, share importer details - we prepare the export documentation in parallel so production is unblocked." },
+        "production": { "title": "Production",           "description": "Your order is scheduled into the line, raw materials are released, and QA samples are pulled from every batch." },
+        "loading":    { "title": "Loading",              "description": "The container is stuffed under supervision, sealed, photo-documented, and handed over to your nominated forwarder." },
+        "shipping":   { "title": "Shipping & tracking",  "description": "We share the bill of lading or airway bill and stay on the line through arrival, customs clearance, and delivery." }
+      }
+    },
+    "incoterms": {
+      "eyebrow": "LOGISTICS",
+      "heading": "Incoterms & shipping",
+      "intro": "Pick the level of service that fits your customs setup and forwarder relationships.",
+      "terms": {
+        "fob": { "title": "FOB",  "description": "We deliver goods on board at Alexandria, Damietta, or Port Said. You take ownership and freight from there." },
+        "cif": { "title": "CIF",  "description": "We arrange ocean freight and cargo insurance to your destination port. Your importer handles customs clearance." },
+        "exw": { "title": "EXW",  "description": "Your forwarder collects from our facility in New Cairo. Best when you have established Egyptian logistics." },
+        "dap": { "title": "DAP",  "description": "Door-to-door delivery to your warehouse. We handle freight, insurance, and origin/destination forwarding." }
+      },
+      "ports": {
+        "heading": "Loading ports",
+        "items": ["Alexandria", "Damietta", "Port Said"]
+      },
+      "containers": {
+        "heading": "Container types",
+        "items": ["20' FCL", "40' HC", "40' Reefer"]
+      }
+    },
+    "certifications": { "heading": "Certified production, every batch" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Questions importers ask first",
+      "items": {
+        "moq":           { "question": "What's the minimum order?",
+                           "answer":   "1× 20ft FCL is our standard MOQ across categories. Mixed-product loads are possible - talk to us about your assortment." },
+        "leadTime":      { "question": "How long is the lead time?",
+                           "answer":   "First shipments typically leave within four to six weeks of PO. Established reorders can ship in two to three weeks depending on category and packaging." },
+        "samples":       { "question": "Can I get samples first?",
+                           "answer":   "Yes. Sealed retail samples ship within five to seven business days of your RFQ. Custom-formulated samples are quoted per project and credited against your first production order." },
+        "payment":       { "question": "What are your payment terms?",
+                           "answer":   "30% advance on PO and 70% against shipping documents is our default. LC and CAD terms are available for established accounts." },
+        "incoterms":     { "question": "Which Incoterms do you support?",
+                           "answer":   "FOB Alexandria is our default. CIF, CFR, EXW, and DAP are all routinely arranged through our forwarder network." },
+        "documentation": { "question": "What documents come with each shipment?",
+                           "answer":   "Commercial invoice, packing list, certificate of origin, health certificate, halal certificate, ISO 22000, and any destination-specific documents your importer needs." }
+      }
+    },
+    "cta": {
+      "heading": "Ready to export Egyptian quality?",
+      "sub": "Send us a brief - volume, markets, packaging - and we'll respond in two business days with indicative pricing and a sampling plan.",
+      "button": "Start an export RFQ"
+    }
+  },
   "export": {
     "section": {
       "eyebrow": "GLOBAL REACH",

@@ -233,6 +233,83 @@
       "button": "Demander un devis"
     }
   },
+  "exportPage": {
+    "hero": {
+      "eyebrow": "EXPORT",
+      "heading": "Qualité égyptienne, approvisionnement prêt à l'international",
+      "subhead": "Les conteneurs quittent notre site avec la documentation, les certifications et les Incoterms qui passent les douanes sans accroc - pour que vos rayons restent garnis.",
+      "cta": "Voir nos capacités"
+    },
+    "capabilities": {
+      "eyebrow": "CAPACITÉS",
+      "heading": "Tout ce qu'un importateur attend chez un seul fournisseur",
+      "intro": "Six piliers qui font de KAG une ligne d'approvisionnement sereine du Caire à votre entrepôt - pas d'improvisation à la frontière, pas de surprise au port.",
+      "items": {
+        "volume":        { "title": "Capacité de volume",       "description": "Production en conteneurs complets sur les sauces, confitures, jus et fèves - planifiée selon votre cadence de réassort et la saisonnalité." },
+        "branded":       { "title": "Marque privée & marque",   "description": "Expédiez notre marque Yamkers ou votre propre marque privée - même usine, même équipe qualité, même documentation export." },
+        "formats":       { "title": "Formats d'emballage",       "description": "Boîte métal, verre, PET et doypack en formats retail et CHR - adaptés à votre rayon, votre marge et votre régime douanier." },
+        "regulatory":    { "title": "Dossiers réglementaires",  "description": "Étiquetage par pays, déclarations d'ingrédients, panneaux nutritionnels, COA et certificats de destination - préparés par notre équipe conformité." },
+        "shelfLife":     { "title": "Ambiant & chaîne du froid","description": "Lignes stables à température ambiante pour les longues distances ; chaîne du froid quand le marché de destination l'exige." },
+        "documentation": { "title": "Documents d'export",        "description": "Certificat d'origine, facture commerciale, liste de colisage, halal et certificats sanitaires - gérés en interne et synchronisés avec votre transitaire." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESSUS",
+      "heading": "Comment se déroule une commande export",
+      "intro": "Six étapes du premier e-mail jusqu'à la livraison du conteneur - documentées à chaque jalon pour que rien ne stagne en transit.",
+      "steps": {
+        "rfq":        { "title": "Demande de prix",       "description": "Envoyez-nous volumes, marchés cibles et conditionnement - nous revenons avec un tarif indicatif et un plan d'échantillonnage sous deux jours ouvrés." },
+        "samples":    { "title": "Échantillons",          "description": "Des échantillons scellés sont expédiés à votre bureau ou laboratoire pour la dégustation, les contrôles réglementaires et la validation des étiquettes - sous cinq à sept jours ouvrés." },
+        "po":         { "title": "PO & documents",       "description": "Spécifications verrouillées, PO signé, données importateur partagées - nous préparons en parallèle la documentation export pour ne pas bloquer la production." },
+        "production": { "title": "Production",            "description": "Votre commande est intégrée à la ligne, les matières premières libérées et des échantillons qualité prélevés sur chaque lot." },
+        "loading":    { "title": "Chargement",            "description": "Le conteneur est empoté sous supervision, scellé, documenté par photos et remis à votre transitaire." },
+        "shipping":   { "title": "Expédition & suivi",   "description": "Nous partageons le connaissement ou la LTA et restons à vos côtés jusqu'à l'arrivée, le dédouanement et la livraison." }
+      }
+    },
+    "incoterms": {
+      "eyebrow": "LOGISTIQUE",
+      "heading": "Incoterms & expédition",
+      "intro": "Choisissez le niveau de service adapté à votre dispositif douanier et à vos relations transitaires.",
+      "terms": {
+        "fob": { "title": "FOB",  "description": "Nous livrons à bord à Alexandrie, Damiette ou Port-Saïd. Vous prenez la propriété et le fret à partir de là." },
+        "cif": { "title": "CIF",  "description": "Nous organisons le fret maritime et l'assurance jusqu'au port de destination. L'importateur gère le dédouanement." },
+        "exw": { "title": "EXW",  "description": "Votre transitaire enlève à notre site du New Cairo. Idéal si vous disposez d'une logistique établie en Égypte." },
+        "dap": { "title": "DAP",  "description": "Livraison porte à porte jusqu'à votre entrepôt. Nous gérons fret, assurance et transit origine/destination." }
+      },
+      "ports": {
+        "heading": "Ports de chargement",
+        "items": ["Alexandrie", "Damiette", "Port-Saïd"]
+      },
+      "containers": {
+        "heading": "Types de conteneurs",
+        "items": ["20' FCL", "40' HC", "40' Reefer"]
+      }
+    },
+    "certifications": { "heading": "Production certifiée, chaque lot" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Les questions que posent d'abord les importateurs",
+      "items": {
+        "moq":           { "question": "Quelle est la commande minimum ?",
+                           "answer":   "1× 20ft FCL est notre MOQ standard sur toutes les catégories. Les chargements mixtes sont possibles - parlons de votre assortiment." },
+        "leadTime":      { "question": "Quel est le délai ?",
+                           "answer":   "Les premières expéditions partent généralement entre quatre et six semaines après le PO. Les réassorts réguliers partent en deux à trois semaines selon la catégorie et le conditionnement." },
+        "samples":       { "question": "Puis-je avoir des échantillons d'abord ?",
+                           "answer":   "Oui. Les échantillons retail scellés partent sous cinq à sept jours ouvrés après la demande. Les échantillons sur mesure sont chiffrés par projet et déduits de la première commande de production." },
+        "payment":       { "question": "Quels sont vos termes de paiement ?",
+                           "answer":   "30 % à la signature du PO et 70 % contre documents d'expédition est notre référence. Les termes LC et CAD sont disponibles pour les comptes établis." },
+        "incoterms":     { "question": "Quels Incoterms supportez-vous ?",
+                           "answer":   "FOB Alexandrie par défaut. CIF, CFR, EXW et DAP sont arrangés sans difficulté via notre réseau de transitaires." },
+        "documentation": { "question": "Quels documents accompagnent chaque expédition ?",
+                           "answer":   "Facture commerciale, liste de colisage, certificat d'origine, certificat sanitaire, certificat halal, ISO 22000 et tout document spécifique à la destination de votre importateur." }
+      }
+    },
+    "cta": {
+      "heading": "Prêt à exporter la qualité égyptienne ?",
+      "sub": "Envoyez-nous un brief - volumes, marchés, conditionnement - et nous reviendrons sous deux jours ouvrés avec un tarif indicatif et un plan d'échantillonnage.",
+      "button": "Démarrer une demande export"
+    }
+  },
   "export": {
     "section": {
       "eyebrow": "RAYONNEMENT MONDIAL",
