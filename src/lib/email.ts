@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { getTranslations } from 'next-intl/server';
 import { products } from '@/lib/data/products';
 import type { BrandsRfqInput, ContactInput, PrivateLabelRfqInput } from './schemas';
 
@@ -47,10 +48,12 @@ export async function sendContactEmail(data: ContactInput): Promise<void> {
   if (error) throw new Error(`Resend failed: ${error.message ?? 'unknown'}`);
 }
 
-function productNameById(id: string): string {
+async function productNameById(id: string): Promise<string> {
   const numeric = Number(id);
   const found = products.find((p) => p.id === numeric);
-  return found ? found.nameEn : `Unknown product (id ${id})`;
+  if (!found) return `Unknown product (id ${id})`;
+  const t = await getTranslations({ locale: 'en', namespace: 'products.items' });
+  return t(`${found.slug}.name`);
 }
 
 function renderContactBlock(data: { companyName: string; contactName: string; email: string; phone: string; country: string; address?: string }): string {
@@ -79,8 +82,12 @@ function renderShippingBlock(data: { isExport: boolean; shippingMethod?: string;
 
 export async function sendBrandsRfqEmail(data: BrandsRfqInput): Promise<void> {
   const { from, to } = getAddresses();
-  const productLines = data.products.map((p, i) =>
-    `${i + 1}. ${productNameById(p.productId)} - qty ${p.quantity}${p.notes ? ` - ${p.notes}` : ''}`
+  const productLines = (
+    await Promise.all(
+      data.products.map(async (p, i) =>
+        `${i + 1}. ${await productNameById(p.productId)} - qty ${p.quantity}${p.notes ? ` - ${p.notes}` : ''}`
+      )
+    )
   ).join('\n');
   const body = [
     'CONTACT',

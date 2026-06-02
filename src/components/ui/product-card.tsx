@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   CardHoverReveal,
   CardHoverRevealContent,
@@ -73,9 +74,10 @@ export default function ProductCard({
   locale,
   labels,
 }: ProductCardProps) {
+  const t = useTranslations("products.items");
   const isAr = locale === "ar";
-  const name = isAr ? product.nameAr : product.nameEn;
-  const description = isAr ? product.descriptionAr : product.descriptionEn;
+  const name = t(`${product.slug}.name`);
+  const description = t(`${product.slug}.description`);
   const netWeight = isAr ? product.specs.netWeightAr : product.specs.netWeight;
   const drained = isAr
     ? product.specs.drainedWeightAr

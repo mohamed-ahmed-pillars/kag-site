@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormContext, useFieldArray } from 'react-hook-form';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Trash2 } from 'lucide-react';
 import { products as catalog } from '@/lib/data/products';
@@ -11,13 +11,13 @@ import { stepVariant } from './motion';
 
 export function BrandsStep() {
   const t = useTranslations('rfq.brands');
-  const locale = useLocale();
+  const tItems = useTranslations('products.items');
   const { control, register, formState: { errors } } = useFormContext<BrandsRfqInput>();
   const { fields, append, remove } = useFieldArray({ control, name: 'products' });
   const productLabel = (id: number) => {
     const p = catalog.find((x) => x.id === id);
     if (!p) return String(id);
-    return locale === 'ar' ? p.nameAr : p.nameEn;
+    return tItems(`${p.slug}.name`);
   };
 
   return (

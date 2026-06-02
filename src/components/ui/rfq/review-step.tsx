@@ -35,10 +35,14 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
   const tFmt = useTranslations('rfq.privateLabel.packagingFormats');
   const tMethods = useTranslations('rfq.shipping.methods');
   const tLabels = useTranslations('rfq.review.labels');
+  const tItems = useTranslations('products.items');
   const { getValues } = useFormContext<BrandsRfqInput | PrivateLabelRfqInput>();
   const v = getValues();
 
-  const productName = (id: string) => catalog.find((p) => String(p.id) === id)?.nameEn ?? `#${id}`;
+  const productName = (id: string) => {
+    const p = catalog.find((x) => String(x.id) === id);
+    return p ? tItems(`${p.slug}.name`) : `#${id}`;
+  };
 
   return (
     <motion.section {...stepVariant} className="space-y-8">
