@@ -10,7 +10,7 @@ import { stepVariant } from './motion';
 import { isEgypt } from '@/lib/i18n/country';
 
 const METHODS = ['fob', 'cif', 'exw', 'dap'] as const;
-const EXPORT_CERTS = ['halal', 'euOrganic', 'sfda', 'fda', 'jas', 'kosher', 'nsf', 'other'] as const;
+const EXPORT_CERTS = ['halal', 'euOrganic', 'sfda', 'fda', 'jas', 'nsf', 'other'] as const;
 
 export function ShippingStep() {
   const t = useTranslations('rfq.shipping');

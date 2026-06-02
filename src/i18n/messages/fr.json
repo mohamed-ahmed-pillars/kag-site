@@ -486,7 +486,6 @@
       "fda": "FDA",
       "gmp": "GMP",
       "brc": "BRC",
-      "kosher": "Casher",
       "euOrganic": "Bio UE",
       "other": "Autre"
     },
@@ -514,7 +513,6 @@
           "sfda": "SFDA",
           "fda": "FDA",
           "jas": "JAS",
-          "kosher": "Casher",
           "nsf": "NSF",
           "other": "Autre"
         },

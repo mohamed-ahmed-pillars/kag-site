@@ -486,7 +486,6 @@
       "fda": "FDA",
       "gmp": "GMP",
       "brc": "BRC",
-      "kosher": "كوشير",
       "euOrganic": "عضوي أوروبي",
       "other": "أخرى"
     },
@@ -514,7 +513,6 @@
           "sfda": "SFDA",
           "fda": "FDA",
           "jas": "JAS",
-          "kosher": "كوشير",
           "nsf": "NSF",
           "other": "أخرى"
         },
