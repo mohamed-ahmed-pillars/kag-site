@@ -158,6 +158,15 @@ describe('brandsRfqSchema', () => {
     });
     expect(result.success).toBe(false);
   });
+  test('rejects a filled honeypot', () => {
+    const result = brandsRfqSchema.safeParse({
+      ...validContact,
+      ...validShipping,
+      products: [{ productId: '1', quantity: 100, notes: '' }],
+      hp: 'bot',
+    });
+    expect(result.success).toBe(false);
+  });
 });
 
 describe('privateLabelRfqSchema', () => {
@@ -184,6 +193,23 @@ describe('privateLabelRfqSchema', () => {
       ...validShipping,
       briefs: [],
       hp: '',
+    });
+    expect(result.success).toBe(false);
+  });
+  test('rejects a filled honeypot', () => {
+    const result = privateLabelRfqSchema.safeParse({
+      ...validContact,
+      ...validShipping,
+      briefs: [{
+        category: 'tomato_paste',
+        packagingFormat: 'tin',
+        targetVolume: '1 container/month',
+        certifications: ['halal'],
+        brandName: 'Al-Falah',
+        targetRetailPrice: '$1.5/unit',
+        artworkLink: '',
+      }],
+      hp: 'bot',
     });
     expect(result.success).toBe(false);
   });

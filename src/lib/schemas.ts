@@ -13,7 +13,7 @@ export type ContactInput = z.infer<typeof contactSchema>;
 export const contactStepSchema = z.object({
   companyName: z.string().min(2),
   contactName: z.string().min(2),
-  email: z.string().email(),
+  email: z.email({ message: 'Email is invalid' }),
   phone: z.string().min(5),
   country: z.string().min(2),
   address: z.string().optional().or(z.literal('')),
@@ -30,6 +30,7 @@ export type ProductLineInput = z.infer<typeof productLineSchema>;
 export const brandsStepSchema = z.object({
   products: z.array(productLineSchema).min(1),
 });
+export type BrandsStepInput = z.infer<typeof brandsStepSchema>;
 
 export const projectBriefSchema = z.object({
   category: z.enum([
@@ -41,13 +42,14 @@ export const projectBriefSchema = z.object({
   certifications: z.array(z.string()).optional(),
   brandName: z.string().optional().or(z.literal('')),
   targetRetailPrice: z.string().optional().or(z.literal('')),
-  artworkLink: z.string().url().optional().or(z.literal('')),
+  artworkLink: z.url().optional().or(z.literal('')),
 });
 export type ProjectBriefInput = z.infer<typeof projectBriefSchema>;
 
 export const privateLabelStepSchema = z.object({
   briefs: z.array(projectBriefSchema).min(1),
 });
+export type PrivateLabelStepInput = z.infer<typeof privateLabelStepSchema>;
 
 export const shippingStepSchema = z.object({
   shippingMethod: z.enum(['fob', 'cif', 'exw', 'dap']),
@@ -59,13 +61,13 @@ export const shippingStepSchema = z.object({
 export type ShippingStepInput = z.infer<typeof shippingStepSchema>;
 
 export const brandsRfqSchema = contactStepSchema
-  .merge(shippingStepSchema)
-  .merge(brandsStepSchema)
+  .extend(shippingStepSchema.shape)
+  .extend(brandsStepSchema.shape)
   .extend({ hp: honeypot });
 export type BrandsRfqInput = z.infer<typeof brandsRfqSchema>;
 
 export const privateLabelRfqSchema = contactStepSchema
-  .merge(shippingStepSchema)
-  .merge(privateLabelStepSchema)
+  .extend(shippingStepSchema.shape)
+  .extend(privateLabelStepSchema.shape)
   .extend({ hp: honeypot });
 export type PrivateLabelRfqInput = z.infer<typeof privateLabelRfqSchema>;
