@@ -164,6 +164,52 @@
       "secondary": "See our brands"
     }
   },
+  "customProduct": {
+    "section": {
+      "eyebrow": "CUSTOM PRODUCT",
+      "heading": "Built around your brief",
+      "intro": "From a flavor profile or a competitor sample to a shelf-ready spec - our R&D team develops, tastes, and scales the recipe that fits."
+    },
+    "eyebrow": "Custom Product",
+    "heading": "Your idea, our R&D bench",
+    "description": "Bring us a brief - a target market, a benchmark product, or a flavor direction - and our food technologists translate it into a production-ready recipe. Iterated under a trained panel, validated for shelf life, and handed to production with a locked spec.",
+    "stats": [
+      "R&D & sensory lab",
+      "Pilot-batch capable",
+      "Recipes you own"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Share your brief",
+        "text": "Target market, reference products, cost ceiling, label claims - we respond with feasibility within two business days."
+      },
+      {
+        "id": "prototype",
+        "title": "Prototype & taste",
+        "text": "Lab-scale prototypes shipped within three to four weeks. Structured feedback drives the next iteration."
+      },
+      {
+        "id": "pilot",
+        "title": "Pilot on the line",
+        "text": "Production-line pilot batch - same equipment, same QA - so the recipe is proven before commercial scale."
+      },
+      {
+        "id": "handoff",
+        "title": "Handoff to production",
+        "text": "Locked spec, validated process, and a sampling plan transferred to our production team for your first commercial run."
+      }
+    ],
+    "tabs": {
+      "rnd": "R&D",
+      "tasting": "Tasting",
+      "pilot": "Pilot"
+    },
+    "cta": {
+      "primary": "Start a recipe",
+      "secondary": "See our categories"
+    }
+  },
   "privateLabelPage": {
     "hero": {
       "eyebrow": "PRIVATE LABEL",

@@ -164,6 +164,52 @@
       "secondary": "Voir nos marques"
     }
   },
+  "customProduct": {
+    "section": {
+      "eyebrow": "PRODUIT PERSONNALISÉ",
+      "heading": "Conçu autour de votre brief",
+      "intro": "D'un profil de saveur ou d'un produit de référence à un cahier des charges prêt à produire - notre équipe R&D développe, déguste et industrialise la recette qui correspond."
+    },
+    "eyebrow": "Produit Personnalisé",
+    "heading": "Votre idée, notre R&D",
+    "description": "Apportez-nous un brief - un marché cible, un produit de référence ou une direction aromatique - et nos technologues alimentaires le traduisent en une recette prête à produire. Itérée sous panel entraîné, validée pour la durée de vie, puis transférée à la production avec un cahier des charges figé.",
+    "stats": [
+      "R&D et labo sensoriel",
+      "Lots pilotes possibles",
+      "Recettes que vous possédez"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Partagez votre brief",
+        "text": "Marché cible, produits de référence, plafond de coût, allégations d'étiquette - nous répondons sous deux jours ouvrés avec une étude de faisabilité."
+      },
+      {
+        "id": "prototype",
+        "title": "Prototype & dégustation",
+        "text": "Prototypes au laboratoire expédiés sous trois à quatre semaines. Les retours structurés alimentent l'itération suivante."
+      },
+      {
+        "id": "pilot",
+        "title": "Pilote en ligne",
+        "text": "Lot pilote en ligne de production - mêmes équipements, même contrôle qualité - pour valider la recette avant l'échelle commerciale."
+      },
+      {
+        "id": "handoff",
+        "title": "Transfert à la production",
+        "text": "Cahier des charges figé, procédé validé et plan d'échantillonnage transmis à la production pour votre premier lot commercial."
+      }
+    ],
+    "tabs": {
+      "rnd": "R&D",
+      "tasting": "Dégustation",
+      "pilot": "Pilote"
+    },
+    "cta": {
+      "primary": "Démarrer une recette",
+      "secondary": "Voir nos catégories"
+    }
+  },
   "privateLabelPage": {
     "hero": {
       "eyebrow": "MARQUE DE DISTRIBUTEUR",
