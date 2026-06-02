@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { rfqSchema } from '@/lib/schemas';
-import { sendRfqEmail } from '@/lib/email';
+import { brandsRfqSchema } from '@/lib/schemas';
+import { sendBrandsRfqEmail } from '@/lib/email';
 
 export async function POST(req: Request) {
   let body: unknown;
@@ -9,21 +9,19 @@ export async function POST(req: Request) {
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
   }
-  const parsed = rfqSchema.safeParse(body);
+
+  const parsed = brandsRfqSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { ok: false, errors: parsed.error.flatten() },
-      { status: 400 }
-    );
+    return NextResponse.json({ ok: false, errors: parsed.error.flatten() }, { status: 400 });
   }
   if (parsed.data.hp && parsed.data.hp.length > 0) {
     return new NextResponse(null, { status: 204 });
   }
   try {
-    await sendRfqEmail(parsed.data);
+    await sendBrandsRfqEmail(parsed.data);
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error('[rfq] send failed', err);
+    console.error('[rfq/brands] send failed', err);
     return NextResponse.json({ ok: false, error: 'mail_failed' }, { status: 502 });
   }
 }
