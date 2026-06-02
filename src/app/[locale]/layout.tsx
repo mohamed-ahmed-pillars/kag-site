@@ -9,8 +9,27 @@ import { fontVariables } from '../fonts';
 import '../globals.css';
 
 export const metadata: Metadata = {
-  title: 'KAG',
-  description: '',
+  title: {
+    default: 'KAG — Khalid Abdelhamid Group | Egyptian Food Manufacturer',
+    template: '%s | KAG',
+  },
+  description:
+    'KAG (Khalid Abdelhamid Group) is an Egyptian food manufacturer producing sauces, jams, juices, fava beans, and condiments for retail, private label, and global export from Cairo.',
+  applicationName: 'KAG',
+  icons: {
+    icon: [
+      { url: '/icon-light.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png',  media: '(prefers-color-scheme: dark)' },
+    ],
+    apple: [
+      { url: '/icon-light.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png',  media: '(prefers-color-scheme: dark)' },
+    ],
+    shortcut: [
+      { url: '/icon-light.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png',  media: '(prefers-color-scheme: dark)' },
+    ],
+  },
 };
 
 export function generateStaticParams() {
