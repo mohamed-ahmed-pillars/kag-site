@@ -19,7 +19,7 @@ export function PrivateLabelStep() {
   const tFmt = useTranslations('rfq.privateLabel.packagingFormats');
   const { control, register, setValue, formState: { errors } } = useFormContext<PrivateLabelRfqInput>();
   const { fields, append, remove } = useFieldArray({ control, name: 'briefs' });
-  const briefs = useWatch({ name: 'briefs' }) as Array<{ certifications?: string[]; packagingFormat?: string }> | undefined;
+  const briefs = useWatch({ control, name: 'briefs' });
 
   const toggleCert = (briefIdx: number, cert: string) => {
     const current = briefs?.[briefIdx]?.certifications ?? [];
@@ -62,10 +62,10 @@ export function PrivateLabelStep() {
               </div>
 
               <div className="space-y-3">
-                <span className="text-xs uppercase tracking-wider text-primary/70">{t('fields.packagingFormat.label')}</span>
-                <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                <span id={`rfq-pl-fmt-${idx}`} className="text-xs uppercase tracking-wider text-primary/70">{t('fields.packagingFormat.label')}</span>
+                <div role="radiogroup" aria-labelledby={`rfq-pl-fmt-${idx}`} className="grid grid-cols-2 gap-3 md:grid-cols-4">
                   {PACK_FORMATS.map((f) => (
-                    <Chip key={f} selected={selectedFormat === f} onClick={() => setValue(`briefs.${idx}.packagingFormat`, f, { shouldDirty: true, shouldValidate: true })}>
+                    <Chip key={f} role="radio" selected={selectedFormat === f} onClick={() => setValue(`briefs.${idx}.packagingFormat`, f, { shouldDirty: true, shouldValidate: true })}>
                       {tFmt(f)}
                     </Chip>
                   ))}
