@@ -528,6 +528,9 @@
         "contact": "Contact",
         "what": "What you want",
         "shipping": "Shipping"
+      },
+      "labels": {
+        "exportCerts": "Export certs"
       }
     },
     "success": {
@@ -544,6 +547,7 @@
       "requestQuote": "Request a quote"
     },
     "errors": {
+      "required": "Required",
       "submitFailed": "Something went wrong on our end. Please try again.",
       "networkError": "Couldn't reach the server. Check your connection and retry."
     }

@@ -4,13 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { TextField } from './text-field';
-
-const stepVariant = {
-  initial: { opacity: 0, x: 24 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -24 },
-  transition: { duration: 0.25, ease: 'easeOut' as const },
-};
+import { stepVariant } from './motion';
 
 export function ContactStep() {
   const t = useTranslations('rfq.contact');

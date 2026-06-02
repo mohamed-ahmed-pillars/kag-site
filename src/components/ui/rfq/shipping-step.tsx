@@ -5,14 +5,8 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { TextField } from './text-field';
 import { Chip } from './chip';
+import { stepVariant } from './motion';
 import { isEgypt } from '@/lib/i18n/country';
-
-const stepVariant = {
-  initial: { opacity: 0, x: 24 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -24 },
-  transition: { duration: 0.25, ease: 'easeOut' as const },
-};
 
 const METHODS = ['fob', 'cif', 'exw', 'dap'] as const;
 const EXPORT_CERTS = ['halal', 'euOrganic', 'sfda', 'fda', 'jas', 'kosher', 'nsf', 'other'] as const;
@@ -21,6 +15,7 @@ export function ShippingStep() {
   const t = useTranslations('rfq.shipping');
   const tMethods = useTranslations('rfq.shipping.methods');
   const tCerts = useTranslations('rfq.shipping.exportCerts.chips');
+  const tErrors = useTranslations('rfq.errors');
   const { register, setValue, formState: { errors } } = useFormContext();
   const country = useWatch({ name: 'country' });
   const method = useWatch({ name: 'shippingMethod' });
@@ -44,15 +39,15 @@ export function ShippingStep() {
       </header>
 
       <div className="space-y-3">
-        <span className="text-xs uppercase tracking-wider text-primary/70">{t('fields.method.label')}</span>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <span id="rfq-method-label" className="text-xs uppercase tracking-wider text-primary/70">{t('fields.method.label')}</span>
+        <div role="radiogroup" aria-labelledby="rfq-method-label" className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {METHODS.map((m) => (
-            <Chip key={m} selected={method === m} onClick={() => setValue('shippingMethod', m, { shouldDirty: true, shouldValidate: true })}>
+            <Chip key={m} role="radio" selected={method === m} onClick={() => setValue('shippingMethod', m, { shouldDirty: true, shouldValidate: true })}>
               {tMethods(m)}
             </Chip>
           ))}
         </div>
-        {errors.shippingMethod && <span className="text-xs text-red-500">required</span>}
+        {errors.shippingMethod && <span className="text-xs text-red-500">{tErrors('required')}</span>}
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

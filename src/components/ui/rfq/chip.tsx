@@ -7,14 +7,19 @@ type ChipProps = {
   onClick: () => void;
   children: React.ReactNode;
   className?: string;
+  role?: 'button' | 'radio';
 };
 
-export function Chip({ selected, onClick, children, className }: ChipProps) {
+export function Chip({ selected, onClick, children, className, role = 'button' }: ChipProps) {
+  const semantic =
+    role === 'radio'
+      ? ({ role: 'radio', 'aria-checked': selected } as const)
+      : ({ 'aria-pressed': selected } as const);
   return (
     <button
       type="button"
       onClick={onClick}
-      aria-pressed={selected}
+      {...semantic}
       className={cn(
         'rounded-xl border px-4 py-2 text-sm transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40',
         selected

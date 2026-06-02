@@ -528,6 +528,9 @@
         "contact": "Contact",
         "what": "Votre demande",
         "shipping": "Expédition"
+      },
+      "labels": {
+        "exportCerts": "Certifs export"
       }
     },
     "success": {
@@ -544,6 +547,7 @@
       "requestQuote": "Demander un devis"
     },
     "errors": {
+      "required": "Requis",
       "submitFailed": "Une erreur est survenue. Réessayez.",
       "networkError": "Impossible de joindre le serveur. Vérifiez votre connexion."
     }

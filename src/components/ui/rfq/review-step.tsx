@@ -4,13 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { products as catalog } from '@/lib/data/products';
-
-const stepVariant = {
-  initial: { opacity: 0, x: 24 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -24 },
-  transition: { duration: 0.25, ease: 'easeOut' as const },
-};
+import { stepVariant } from './motion';
 
 function Row({ label, value }: { label: string; value?: string | null }) {
   if (!value) return null;
@@ -33,9 +27,13 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
 
 export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
   const t = useTranslations('rfq.review');
+  const tCon = useTranslations('rfq.contact.fields');
+  const tSh = useTranslations('rfq.shipping.fields');
+  const tPL = useTranslations('rfq.privateLabel.fields');
   const tCats = useTranslations('rfq.privateLabel.categories');
   const tFmt = useTranslations('rfq.privateLabel.packagingFormats');
   const tMethods = useTranslations('rfq.shipping.methods');
+  const tLabels = useTranslations('rfq.review.labels');
   const { getValues } = useFormContext();
   const v = getValues();
 
@@ -50,12 +48,12 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
       </header>
 
       <Card title={t('sections.contact')}>
-        <Row label="Company"  value={v.companyName} />
-        <Row label="Contact"  value={v.contactName} />
-        <Row label="Email"    value={v.email} />
-        <Row label="Phone"    value={v.phone} />
-        <Row label="Country"  value={v.country} />
-        <Row label="Address"  value={v.address} />
+        <Row label={tCon('companyName.label')} value={v.companyName} />
+        <Row label={tCon('contactName.label')} value={v.contactName} />
+        <Row label={tCon('email.label')}       value={v.email} />
+        <Row label={tCon('phone.label')}       value={v.phone} />
+        <Row label={tCon('country.label')}     value={v.country} />
+        <Row label={tCon('address.label')}     value={v.address} />
       </Card>
 
       {flow === 'brands' ? (
@@ -68,24 +66,24 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
         <Card title={t('sections.what')}>
           {(v.briefs ?? []).map((b: { category: string; packagingFormat: string; targetVolume: string; certifications?: string[]; brandName?: string; targetRetailPrice?: string; artworkLink?: string }, i: number) => (
             <div key={i} className={i > 0 ? 'mt-4 border-t border-primary/10 pt-4' : ''}>
-              <Row label="Category"        value={tCats(b.category)} />
-              <Row label="Packaging"       value={tFmt(b.packagingFormat)} />
-              <Row label="Target volume"   value={b.targetVolume} />
-              <Row label="Certifications"  value={(b.certifications ?? []).join(', ') || undefined} />
-              <Row label="Brand name"      value={b.brandName} />
-              <Row label="Target price"    value={b.targetRetailPrice} />
-              <Row label="Artwork link"    value={b.artworkLink} />
+              <Row label={tPL('category.label')}          value={tCats(b.category)} />
+              <Row label={tPL('packagingFormat.label')}   value={tFmt(b.packagingFormat)} />
+              <Row label={tPL('targetVolume.label')}      value={b.targetVolume} />
+              <Row label={tPL('certifications.label')}    value={(b.certifications ?? []).join(', ') || undefined} />
+              <Row label={tPL('brandName.label')}         value={b.brandName} />
+              <Row label={tPL('targetRetailPrice.label')} value={b.targetRetailPrice} />
+              <Row label={tPL('artworkLink.label')}       value={b.artworkLink} />
             </div>
           ))}
         </Card>
       )}
 
       <Card title={t('sections.shipping')}>
-        <Row label="Method"               value={v.shippingMethod ? tMethods(v.shippingMethod) : undefined} />
-        <Row label="Destination"          value={v.destinationPort} />
-        <Row label="Estimated date"       value={v.estimatedDate} />
-        <Row label="Special requirements" value={v.specialRequirements} />
-        <Row label="Export certs"         value={(v.exportCertifications ?? []).join(', ') || undefined} />
+        <Row label={tSh('method.label')}              value={v.shippingMethod ? tMethods(v.shippingMethod) : undefined} />
+        <Row label={tSh('destinationPort.label')}     value={v.destinationPort} />
+        <Row label={tSh('estimatedDate.label')}       value={v.estimatedDate} />
+        <Row label={tSh('specialRequirements.label')} value={v.specialRequirements} />
+        <Row label={tLabels('exportCerts')}           value={(v.exportCertifications ?? []).join(', ') || undefined} />
       </Card>
     </motion.section>
   );
