@@ -3,6 +3,7 @@
 import { useFormContext, useWatch } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import type { ShippingStepInput } from '@/lib/schemas';
 import { TextField } from './text-field';
 import { Chip } from './chip';
 import { stepVariant } from './motion';
@@ -16,7 +17,7 @@ export function ShippingStep() {
   const tMethods = useTranslations('rfq.shipping.methods');
   const tCerts = useTranslations('rfq.shipping.exportCerts.chips');
   const tErrors = useTranslations('rfq.errors');
-  const { register, setValue, formState: { errors } } = useFormContext();
+  const { register, setValue, formState: { errors } } = useFormContext<ShippingStepInput>();
   const country = useWatch({ name: 'country' });
   const method = useWatch({ name: 'shippingMethod' });
   const selectedCerts = (useWatch({ name: 'exportCertifications' }) as string[] | undefined) ?? [];
@@ -51,7 +52,7 @@ export function ShippingStep() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <TextField label={t('fields.destinationPort.label')} placeholder={t('fields.destinationPort.placeholder')} {...register('destinationPort')} error={errors.destinationPort?.message as string | undefined} />
+        <TextField label={t('fields.destinationPort.label')} placeholder={t('fields.destinationPort.placeholder')} {...register('destinationPort')} error={errors.destinationPort?.message} />
         <TextField label={t('fields.estimatedDate.label')} type="date" {...register('estimatedDate')} />
       </div>
 

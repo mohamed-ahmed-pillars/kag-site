@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
+import { FormProvider, useForm, type FieldPath } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -14,7 +14,12 @@ import { ShippingStep, SHIPPING_FIELDS } from './shipping-step';
 import { ReviewStep } from './review-step';
 import { BrandsStep, BRANDS_FIELDS } from './brands-step';
 
-const STEP_FIELDS = [CONTACT_FIELDS, BRANDS_FIELDS, SHIPPING_FIELDS, []] as const;
+const STEP_FIELDS: readonly (readonly FieldPath<BrandsRfqInput>[])[] = [
+  CONTACT_FIELDS as readonly FieldPath<BrandsRfqInput>[],
+  BRANDS_FIELDS as readonly FieldPath<BrandsRfqInput>[],
+  SHIPPING_FIELDS as readonly FieldPath<BrandsRfqInput>[],
+  [],
+];
 
 type Props = { preselectProductId?: string };
 
@@ -42,7 +47,7 @@ export function BrandsWizard({ preselectProductId }: Props) {
 
   const goNext = async () => {
     const fields = STEP_FIELDS[step];
-    const ok = fields.length === 0 ? true : await methods.trigger(fields as readonly string[] as never);
+    const ok = fields.length === 0 ? true : await methods.trigger(fields);
     if (!ok) return;
     setStep((s) => Math.min(s + 1, 3));
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -54,6 +59,7 @@ export function BrandsWizard({ preselectProductId }: Props) {
   };
 
   const onSubmit = async (data: BrandsRfqInput) => {
+    if (submitState === 'submitting') return;
     setSubmitState('submitting');
     try {
       const res = await fetch('/api/rfq/brands', {
@@ -117,11 +123,12 @@ export function BrandsWizard({ preselectProductId }: Props) {
           {step < 3 ? (
             <FlowButton text={tActions('next')} onClick={goNext} />
           ) : (
-            <FlowButton text={submitState === 'submitting' ? tActions('submitting') : tActions('submit')} onClick={() => methods.handleSubmit(onSubmit)()} />
+            <FlowButton
+              text={submitState === 'submitting' ? tActions('submitting') : tActions('submit')}
+              type="submit"
+            />
           )}
         </div>
-
-        <input {...methods.register('hp')} hidden tabIndex={-1} autoComplete="off" />
       </form>
     </FormProvider>
   );

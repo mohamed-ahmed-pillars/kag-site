@@ -5,13 +5,14 @@ import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Trash2 } from 'lucide-react';
 import { products as catalog } from '@/lib/data/products';
+import type { BrandsRfqInput } from '@/lib/schemas';
 import { TextField } from './text-field';
 import { stepVariant } from './motion';
 
 export function BrandsStep() {
   const t = useTranslations('rfq.brands');
   const locale = useLocale();
-  const { control, register, formState: { errors } } = useFormContext();
+  const { control, register, formState: { errors } } = useFormContext<BrandsRfqInput>();
   const { fields, append, remove } = useFieldArray({ control, name: 'products' });
   const productLabel = (id: number) => {
     const p = catalog.find((x) => x.id === id);
@@ -69,8 +70,8 @@ export function BrandsStep() {
           </div>
         ))}
 
-        {errors.products && typeof errors.products === 'object' && 'message' in errors.products && (
-          <span className="text-xs text-red-500">{(errors.products as { message?: string }).message}</span>
+        {errors.products?.root?.message && (
+          <span className="text-xs text-red-500">{errors.products.root.message}</span>
         )}
 
         <button

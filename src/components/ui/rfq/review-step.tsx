@@ -4,6 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { products as catalog } from '@/lib/data/products';
+import type { BrandsRfqInput, PrivateLabelRfqInput } from '@/lib/schemas';
 import { stepVariant } from './motion';
 
 function Row({ label, value }: { label: string; value?: string | null }) {
@@ -34,7 +35,7 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
   const tFmt = useTranslations('rfq.privateLabel.packagingFormats');
   const tMethods = useTranslations('rfq.shipping.methods');
   const tLabels = useTranslations('rfq.review.labels');
-  const { getValues } = useFormContext();
+  const { getValues } = useFormContext<BrandsRfqInput | PrivateLabelRfqInput>();
   const v = getValues();
 
   const productName = (id: string) => catalog.find((p) => String(p.id) === id)?.nameEn ?? `#${id}`;
@@ -58,13 +59,13 @@ export function ReviewStep({ flow }: { flow: 'brands' | 'privateLabel' }) {
 
       {flow === 'brands' ? (
         <Card title={t('sections.what')}>
-          {(v.products ?? []).map((p: { productId: string; quantity: number; notes?: string }, i: number) => (
+          {((v as BrandsRfqInput).products ?? []).map((p, i) => (
             <Row key={i} label={`#${i + 1}`} value={`${productName(p.productId)} - qty ${p.quantity}${p.notes ? ` - ${p.notes}` : ''}`} />
           ))}
         </Card>
       ) : (
         <Card title={t('sections.what')}>
-          {(v.briefs ?? []).map((b: { category: string; packagingFormat: string; targetVolume: string; certifications?: string[]; brandName?: string; targetRetailPrice?: string; artworkLink?: string }, i: number) => (
+          {((v as PrivateLabelRfqInput).briefs ?? []).map((b, i) => (
             <div key={i} className={i > 0 ? 'mt-4 border-t border-primary/10 pt-4' : ''}>
               <Row label={tPL('category.label')}          value={tCats(b.category)} />
               <Row label={tPL('packagingFormat.label')}   value={tFmt(b.packagingFormat)} />

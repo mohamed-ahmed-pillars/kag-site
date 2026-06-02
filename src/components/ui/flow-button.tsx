@@ -11,6 +11,7 @@ type FlowButtonProps = {
   className?: string;
   onClick?: () => void;
   variant?: FlowButtonVariant;
+  type?: "button" | "submit" | "reset";
 };
 
 const baseClass =
@@ -39,6 +40,7 @@ export function FlowButton({
   className,
   onClick,
   variant = "primary",
+  type = "button",
 }: FlowButtonProps) {
   const arrow = variantArrow[variant];
   const content = (
@@ -79,7 +81,7 @@ export function FlowButton({
   }
 
   return (
-    <button onClick={onClick} className={cn(baseClass, variantWrapper[variant], className)}>
+    <button type={type} onClick={onClick} className={cn(baseClass, variantWrapper[variant], className)}>
       {content}
     </button>
   );
