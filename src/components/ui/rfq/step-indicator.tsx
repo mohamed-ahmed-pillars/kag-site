@@ -10,12 +10,19 @@ type StepIndicatorProps = {
 
 export function StepIndicator({ steps, current }: StepIndicatorProps) {
   return (
-    <ol className="flex w-full items-center justify-between gap-2 sm:gap-4">
+    <ol
+      aria-label="Progress"
+      className="flex w-full items-center justify-between gap-2 sm:gap-4"
+    >
       {steps.map((label, i) => {
         const isActive = i === current;
         const isDone = i < current;
         return (
-          <li key={label} className="flex flex-1 flex-col items-center gap-2">
+          <li
+            key={label}
+            aria-current={isActive ? 'step' : undefined}
+            className="flex flex-1 flex-col items-center gap-2"
+          >
             <div className="flex w-full items-center">
               {i > 0 && (
                 <div
@@ -33,7 +40,14 @@ export function StepIndicator({ steps, current }: StepIndicatorProps) {
                   !isDone && !isActive && 'bg-white/60 text-primary border border-primary/20',
                 )}
               >
-                {isDone ? <CheckCircle className="h-4 w-4" /> : i + 1}
+                {isDone ? (
+                  <>
+                    <CheckCircle aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">completed</span>
+                  </>
+                ) : (
+                  i + 1
+                )}
               </div>
               {i < steps.length - 1 && (
                 <div

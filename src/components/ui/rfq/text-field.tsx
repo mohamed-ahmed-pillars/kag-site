@@ -10,7 +10,9 @@ type TextFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   function TextField({ label, error, className, id, ...rest }, ref) {
-    const fieldId = id ?? `tf-${React.useId()}`;
+    const generatedId = React.useId();
+    const fieldId = id ?? `tf-${generatedId}`;
+    const errorId = error ? `${fieldId}-error` : undefined;
     return (
       <div className="flex flex-col gap-1.5">
         <label htmlFor={fieldId} className="text-xs uppercase tracking-wider text-primary/70">
@@ -19,6 +21,8 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
         <input
           ref={ref}
           id={fieldId}
+          aria-invalid={error ? true : undefined}
+          aria-describedby={errorId}
           className={cn(
             'rounded-xl border border-primary/10 bg-white/60 px-4 py-3 text-sm text-primary outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/30',
             error && 'border-red-400 focus:border-red-400 focus:ring-red-200',
@@ -26,8 +30,13 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           )}
           {...rest}
         />
-        {error && <span className="text-xs text-red-500">{error}</span>}
+        {error && (
+          <span id={errorId} role="alert" className="text-xs text-red-500">
+            {error}
+          </span>
+        )}
       </div>
     );
   },
 );
+TextField.displayName = 'TextField';
