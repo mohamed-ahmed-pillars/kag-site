@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "ourBrands": "Nos Marques",
+    "privateLabel": "Marque de Distributeur",
     "products": "Produits",
     "news": "Actualités",
     "contact": "Contactez-nous",
@@ -160,6 +161,75 @@
     "cta": {
       "primary": "Devenir partenaire",
       "secondary": "Voir nos marques"
+    }
+  },
+  "privateLabelPage": {
+    "hero": {
+      "eyebrow": "MARQUE DE DISTRIBUTEUR",
+      "heading": "Votre marque, fabriquée en Égypte",
+      "subhead": "Du développement de la recette aux cartons prêts à l'export - nous fabriquons, conditionnons et expédions votre marque privée au Moyen-Orient, en Europe et en Afrique.",
+      "cta": "Découvrir nos capacités"
+    },
+    "capabilities": {
+      "eyebrow": "CAPACITÉS",
+      "heading": "Fabrication de marque privée de bout en bout",
+      "intro": "Six piliers qui mènent votre concept du brief sur la table aux cartons quittant le port.",
+      "items": {
+        "rnd":           { "title": "R&D et formulation",          "description": "Confiez-nous un profil de saveur, un marché cible ou un échantillon concurrent - nos technologues alimentaires développent, itèrent et verrouillent la recette avec vous." },
+        "manufacturing": { "title": "Fabrication interne",          "description": "Concentré de tomate, fèves, confitures, jus - tout est produit sous un même toit sur des lignes conçues pour la constance, la traçabilité et la sécurité alimentaire." },
+        "packaging":     { "title": "Flexibilité d'emballage",      "description": "Boîtes métalliques, pots en verre, bouteilles PET et poches - choisissez un format et une capacité qui correspondent à votre rayon, votre marge et votre marché." },
+        "regulatory":    { "title": "Réglementation et étiquetage", "description": "Étiquettes spécifiques au pays, déclarations d'ingrédients, valeurs nutritionnelles et documentation d'export gérées par notre équipe conformité." },
+        "qa":            { "title": "QA et certifications",         "description": "ISO 22000, HACCP, Halal, FDA, GMP et BRC - chaque lot est testé, enregistré et traçable de la matière première au carton scellé." },
+        "logistics":     { "title": "Logistique d'export",          "description": "Chargement de conteneurs, manutention portuaire et accompagnement Incoterms - nous acheminons votre marque de notre porte à celle de votre importateur." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESSUS",
+      "heading": "Comment se déroule un projet de marque privée",
+      "intro": "Six étapes claires - la plupart des projets passent du brief à la première expédition en 12 à 16 semaines.",
+      "steps": {
+        "brief":      { "title": "Brief et objectifs",            "description": "Nous alignons votre marché cible, votre prix, votre format d'emballage et votre volume afin que le reste du projet soit calibré correctement." },
+        "recipe":     { "title": "Développement de la recette",   "description": "Notre R&D formule selon votre profil gustatif, vos exigences réglementaires et vos objectifs de durée de vie - en itérant jusqu'à ce que la spécification soit la vôtre." },
+        "samples":    { "title": "Échantillons et validation",    "description": "Nous expédions des échantillons scellés pour dégustation, analyse en laboratoire et épreuvage des étiquettes. Rien ne passe en production tant que vous n'avez pas validé." },
+        "pilot":      { "title": "Lot pilote",                    "description": "Un lot pilote court valide les paramètres de production, l'artwork de l'étiquette et l'intégrité de l'emballage sur la ligne réelle." },
+        "production": { "title": "Production complète",           "description": "Votre commande est planifiée, les matières premières libérées et la ligne tourne selon la spec - avec des échantillons QA prélevés sur chaque lot." },
+        "shipment":   { "title": "Expédition et suivi",           "description": "Nous chargeons le conteneur, transmettons la documentation d'export et restons disponibles pour toute réassort ou ajustement de formule." }
+      }
+    },
+    "packaging": {
+      "eyebrow": "FORMATS",
+      "heading": "Un emballage adapté à votre marché",
+      "intro": "Quatre familles d'emballage, chacune avec les capacités les plus demandées par nos clients retail et food-service.",
+      "items": {
+        "tin":   { "title": "Boîte métallique", "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["400 g", "800 g", "2,5 kg", "4,5 kg"] },
+        "glass": { "title": "Pot en verre",     "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["250 g", "450 g", "650 g"] },
+        "pet":   { "title": "Bouteille PET",    "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
+        "pouch": { "title": "Poche / Stick",    "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["80 g", "250 g"] }
+      }
+    },
+    "certifications": { "heading": "Une production certifiée, à chaque lot" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Les questions qui reviennent le plus",
+      "items": {
+        "moq":        { "question": "Quelles sont vos quantités minimales de commande ?",
+                        "answer":   "Nous travaillons généralement en conteneur complet - 1 conteneur 20ft FCL est notre MOQ standard. Des séries pilotes plus petites sont possibles pendant la phase d'échantillonnage." },
+        "leadTime":   { "question": "Combien de temps entre le brief et la première expédition ?",
+                        "answer":   "La plupart des projets expédient le premier conteneur 12 à 16 semaines après la validation du brief. Les réassorts sont bien plus rapides - 4 à 6 semaines en général." },
+        "samples":    { "question": "Les échantillons sont-ils facturés ?",
+                        "answer":   "Les échantillons de concept initial sont gratuits. Les échantillons formulés sur mesure couvrant le temps R&D sont devisés au projet et crédités sur votre première commande de production." },
+        "artwork":    { "question": "Pouvez-vous gérer l'artwork d'étiquette personnalisé ?",
+                        "answer":   "Oui - apportez votre artwork finalisé ou travaillez avec notre partenaire design interne. Nous gérons le prépresse, l'épreuvage et la validation selon les règles d'étiquetage du marché de destination." },
+        "regulatory": { "question": "Quels documents d'export fournissez-vous ?",
+                        "answer":   "Facture commerciale, liste de colisage, certificat d'origine, certificat sanitaire, certificat halal, et tout document spécifique à la destination requis par votre importateur." },
+        "incoterms":  { "question": "Quels Incoterms supportez-vous ?",
+                        "answer":   "FOB Alexandrie est notre défaut, mais nous arrangeons régulièrement des expéditions CIF, CFR et DDP vers la plupart des marchés que nous servons." }
+      }
+    },
+    "cta": {
+      "heading": "Prêt à lancer un projet de marque privée ?",
+      "sub": "Envoyez-nous un brief et nous reviendrons sous deux jours ouvrés avec un plan d'échantillonnage, un tarif indicatif et un calendrier projet.",
+      "button": "Demander un devis"
     }
   },
   "export": {

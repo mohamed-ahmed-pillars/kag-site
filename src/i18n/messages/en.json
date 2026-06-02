@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "ourBrands": "Our Brands",
+    "privateLabel": "Private Label",
     "products": "Products",
     "news": "News",
     "contact": "Contact us",
@@ -160,6 +161,75 @@
     "cta": {
       "primary": "Partner with KAG",
       "secondary": "See our brands"
+    }
+  },
+  "privateLabelPage": {
+    "hero": {
+      "eyebrow": "PRIVATE LABEL",
+      "heading": "Your Brand, Built in Egypt",
+      "subhead": "From recipe development to export-ready cartons - we manufacture, fill, and ship your private label across the Middle East, Europe, and Africa.",
+      "cta": "Explore capabilities"
+    },
+    "capabilities": {
+      "eyebrow": "CAPABILITIES",
+      "heading": "End-to-end private-label manufacturing",
+      "intro": "Six pillars that take your concept from a brief on the table to cartons leaving the port.",
+      "items": {
+        "rnd":           { "title": "R&D & Formulation",       "description": "Hand us a flavor brief, a target market, or a competitor sample - our food technologists develop, iterate, and lock the recipe with you." },
+        "manufacturing": { "title": "In-house Manufacturing",  "description": "Tomato paste, fava, jams, juices - all produced under one roof on lines built for consistency, traceability, and food safety." },
+        "packaging":     { "title": "Packaging Flexibility",   "description": "Tins, glass jars, PET bottles, and pouches - pick a format and capacity that fits your shelf, your margin, and your market." },
+        "regulatory":    { "title": "Regulatory & Labeling",   "description": "Country-specific labels, ingredient declarations, nutritional panels, and export documentation handled by our compliance team." },
+        "qa":            { "title": "QA & Certifications",     "description": "ISO 22000, HACCP, Halal, FDA, GMP, and BRC - every batch is tested, logged, and traceable from raw input to sealed carton." },
+        "logistics":     { "title": "Export Logistics",        "description": "Container loading, port handling, and Incoterms support - we get your brand from our gate to your importer's door." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESS",
+      "heading": "How a private-label project moves",
+      "intro": "Six clear stages - most projects move from brief to first shipment in 12 to 16 weeks.",
+      "steps": {
+        "brief":      { "title": "Brief & Goals",        "description": "We align on your target market, price point, packaging format, and volume so the rest of the project is calibrated correctly." },
+        "recipe":     { "title": "Recipe Development",   "description": "Our R&D team formulates to your taste profile, regulatory needs, and shelf-life targets - iterating until the spec is yours." },
+        "samples":    { "title": "Samples & Sign-off",   "description": "We ship sealed samples for tasting, lab analysis, and label proofing. Nothing moves to production until you've signed off." },
+        "pilot":      { "title": "Pilot Run",            "description": "A short pilot batch validates the production parameters, label artwork, and packaging integrity on the actual line." },
+        "production": { "title": "Full Production",      "description": "Your order is scheduled, raw materials are released, and the line runs to spec - with QA samples pulled from every batch." },
+        "shipment":   { "title": "Shipment & Aftercare", "description": "We load the container, hand over export documentation, and stay on the line for any reorder or formula tweak you need." }
+      }
+    },
+    "packaging": {
+      "eyebrow": "FORMATS",
+      "heading": "Packaging that fits your market",
+      "intro": "Four families of packaging, each with the capacities our retail and food-service customers ask for most.",
+      "items": {
+        "tin":   { "title": "Tin (Canned)",   "moq": "MOQ: 1× 20ft FCL", "capacities": ["400 g", "800 g", "2.5 kg", "4.5 kg"] },
+        "glass": { "title": "Glass Jar",      "moq": "MOQ: 1× 20ft FCL", "capacities": ["250 g", "450 g", "650 g"] },
+        "pet":   { "title": "PET Bottle",     "moq": "MOQ: 1× 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
+        "pouch": { "title": "Pouch / Stick",  "moq": "MOQ: 1× 20ft FCL", "capacities": ["80 g", "250 g"] }
+      }
+    },
+    "certifications": { "heading": "Certified production, every batch" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Questions we hear most",
+      "items": {
+        "moq":        { "question": "What are your minimum order quantities?",
+                        "answer":   "We typically work in full container loads - 1× 20ft FCL is our standard MOQ. Smaller pilot runs are possible during the sampling phase." },
+        "leadTime":   { "question": "How long from brief to first shipment?",
+                        "answer":   "Most projects ship the first container 12 to 16 weeks after the brief is locked. Reorders move much faster - usually 4 to 6 weeks." },
+        "samples":    { "question": "Do you charge for samples?",
+                        "answer":   "Initial concept samples are free. Custom-formulated samples covering R&D time are quoted per project and credited against your first production order." },
+        "artwork":    { "question": "Can you handle custom label artwork?",
+                        "answer":   "Yes - bring us your finished artwork or work with our in-house design partner. We pre-press, proof, and validate against the destination market's labeling rules." },
+        "regulatory": { "question": "Which export documents do you provide?",
+                        "answer":   "Commercial invoice, packing list, certificate of origin, health certificate, halal certificate, and any destination-specific documents your importer needs." },
+        "incoterms":  { "question": "Which Incoterms do you support?",
+                        "answer":   "FOB Alexandria is our default, but we routinely arrange CIF, CFR, and DDP shipments to most markets we serve." }
+      }
+    },
+    "cta": {
+      "heading": "Ready to start a private-label project?",
+      "sub": "Send us a brief and we'll be back within two business days with a sampling plan, indicative pricing, and a project timeline.",
+      "button": "Request a quote"
     }
   },
   "export": {
