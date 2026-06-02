@@ -32,6 +32,7 @@ export async function sendContactEmail(data: ContactInput): Promise<void> {
   const body = [
     `Name: ${data.name}`,
     `Email: ${data.email}`,
+    `Phone: ${data.phone}`,
     '',
     'Message:',
     data.message,

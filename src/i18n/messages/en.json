@@ -425,6 +425,7 @@
     "form": {
       "name":    { "label": "Your name",    "placeholder": "Full name" },
       "email":   { "label": "Email",        "placeholder": "name@company.com" },
+      "phone":   { "label": "Phone",        "placeholder": "+20 100 000 0000" },
       "message": { "label": "Message",      "placeholder": "Tell us how we can help - at least a couple of sentences." },
       "submit": "Send message",
       "submitting": "Sending..."
@@ -437,6 +438,7 @@
     "errors": {
       "name": "Please share your name.",
       "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number (digits, +, spaces, -, ()).",
       "message": "Please give us a little more detail (10+ characters).",
       "submitFailed": "Something went wrong sending your message. Please try again, or email wecare@kagegypt.com directly."
     }

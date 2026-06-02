@@ -5,6 +5,7 @@ const honeypot = z.string().max(0).optional().or(z.literal(''));
 export const contactSchema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
+  phone: z.string().regex(/^\+?[\d\s\-()]{6,20}$/, { message: 'Phone must be digits with optional +, spaces, -, ()' }),
   message: z.string().min(10),
   hp: honeypot,
 });

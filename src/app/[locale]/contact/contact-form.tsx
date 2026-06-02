@@ -24,7 +24,7 @@ export function ContactForm() {
   } = useForm<ContactInput>({
     resolver: zodResolver(contactSchema),
     mode: 'onTouched',
-    defaultValues: { name: '', email: '', message: '', hp: '' },
+    defaultValues: { name: '', email: '', phone: '', message: '', hp: '' },
   });
 
   const onSubmit = async (data: ContactInput) => {
@@ -84,15 +84,26 @@ export function ContactForm() {
         {...register('name')}
         error={errors.name && tErrors('name')}
       />
-      <TextField
-        label={t('email.label')}
-        placeholder={t('email.placeholder')}
-        type="email"
-        inputMode="email"
-        autoComplete="email"
-        {...register('email')}
-        error={errors.email && tErrors('email')}
-      />
+      <div className="grid gap-5 md:grid-cols-2">
+        <TextField
+          label={t('email.label')}
+          placeholder={t('email.placeholder')}
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          {...register('email')}
+          error={errors.email && tErrors('email')}
+        />
+        <TextField
+          label={t('phone.label')}
+          placeholder={t('phone.placeholder')}
+          type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          {...register('phone')}
+          error={errors.phone && tErrors('phone')}
+        />
+      </div>
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-primary/70">
