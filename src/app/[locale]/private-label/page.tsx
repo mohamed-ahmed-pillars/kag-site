@@ -5,7 +5,7 @@ import PrivateLabelProcess from "@/components/ui/private-label-process";
 import PrivateLabelPackaging from "@/components/ui/private-label-packaging";
 import PrivateLabelFaq from "@/components/ui/private-label-faq";
 import CertificationsMarquee from "@/components/ui/certifications-marquee";
-import { FlowButton } from "@/components/ui/flow-button";
+import { RequestQuoteButton } from "@/components/ui/request-quote-button";
 
 const CAPABILITY_KEYS = [
   "rnd",
@@ -149,7 +149,7 @@ export default async function PrivateLabelPage({
               </h3>
               <p className="text-primary-foreground/80">{t("cta.sub")}</p>
             </div>
-            <FlowButton href="/rfq" text={t("cta.button")} className="px-10 py-3" />
+            <RequestQuoteButton type="privateLabel" text={t("cta.button")} className="px-10 py-3" />
           </div>
         </div>
       </section>

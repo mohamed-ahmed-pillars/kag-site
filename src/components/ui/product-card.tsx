@@ -6,6 +6,7 @@ import {
   CardHoverRevealContent,
   CardHoverRevealMain,
 } from "@/components/ui/reveal-on-hover";
+import { RequestQuoteButton } from "@/components/ui/request-quote-button";
 import type { Product } from "@/lib/data/products";
 
 interface ProductCardProps {
@@ -133,6 +134,10 @@ export default function ProductCard({
             {product.packaging.unitsPerCarton}
             {labels.perCarton}
           </Chip>
+        </div>
+
+        <div className="pt-2">
+          <RequestQuoteButton type="brands" productId={product.id} variant="secondary" className="px-5 py-2 text-xs" />
         </div>
       </CardHoverRevealContent>
     </CardHoverReveal>
