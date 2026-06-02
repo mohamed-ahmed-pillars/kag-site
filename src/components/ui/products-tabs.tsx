@@ -20,10 +20,10 @@ type TabKey = "all" | ProductCategory;
 const TABS: { key: TabKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "all", icon: LayoutGrid },
   { key: "tomato_paste", icon: Soup },
+  { key: "jams", icon: Cherry },
   { key: "fava_beans", icon: Bean },
   { key: "beans_peas", icon: Sprout },
   { key: "canned_vegetables", icon: Salad },
-  { key: "jams", icon: Cherry },
   { key: "juices", icon: GlassWater },
 ];
 
