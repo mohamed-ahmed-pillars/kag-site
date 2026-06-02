@@ -16,7 +16,7 @@ const quickLinks: { key: string; href: Href }[] = [
 
 const serviceLinks: { key: string; href: Href }[] = [
   { key: 'privateLabel', href: '/private-label' },
-  { key: 'customProduct', href: '/services/custom-product' },
+  { key: 'customProduct', href: '/custom-product' },
   { key: 'export', href: '/export' },
 ];
 

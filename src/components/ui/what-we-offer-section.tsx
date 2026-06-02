@@ -237,7 +237,7 @@ export default function WhatWeOfferSection() {
                       summary={t("pillars.customRecipe.summary")}
                       items={t.raw("pillars.customRecipe.items") as string[]}
                       ctaText={t("pillars.customRecipe.cta")}
-                      ctaHref="/contact"
+                      ctaHref="/custom-product"
                       rfqText={t("rfq")}
                       isActive={isActive}
                     />

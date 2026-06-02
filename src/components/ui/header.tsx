@@ -13,7 +13,7 @@ import { FlowButton } from "@/components/ui/flow-button";
 
 const serviceItems = [
   { key: "privateLabel", href: "/private-label" },
-  { key: "customProduct", href: "/services/custom-product" },
+  { key: "customProduct", href: "/custom-product" },
   { key: "export", href: "/export" },
 ] as const;
 

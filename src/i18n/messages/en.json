@@ -310,6 +310,77 @@
       "button": "Start an export RFQ"
     }
   },
+  "customProductPage": {
+    "hero": {
+      "eyebrow": "CUSTOM PRODUCT",
+      "heading": "Built around your brief",
+      "subhead": "Bring us a flavor profile, a target market, or a competitor benchmark - our R&D team develops, samples, and scales the recipe that fits.",
+      "cta": "See our capabilities"
+    },
+    "capabilities": {
+      "eyebrow": "R&D CAPABILITIES",
+      "heading": "From idea to shelf-ready spec",
+      "intro": "Six R&D capabilities that turn a brief into a product your buyers reorder - tasted, tested, and ready to scale.",
+      "items": {
+        "flavorProfiling":   { "title": "Flavor profiling",     "description": "Sensory benchmarking against your reference samples, target market preferences, and competitor SKUs - so the prototype hits the right palate from round one." },
+        "formulation":       { "title": "Recipe formulation",   "description": "Ingredient sourcing, ratio modeling, and process design - tuned to your target cost, label claims, and the shelf reality of your destination market." },
+        "sensoryTesting":    { "title": "Sensory & shelf-life", "description": "Trained-panel evaluation, accelerated and real-time shelf-life trials, and stability testing across the temperatures your product will actually see." },
+        "regulatoryLabel":   { "title": "Regulatory & labels",  "description": "Ingredient declarations, nutritional panels, and claim validation for your destination market - reviewed by our compliance team before the first artwork proof." },
+        "pilotBatches":      { "title": "Pilot batches",        "description": "Production-line pilot runs that prove the recipe scales - same equipment, same QA gates, same documentation as your eventual commercial batches." },
+        "scaleUp":           { "title": "Scale-up to production","description": "Handoff to our production team with a locked spec, validated process parameters, and a sampling plan for your first commercial run." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESS",
+      "heading": "How a custom product gets built",
+      "intro": "Six stages from first brief to handoff - each one ends in a tangible artefact you can taste, test, or send to your buyer.",
+      "steps": {
+        "brief":     { "title": "Brief",              "description": "Share your target market, reference products, cost ceiling, and any non-negotiables on label claims or ingredients. We respond with feasibility within two business days." },
+        "discovery": { "title": "Discovery",          "description": "Our R&D team benchmarks your references, sources candidate ingredients, and maps the formulation space - then proposes two or three directions to explore." },
+        "prototype": { "title": "Prototype",          "description": "Lab-scale prototypes built around the chosen direction, photographed and packed for shipping - typically within three to four weeks of the brief." },
+        "tasting":   { "title": "Tasting & iteration","description": "Structured feedback on each prototype - sensory, regulatory, cost - feeds the next iteration. Most projects converge in two to three rounds." },
+        "pilot":     { "title": "Pilot batch",        "description": "We run a production-line pilot - same equipment, same QA - and ship the result for final approval and any destination-market testing your buyers need." },
+        "handoff":   { "title": "Handoff",            "description": "Locked spec, validated process, and a sampling plan are handed to production. Your first commercial batch ships under the same documentation as the pilot." }
+      }
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS",
+      "heading": "Categories we've built before",
+      "intro": "Six categories where our R&D team has formulated, scaled, and shipped commercial products - the starting point for most custom briefs.",
+      "items": {
+        "sauces":     { "title": "Sauces & dressings",  "description": "Tomato, chili, garlic, tahina, and emulsified dressings - retail and food-service formats, ambient-stable for export." },
+        "jams":       { "title": "Jams & spreads",      "description": "Fruit jams, marmalades, halawa, and sweet spreads - tuned for sweetness profile and target sugar content." },
+        "juices":     { "title": "Juices & beverages",  "description": "Nectars, concentrates, and ready-to-drink formats - flavor matched to your market and packaged for ambient distribution." },
+        "fava":       { "title": "Fava & legumes",      "description": "Plain, chili, garlic, and tehina-spiked fava beans plus other legume preparations - our heritage category." },
+        "condiments": { "title": "Condiments",          "description": "Mustards, mayonnaise variants, chutneys, and pastes - balanced for shelf stability and the heat profile of your market." },
+        "pickles":    { "title": "Pickles & preserves", "description": "Brined and acidified vegetables, olive preparations, and other ambient preserves - retail jars and food-service bulk formats." }
+      }
+    },
+    "certifications": { "heading": "Recipes built to certified standards" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Questions buyers ask first",
+      "items": {
+        "turnaround":  { "question": "How long does a custom product take?",
+                         "answer":   "Most projects converge in eight to twelve weeks from brief to pilot batch - faster when the brief is close to a category we already produce, longer for new categories or restricted ingredients." },
+        "samples":     { "question": "Are R&D samples free?",
+                         "answer":   "Initial concept samples are free. Custom-formulated samples covering R&D time are quoted per project and credited against your first commercial production order." },
+        "ipOwnership": { "question": "Who owns the recipe?",
+                         "answer":   "You do. Recipes developed against your brief are yours, with a multi-year exclusivity in your target markets. We retain the right to use formulation know-how, not the specific recipe." },
+        "moq":         { "question": "What's the MOQ for the first commercial run?",
+                         "answer":   "1× 20ft FCL is standard once a recipe is locked. Smaller pilot-batch volumes are possible for market trials - talk to us about your launch plan." },
+        "costing":     { "question": "How much does development cost?",
+                         "answer":   "Concept and benchmarking are at our cost. Prototype rounds and pilot batches are quoted per project based on ingredient complexity and testing scope - typically credited against your first production order." },
+        "regulatory":  { "question": "Do you handle destination-market regulatory work?",
+                         "answer":   "Yes. Our compliance team reviews ingredient declarations, nutritional panels, claim validation, and destination-specific certificates before the first artwork proof - so your product clears customs cleanly." }
+      }
+    },
+    "cta": {
+      "heading": "Ready to start a recipe?",
+      "sub": "Send us a brief - reference products, target market, cost ceiling - and we'll respond in two business days with feasibility and a development plan.",
+      "button": "Start a recipe"
+    }
+  },
   "export": {
     "section": {
       "eyebrow": "GLOBAL REACH",

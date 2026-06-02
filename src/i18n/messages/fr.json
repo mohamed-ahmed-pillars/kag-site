@@ -310,6 +310,77 @@
       "button": "Démarrer une demande export"
     }
   },
+  "customProductPage": {
+    "hero": {
+      "eyebrow": "PRODUIT PERSONNALISÉ",
+      "heading": "Conçu autour de votre brief",
+      "subhead": "Apportez-nous un profil de saveur, un marché cible ou un produit de référence - notre équipe R&D développe, échantillonne et industrialise la recette qui correspond.",
+      "cta": "Voir nos capacités"
+    },
+    "capabilities": {
+      "eyebrow": "CAPACITÉS R&D",
+      "heading": "De l'idée au cahier des charges prêt à produire",
+      "intro": "Six capacités R&D qui transforment un brief en produit que vos acheteurs réorganisent - dégusté, testé et prêt à industrialiser.",
+      "items": {
+        "flavorProfiling":   { "title": "Profil de saveur",       "description": "Benchmark sensoriel face à vos échantillons de référence, aux préférences du marché cible et aux concurrents - pour que le prototype touche juste dès la première itération." },
+        "formulation":       { "title": "Formulation",            "description": "Sourcing des ingrédients, modélisation des ratios, conception du procédé - calibrés selon votre coût cible, vos allégations et la réalité linéaire du marché de destination." },
+        "sensoryTesting":    { "title": "Sensoriel & DLC",        "description": "Évaluation par panel entraîné, essais de durée de vie accélérés et réels, et tests de stabilité dans les températures que votre produit subira réellement." },
+        "regulatoryLabel":   { "title": "Réglementaire & étiquetage","description": "Déclarations d'ingrédients, tableaux nutritionnels et validation des allégations pour votre marché de destination - revus par notre cellule conformité avant la première maquette." },
+        "pilotBatches":      { "title": "Lots pilotes",           "description": "Tirages pilotes sur ligne de production qui prouvent que la recette tient à l'échelle - mêmes équipements, mêmes contrôles qualité, mêmes documents que vos futurs lots commerciaux." },
+        "scaleUp":           { "title": "Industrialisation",      "description": "Transfert à notre équipe production avec un cahier des charges figé, des paramètres procédés validés et un plan d'échantillonnage pour votre première série commerciale." }
+      }
+    },
+    "process": {
+      "eyebrow": "PROCESSUS",
+      "heading": "Comment se construit un produit personnalisé",
+      "intro": "Six étapes du premier brief au transfert - chacune se termine par un livrable concret que vous pouvez goûter, tester ou envoyer à votre acheteur.",
+      "steps": {
+        "brief":     { "title": "Brief",                "description": "Partagez votre marché cible, vos références, votre plafond de coût et toute exigence non négociable sur les allégations ou ingrédients. Nous répondons sous deux jours ouvrés avec une étude de faisabilité." },
+        "discovery": { "title": "Cadrage",              "description": "Notre équipe R&D analyse vos références, source les ingrédients candidats et cartographie l'espace de formulation - puis propose deux ou trois directions à explorer." },
+        "prototype": { "title": "Prototype",            "description": "Prototypes au laboratoire bâtis autour de la direction retenue, photographiés et conditionnés pour expédition - généralement trois à quatre semaines après le brief." },
+        "tasting":   { "title": "Dégustation & itération","description": "Retours structurés sur chaque prototype - sensoriels, réglementaires, coûts - alimentent l'itération suivante. La plupart des projets convergent en deux ou trois rounds." },
+        "pilot":     { "title": "Lot pilote",           "description": "Nous lançons un lot pilote en ligne de production - mêmes équipements, même qualité - et expédions le résultat pour validation finale et tout test marché requis par vos acheteurs." },
+        "handoff":   { "title": "Transfert",            "description": "Cahier des charges figé, procédé validé et plan d'échantillonnage transmis à la production. Votre premier lot commercial part avec les mêmes documents que le pilote." }
+      }
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS",
+      "heading": "Catégories que nous avons déjà construites",
+      "intro": "Six catégories où notre équipe R&D a formulé, industrialisé et expédié des produits commerciaux - le point de départ de la plupart des briefs personnalisés.",
+      "items": {
+        "sauces":     { "title": "Sauces & vinaigrettes","description": "Tomate, piment, ail, tahina et vinaigrettes émulsionnées - formats retail et restauration, stables à température ambiante pour l'export." },
+        "jams":       { "title": "Confitures & pâtes à tartiner","description": "Confitures de fruits, marmelades, halawa et pâtes à tartiner sucrées - ajustées au profil sucré et à la teneur en sucre cible." },
+        "juices":     { "title": "Jus & boissons",      "description": "Nectars, concentrés et formats prêts à boire - saveurs adaptées à votre marché et conditionnement ambiant." },
+        "fava":       { "title": "Fèves & légumineuses","description": "Fèves nature, piment, ail et tehina, ainsi que d'autres préparations de légumineuses - notre catégorie historique." },
+        "condiments": { "title": "Condiments",          "description": "Moutardes, variantes de mayonnaise, chutneys et pâtes - équilibrés pour la stabilité au rayon et le niveau d'épice attendu sur votre marché." },
+        "pickles":    { "title": "Pickles & conserves", "description": "Légumes saumurés et acidifiés, préparations d'olives et autres conserves ambiantes - bocaux retail et formats restauration." }
+      }
+    },
+    "certifications": { "heading": "Des recettes bâties selon des normes certifiées" },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Questions que les acheteurs posent en premier",
+      "items": {
+        "turnaround":  { "question": "Combien de temps pour un produit personnalisé ?",
+                         "answer":   "La plupart des projets convergent en huit à douze semaines, du brief au lot pilote - plus rapide quand le brief est proche d'une catégorie que nous produisons déjà, plus long pour les catégories nouvelles ou les ingrédients sensibles." },
+        "samples":     { "question": "Les échantillons R&D sont-ils gratuits ?",
+                         "answer":   "Les échantillons de concept initiaux sont gratuits. Les échantillons formulés sur mesure couvrant le temps R&D sont facturés au projet et déduits de votre première commande de production." },
+        "ipOwnership": { "question": "À qui appartient la recette ?",
+                         "answer":   "À vous. Les recettes développées sur la base de votre brief vous appartiennent, avec une exclusivité pluriannuelle sur vos marchés cibles. Nous conservons le savoir-faire de formulation, pas la recette elle-même." },
+        "moq":         { "question": "Quel est le MOQ pour le premier lot commercial ?",
+                         "answer":   "1× FCL 20 pieds est la norme une fois la recette figée. Des volumes pilotes plus petits sont possibles pour des tests marché - parlons-en selon votre plan de lancement." },
+        "costing":     { "question": "Quel est le coût du développement ?",
+                         "answer":   "Le concept et le benchmark sont à notre charge. Les rounds de prototypage et lots pilotes sont facturés au projet selon la complexité des ingrédients et l'étendue des tests - généralement déduits de votre première commande de production." },
+        "regulatory":  { "question": "Gérez-vous la réglementaire du marché de destination ?",
+                         "answer":   "Oui. Notre cellule conformité revoit les déclarations d'ingrédients, les tableaux nutritionnels, la validation des allégations et les certificats propres au marché avant la première maquette - pour que votre produit passe la douane sans accroc." }
+      }
+    },
+    "cta": {
+      "heading": "Prêt à démarrer une recette ?",
+      "sub": "Envoyez-nous un brief - produits de référence, marché cible, plafond de coût - et nous reviendrons sous deux jours ouvrés avec une étude de faisabilité et un plan de développement.",
+      "button": "Démarrer une recette"
+    }
+  },
   "export": {
     "section": {
       "eyebrow": "RAYONNEMENT MONDIAL",
