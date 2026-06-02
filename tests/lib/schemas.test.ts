@@ -64,7 +64,7 @@ const validContact = {
 const validShipping = {
   shippingMethod: 'fob' as const,
   destinationPort: 'Felixstowe',
-  estimatedDate: '',
+  estimatedDate: '2026-08-15',
   specialRequirements: '',
   exportCertifications: [],
 };

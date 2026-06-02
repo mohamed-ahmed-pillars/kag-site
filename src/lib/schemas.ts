@@ -14,7 +14,7 @@ export const contactStepSchema = z.object({
   companyName: z.string().min(2),
   contactName: z.string().min(2),
   email: z.email({ message: 'Email is invalid' }),
-  phone: z.string().min(5),
+  phone: z.string().regex(/^\+?[\d\s\-()]{6,20}$/, { message: 'Phone must be digits with optional +, spaces, -, ()' }),
   country: z.string().min(2),
   address: z.string().optional().or(z.literal('')),
 });
@@ -54,7 +54,7 @@ export type PrivateLabelStepInput = z.infer<typeof privateLabelStepSchema>;
 export const shippingStepSchema = z.object({
   shippingMethod: z.enum(['fob', 'cif', 'exw', 'dap']),
   destinationPort: z.string().min(2),
-  estimatedDate: z.string().optional().or(z.literal('')),
+  estimatedDate: z.string().min(1),
   specialRequirements: z.string().optional().or(z.literal('')),
   exportCertifications: z.array(z.string()).optional(),
 });

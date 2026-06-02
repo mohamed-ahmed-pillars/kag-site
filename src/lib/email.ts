@@ -18,7 +18,11 @@ function getAddresses() {
   const from = process.env.MAIL_FROM;
   const to = process.env.MAIL_TO;
   if (!from || !to) {
-    throw new Error('MAIL_FROM and MAIL_TO must be set');
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('MAIL_FROM and MAIL_TO must be set');
+    }
+    console.warn('[email] MAIL_FROM and/or MAIL_TO not set - using placeholders, emails will fail');
+    return { from: from ?? 'dev@placeholder.local', to: to ?? 'dev@placeholder.local' };
   }
   return { from, to };
 }

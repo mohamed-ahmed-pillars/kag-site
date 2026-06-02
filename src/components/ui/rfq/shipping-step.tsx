@@ -53,7 +53,12 @@ export function ShippingStep() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <TextField label={t('fields.destinationPort.label')} placeholder={t('fields.destinationPort.placeholder')} {...register('destinationPort')} error={errors.destinationPort?.message} />
-        <TextField label={t('fields.estimatedDate.label')} type="date" {...register('estimatedDate')} />
+        <TextField
+          label={t('fields.estimatedDate.label')}
+          type="date"
+          {...register('estimatedDate')}
+          error={errors.estimatedDate?.message}
+        />
       </div>
 
       <div className="flex flex-col gap-1.5">

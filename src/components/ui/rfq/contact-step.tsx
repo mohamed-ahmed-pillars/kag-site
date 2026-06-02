@@ -28,7 +28,15 @@ export function ContactStep() {
         <TextField label={t('fields.companyName.label')} placeholder={t('fields.companyName.placeholder')} {...register('companyName')} error={errors.companyName?.message} />
         <TextField label={t('fields.contactName.label')} placeholder={t('fields.contactName.placeholder')} {...register('contactName')} error={errors.contactName?.message} />
         <TextField label={t('fields.email.label')} type="email" placeholder={t('fields.email.placeholder')} {...register('email')} error={errors.email?.message} />
-        <TextField label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} {...register('phone')} error={errors.phone?.message} />
+        <TextField
+          label={t('fields.phone.label')}
+          placeholder={t('fields.phone.placeholder')}
+          type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          {...register('phone')}
+          error={errors.phone?.message}
+        />
         <TextField label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} {...register('country')} error={errors.country?.message} />
         <TextField label={t('fields.address.label')} placeholder={t('fields.address.placeholder')} {...register('address')} />
       </div>
