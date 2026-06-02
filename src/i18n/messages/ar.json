@@ -404,5 +404,148 @@
         "body": "قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ المراجعة المحدث. نشجعك على مراجعة هذه السياسة بشكل دوري."
       }
     ]
+  },
+  "rfq": {
+    "chooser": {
+      "eyebrow": "اطلب عرض سعر",
+      "heading": "كيف يمكننا مساعدتك؟",
+      "intro": "اختر المسار المناسب لمشروعك. نرد خلال يوم عمل واحد.",
+      "brands": {
+        "heading": "اطلب من منتجاتنا",
+        "description": "اشترِ منتجات يامكرز وتسبكة بكميات كبيرة - صلصات الطماطم، المربى، العصائر، والفول جاهزة للشحن.",
+        "cta": "اطلب منتجاتنا"
+      },
+      "privateLabel": {
+        "heading": "تصنيع باسمك التجاري",
+        "description": "صنّع منتجاتك في مصانعنا تحت علامتك - نتولى الوصفة والتعبئة والتصدير.",
+        "cta": "ابدأ مشروع علامة خاصة"
+      }
+    },
+    "steps": {
+      "contact": "بيانات الاتصال",
+      "products": "المنتجات",
+      "brief": "الموجز",
+      "shipping": "الشحن",
+      "review": "المراجعة"
+    },
+    "contact": {
+      "heading": "عرّفنا بنفسك",
+      "intro": "نستخدم هذه البيانات فقط للرد على طلبك.",
+      "fields": {
+        "companyName":  { "label": "اسم الشركة",   "placeholder": "مثال: شركة الأغذية" },
+        "contactName":  { "label": "اسم المسؤول",  "placeholder": "اسمك بالكامل" },
+        "email":        { "label": "البريد الإلكتروني", "placeholder": "you@company.com" },
+        "phone":        { "label": "الهاتف",        "placeholder": "+20 100 123 4567" },
+        "country":      { "label": "الدولة",        "placeholder": "المملكة المتحدة" },
+        "address":      { "label": "العنوان",       "placeholder": "اختياري - الشارع والمدينة" }
+      }
+    },
+    "brands": {
+      "step": { "heading": "ماذا تود أن تطلب؟", "intro": "أضف منتجًا أو أكثر من كتالوجنا." },
+      "fields": {
+        "product":  { "label": "المنتج",     "placeholder": "اختر منتجًا" },
+        "quantity": { "label": "الكمية",     "placeholder": "عدد الكراتين" },
+        "notes":    { "label": "ملاحظات",    "placeholder": "اختياري - أنواع، مواعيد، إلخ." }
+      },
+      "addAnother": "إضافة منتج آخر",
+      "remove": "حذف"
+    },
+    "privateLabel": {
+      "step": { "heading": "حدّثنا عن مشروعك", "intro": "موجز واحد لكل خط منتج تود تصنيعه." },
+      "categories": {
+        "tomato_paste": "صلصة طماطم",
+        "jams": "مربى",
+        "juices": "عصائر",
+        "fava_beans": "فول",
+        "sauces": "صلصات",
+        "beans_peas": "بقوليات وبازلاء",
+        "canned_vegetables": "خضروات معلبة",
+        "other": "أخرى"
+      },
+      "packagingFormats": {
+        "tin": "صفيح",
+        "glass": "زجاج",
+        "pet": "بلاستيك PET",
+        "pouch": "أكياس"
+      },
+      "fields": {
+        "category":          { "label": "الفئة" },
+        "packagingFormat":   { "label": "نوع التعبئة المستهدف" },
+        "targetVolume":      { "label": "الحجم المستهدف / الحد الأدنى السنوي", "placeholder": "مثال: حاوية شهريًا، أو 20,000 كرتونة سنويًا" },
+        "certifications":    { "label": "الشهادات المطلوبة" },
+        "brandName":         { "label": "اسم علامتك التجارية",   "placeholder": "اترك الحقل فارغًا إذا لم تحدده بعد" },
+        "targetRetailPrice": { "label": "سعر التجزئة المستهدف",  "placeholder": "مثال: \"2-3 دولار للوحدة\" أو \"فئة فاخرة\"" },
+        "artworkLink":       { "label": "رابط تصميم الملصق",      "placeholder": "Google Drive / WeTransfer / Dropbox", "help": "إذا لم يكن لديك رابط جاهز، اترك الحقل فارغًا - سنطلبه في ردّنا." }
+      },
+      "addAnother": "إضافة موجز منتج آخر",
+      "remove": "حذف"
+    },
+    "certifications": {
+      "halal": "حلال",
+      "iso22000": "ISO 22000",
+      "fda": "FDA",
+      "gmp": "GMP",
+      "brc": "BRC",
+      "kosher": "كوشير",
+      "euOrganic": "عضوي أوروبي",
+      "other": "أخرى"
+    },
+    "shipping": {
+      "heading": "كيف تود الشحن؟",
+      "intro": "نتعامل مع معظم شروط التسليم والموانئ حول العالم.",
+      "methods": {
+        "fob": "FOB",
+        "cif": "CIF",
+        "exw": "EXW",
+        "dap": "DAP"
+      },
+      "fields": {
+        "method":              { "label": "طريقة الشحن" },
+        "destinationPort":     { "label": "ميناء / مدينة الوصول", "placeholder": "مثال: جدة، فيليكستو، ممباسا" },
+        "estimatedDate":       { "label": "التاريخ المتوقع" },
+        "specialRequirements": { "label": "متطلبات خاصة",         "placeholder": "بالطات، تبريد، ملاحظات جمركية، إلخ." }
+      },
+      "exportCerts": {
+        "heading": "ما الشهادات التي تطلبها دولتك لاستيراد الأغذية من مصر؟",
+        "intro": "اختر كل ما ينطبق. أي شهادة لم نذكرها، أضفها بالأسفل.",
+        "chips": {
+          "halal": "حلال",
+          "euOrganic": "عضوي أوروبي",
+          "sfda": "SFDA",
+          "fda": "FDA",
+          "jas": "JAS",
+          "kosher": "كوشير",
+          "nsf": "NSF",
+          "other": "أخرى"
+        },
+        "free": { "label": "شهادات أخرى", "placeholder": "نص حر - أي شيء لم نذكره" }
+      }
+    },
+    "review": {
+      "heading": "نظرة أخيرة",
+      "intro": "تأكد من البيانات قبل الإرسال.",
+      "sections": {
+        "contact": "بيانات الاتصال",
+        "what": "ما تريده",
+        "shipping": "الشحن"
+      }
+    },
+    "success": {
+      "heading": "تم - سنعاود التواصل",
+      "message": "تم إرسال طلبك إلى فريق KAG. سنرد خلال يوم عمل واحد.",
+      "reference": "المرجع",
+      "backHome": "العودة للرئيسية"
+    },
+    "actions": {
+      "next": "التالي",
+      "prev": "السابق",
+      "submit": "إرسال الطلب",
+      "submitting": "جارٍ الإرسال...",
+      "requestQuote": "اطلب عرض سعر"
+    },
+    "errors": {
+      "submitFailed": "حدث خطأ من جانبنا. حاول مرة أخرى.",
+      "networkError": "تعذّر الوصول إلى الخادم. تحقق من الاتصال وأعد المحاولة."
+    }
   }
 }

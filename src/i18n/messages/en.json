@@ -404,5 +404,148 @@
         "body": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically."
       }
     ]
+  },
+  "rfq": {
+    "chooser": {
+      "eyebrow": "REQUEST A QUOTE",
+      "heading": "How can we help?",
+      "intro": "Choose the path that fits your project. We answer within one business day.",
+      "brands": {
+        "heading": "Order our brands",
+        "description": "Buy Yamkers and Tasbeka SKUs in bulk - tomato sauces, jams, juices, and fava beans ready to ship.",
+        "cta": "Order brands"
+      },
+      "privateLabel": {
+        "heading": "Request private label",
+        "description": "Manufacture under your own brand in our facilities - we handle recipe, packaging, and export.",
+        "cta": "Start a private-label project"
+      }
+    },
+    "steps": {
+      "contact": "Contact",
+      "products": "Products",
+      "brief": "Brief",
+      "shipping": "Shipping",
+      "review": "Review"
+    },
+    "contact": {
+      "heading": "Tell us who you are",
+      "intro": "We use this only to follow up on your quote.",
+      "fields": {
+        "companyName":  { "label": "Company name",  "placeholder": "e.g. Acme Foods Ltd" },
+        "contactName":  { "label": "Contact name",  "placeholder": "Your full name" },
+        "email":        { "label": "Email",         "placeholder": "you@company.com" },
+        "phone":        { "label": "Phone",         "placeholder": "+44 20 1234 5678" },
+        "country":      { "label": "Country",       "placeholder": "United Kingdom" },
+        "address":      { "label": "Address",       "placeholder": "Optional - street, city" }
+      }
+    },
+    "brands": {
+      "step": { "heading": "What would you like to order?", "intro": "Add one or more SKUs from our catalogue." },
+      "fields": {
+        "product":     { "label": "Product",     "placeholder": "Choose a product" },
+        "quantity":    { "label": "Quantity",    "placeholder": "Number of cartons" },
+        "notes":       { "label": "Notes",       "placeholder": "Optional - variants, deadlines, etc." }
+      },
+      "addAnother": "Add another product",
+      "remove": "Remove"
+    },
+    "privateLabel": {
+      "step": { "heading": "Tell us about your project", "intro": "One brief per product line you want to manufacture." },
+      "categories": {
+        "tomato_paste": "Tomato paste",
+        "jams": "Jams",
+        "juices": "Juices",
+        "fava_beans": "Fava beans",
+        "sauces": "Sauces",
+        "beans_peas": "Beans & peas",
+        "canned_vegetables": "Canned vegetables",
+        "other": "Other"
+      },
+      "packagingFormats": {
+        "tin": "Tin",
+        "glass": "Glass",
+        "pet": "PET",
+        "pouch": "Pouch"
+      },
+      "fields": {
+        "category":          { "label": "Category" },
+        "packagingFormat":   { "label": "Target packaging format" },
+        "targetVolume":      { "label": "Target volume / annual MOQ", "placeholder": "e.g. 1 container/month, or 20,000 cartons/year" },
+        "certifications":    { "label": "Required certifications" },
+        "brandName":         { "label": "Customer's brand name",     "placeholder": "Leave blank if not finalised" },
+        "targetRetailPrice": { "label": "Target retail price",       "placeholder": "e.g. \"$2-3 per unit\" or \"premium tier\"" },
+        "artworkLink":       { "label": "Label artwork link",        "placeholder": "Google Drive / WeTransfer / Dropbox link", "help": "If you don't have a link yet, leave this blank - we'll request the artwork in our follow-up email." }
+      },
+      "addAnother": "Add another product brief",
+      "remove": "Remove"
+    },
+    "certifications": {
+      "halal": "Halal",
+      "iso22000": "ISO 22000",
+      "fda": "FDA",
+      "gmp": "GMP",
+      "brc": "BRC",
+      "kosher": "Kosher",
+      "euOrganic": "EU Organic",
+      "other": "Other"
+    },
+    "shipping": {
+      "heading": "How should we ship it?",
+      "intro": "We work with most Incoterms and ports worldwide.",
+      "methods": {
+        "fob": "FOB",
+        "cif": "CIF",
+        "exw": "EXW",
+        "dap": "DAP"
+      },
+      "fields": {
+        "method":               { "label": "Shipping method" },
+        "destinationPort":      { "label": "Destination port / city", "placeholder": "e.g. Felixstowe, Jeddah, Mombasa" },
+        "estimatedDate":        { "label": "Estimated date" },
+        "specialRequirements":  { "label": "Special requirements",    "placeholder": "Pallets, temperature, customs notes, etc." }
+      },
+      "exportCerts": {
+        "heading": "Which certifications does your country require for food imports from Egypt?",
+        "intro": "Pick all that apply. Anything we miss, add it below.",
+        "chips": {
+          "halal": "Halal",
+          "euOrganic": "EU Organic",
+          "sfda": "SFDA",
+          "fda": "FDA",
+          "jas": "JAS",
+          "kosher": "Kosher",
+          "nsf": "NSF",
+          "other": "Other"
+        },
+        "free": { "label": "Other certifications", "placeholder": "Free text - anything we missed" }
+      }
+    },
+    "review": {
+      "heading": "One last look",
+      "intro": "Verify the details before sending.",
+      "sections": {
+        "contact": "Contact",
+        "what": "What you want",
+        "shipping": "Shipping"
+      }
+    },
+    "success": {
+      "heading": "Got it - we'll be in touch",
+      "message": "Your request has been sent to the KAG team. We'll reply within one business day.",
+      "reference": "Reference",
+      "backHome": "Back to home"
+    },
+    "actions": {
+      "next": "Next",
+      "prev": "Back",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "requestQuote": "Request a quote"
+    },
+    "errors": {
+      "submitFailed": "Something went wrong on our end. Please try again.",
+      "networkError": "Couldn't reach the server. Check your connection and retry."
+    }
   }
 }

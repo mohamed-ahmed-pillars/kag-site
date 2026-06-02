@@ -404,5 +404,148 @@
         "body": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une nouvelle date de révision. Nous vous encourageons à consulter cette politique périodiquement."
       }
     ]
+  },
+  "rfq": {
+    "chooser": {
+      "eyebrow": "DEMANDER UN DEVIS",
+      "heading": "Comment pouvons-nous vous aider ?",
+      "intro": "Choisissez le parcours adapté à votre projet. Nous répondons sous un jour ouvré.",
+      "brands": {
+        "heading": "Commander nos marques",
+        "description": "Achetez Yamkers et Tasbeka en gros - sauces tomate, confitures, jus et fèves prêtes à expédier.",
+        "cta": "Commander nos marques"
+      },
+      "privateLabel": {
+        "heading": "Marque distributeur",
+        "description": "Fabriquez sous votre propre marque dans nos installations - nous gérons recette, emballage et export.",
+        "cta": "Lancer un projet MDD"
+      }
+    },
+    "steps": {
+      "contact": "Contact",
+      "products": "Produits",
+      "brief": "Brief",
+      "shipping": "Expédition",
+      "review": "Revue"
+    },
+    "contact": {
+      "heading": "Présentez-vous",
+      "intro": "Nous utilisons ces informations uniquement pour le suivi de votre devis.",
+      "fields": {
+        "companyName":  { "label": "Nom de la société", "placeholder": "ex. Acme Foods" },
+        "contactName":  { "label": "Nom du contact",    "placeholder": "Votre nom complet" },
+        "email":        { "label": "Email",             "placeholder": "vous@societe.com" },
+        "phone":        { "label": "Téléphone",         "placeholder": "+33 1 23 45 67 89" },
+        "country":      { "label": "Pays",              "placeholder": "France" },
+        "address":      { "label": "Adresse",           "placeholder": "Optionnel - rue, ville" }
+      }
+    },
+    "brands": {
+      "step": { "heading": "Que souhaitez-vous commander ?", "intro": "Ajoutez une ou plusieurs références de notre catalogue." },
+      "fields": {
+        "product":  { "label": "Produit",  "placeholder": "Choisissez un produit" },
+        "quantity": { "label": "Quantité", "placeholder": "Nombre de cartons" },
+        "notes":    { "label": "Notes",    "placeholder": "Optionnel - variantes, délais, etc." }
+      },
+      "addAnother": "Ajouter un autre produit",
+      "remove": "Retirer"
+    },
+    "privateLabel": {
+      "step": { "heading": "Parlez-nous de votre projet", "intro": "Un brief par ligne de produit à fabriquer." },
+      "categories": {
+        "tomato_paste": "Concentré de tomate",
+        "jams": "Confitures",
+        "juices": "Jus",
+        "fava_beans": "Fèves",
+        "sauces": "Sauces",
+        "beans_peas": "Légumineuses",
+        "canned_vegetables": "Légumes en conserve",
+        "other": "Autre"
+      },
+      "packagingFormats": {
+        "tin": "Boîte métal",
+        "glass": "Verre",
+        "pet": "PET",
+        "pouch": "Sachet"
+      },
+      "fields": {
+        "category":          { "label": "Catégorie" },
+        "packagingFormat":   { "label": "Format d'emballage cible" },
+        "targetVolume":      { "label": "Volume cible / MOQ annuel", "placeholder": "ex. 1 container/mois, ou 20 000 cartons/an" },
+        "certifications":    { "label": "Certifications requises" },
+        "brandName":         { "label": "Nom de votre marque",       "placeholder": "Laissez vide si non défini" },
+        "targetRetailPrice": { "label": "Prix de vente cible",       "placeholder": "ex. \"2-3 $ l'unité\" ou \"premium\"" },
+        "artworkLink":       { "label": "Lien vers le visuel",        "placeholder": "Google Drive / WeTransfer / Dropbox", "help": "Pas de lien pour l'instant ? Laissez vide - nous le demanderons dans notre réponse." }
+      },
+      "addAnother": "Ajouter un autre brief",
+      "remove": "Retirer"
+    },
+    "certifications": {
+      "halal": "Halal",
+      "iso22000": "ISO 22000",
+      "fda": "FDA",
+      "gmp": "GMP",
+      "brc": "BRC",
+      "kosher": "Casher",
+      "euOrganic": "Bio UE",
+      "other": "Autre"
+    },
+    "shipping": {
+      "heading": "Comment expédier ?",
+      "intro": "Nous gérons la plupart des Incoterms et des ports.",
+      "methods": {
+        "fob": "FOB",
+        "cif": "CIF",
+        "exw": "EXW",
+        "dap": "DAP"
+      },
+      "fields": {
+        "method":              { "label": "Méthode d'expédition" },
+        "destinationPort":     { "label": "Port / ville de destination", "placeholder": "ex. Marseille, Jeddah, Mombasa" },
+        "estimatedDate":       { "label": "Date estimée" },
+        "specialRequirements": { "label": "Exigences particulières",     "placeholder": "Palettes, température, notes douanières, etc." }
+      },
+      "exportCerts": {
+        "heading": "Quelles certifications votre pays exige-t-il pour importer depuis l'Égypte ?",
+        "intro": "Cochez tout ce qui s'applique. Ajoutez ci-dessous ce qui manque.",
+        "chips": {
+          "halal": "Halal",
+          "euOrganic": "Bio UE",
+          "sfda": "SFDA",
+          "fda": "FDA",
+          "jas": "JAS",
+          "kosher": "Casher",
+          "nsf": "NSF",
+          "other": "Autre"
+        },
+        "free": { "label": "Autres certifications", "placeholder": "Texte libre - tout ce qui manque" }
+      }
+    },
+    "review": {
+      "heading": "Un dernier coup d'œil",
+      "intro": "Vérifiez avant d'envoyer.",
+      "sections": {
+        "contact": "Contact",
+        "what": "Votre demande",
+        "shipping": "Expédition"
+      }
+    },
+    "success": {
+      "heading": "C'est noté - nous vous recontactons",
+      "message": "Votre demande a été envoyée à l'équipe KAG. Nous répondons sous un jour ouvré.",
+      "reference": "Référence",
+      "backHome": "Retour à l'accueil"
+    },
+    "actions": {
+      "next": "Suivant",
+      "prev": "Retour",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi...",
+      "requestQuote": "Demander un devis"
+    },
+    "errors": {
+      "submitFailed": "Une erreur est survenue. Réessayez.",
+      "networkError": "Impossible de joindre le serveur. Vérifiez votre connexion."
+    }
   }
 }
