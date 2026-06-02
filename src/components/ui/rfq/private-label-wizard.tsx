@@ -35,7 +35,7 @@ export function PrivateLabelWizard() {
     defaultValues: {
       companyName: '', contactName: '', email: '', phone: '', country: '', address: '',
       briefs: [{ category: 'tomato_paste', packagingFormat: 'tin', targetVolume: '', certifications: [], brandName: '', targetRetailPrice: '', artworkLink: '' }],
-      shippingMethod: 'fob', destinationPort: '', estimatedDate: '', specialRequirements: '',
+      shippingMethod: undefined, destinationPort: '', estimatedDate: '', specialRequirements: '',
       exportCertifications: [],
       hp: '',
     },

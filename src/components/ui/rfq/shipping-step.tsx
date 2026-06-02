@@ -39,17 +39,19 @@ export function ShippingStep() {
         <p className="text-sm text-primary/70">{t('intro')}</p>
       </header>
 
-      <div className="space-y-3">
-        <span id="rfq-method-label" className="text-xs uppercase tracking-wider text-primary/70">{t('fields.method.label')}</span>
-        <div role="radiogroup" aria-labelledby="rfq-method-label" className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {METHODS.map((m) => (
-            <Chip key={m} role="radio" selected={method === m} onClick={() => setValue('shippingMethod', m, { shouldDirty: true, shouldValidate: true })}>
-              {tMethods(m)}
-            </Chip>
-          ))}
+      {!isEgypt(country) && (
+        <div className="space-y-3">
+          <span id="rfq-method-label" className="text-xs uppercase tracking-wider text-primary/70">{t('fields.method.label')}</span>
+          <div role="radiogroup" aria-labelledby="rfq-method-label" className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {METHODS.map((m) => (
+              <Chip key={m} role="radio" selected={method === m} onClick={() => setValue('shippingMethod', m, { shouldDirty: true, shouldValidate: true })}>
+                {tMethods(m)}
+              </Chip>
+            ))}
+          </div>
+          {errors.shippingMethod && <span className="text-xs text-red-500">{tErrors('required')}</span>}
         </div>
-        {errors.shippingMethod && <span className="text-xs text-red-500">{tErrors('required')}</span>}
-      </div>
+      )}
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <TextField label={t('fields.destinationPort.label')} placeholder={t('fields.destinationPort.placeholder')} {...register('destinationPort')} error={errors.destinationPort?.message} />

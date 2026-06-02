@@ -63,13 +63,12 @@ function renderContactBlock(data: { companyName: string; contactName: string; em
   ].join('\n');
 }
 
-function renderShippingBlock(data: { shippingMethod: string; destinationPort: string; estimatedDate?: string; specialRequirements?: string; exportCertifications?: string[] }): string {
-  const lines = [
-    `Method: ${data.shippingMethod.toUpperCase()}`,
-    `Destination: ${data.destinationPort}`,
-    `Estimated date: ${data.estimatedDate || '-'}`,
-    `Special requirements: ${data.specialRequirements || '-'}`,
-  ];
+function renderShippingBlock(data: { shippingMethod?: string; destinationPort: string; estimatedDate?: string; specialRequirements?: string; exportCertifications?: string[] }): string {
+  const lines: string[] = [];
+  if (data.shippingMethod) lines.push(`Method: ${data.shippingMethod.toUpperCase()}`);
+  lines.push(`Destination: ${data.destinationPort}`);
+  lines.push(`Estimated date: ${data.estimatedDate || '-'}`);
+  lines.push(`Special requirements: ${data.specialRequirements || '-'}`);
   if (data.exportCertifications && data.exportCertifications.length > 0) {
     lines.push(`Required certifications: ${data.exportCertifications.join(', ')}`);
   }

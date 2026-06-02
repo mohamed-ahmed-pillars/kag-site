@@ -52,7 +52,7 @@ export const privateLabelStepSchema = z.object({
 export type PrivateLabelStepInput = z.infer<typeof privateLabelStepSchema>;
 
 export const shippingStepSchema = z.object({
-  shippingMethod: z.enum(['fob', 'cif', 'exw', 'dap']),
+  shippingMethod: z.enum(['fob', 'cif', 'exw', 'dap']).optional(),
   destinationPort: z.string().min(2),
   estimatedDate: z.string().min(1),
   specialRequirements: z.string().optional().or(z.literal('')),
