@@ -75,12 +75,16 @@ export function WorldMap({
   const offsetX = (VB_W - renderedW) / 2;
   const offsetY = (VB_H - renderedH) / 2;
 
+  // Quantize coordinates so Math.hypot/trig precision differences between
+  // Node SSR and the browser don't produce mismatched SVG strings on hydrate.
+  const q = (n: number) => Math.round(n * 100) / 100;
+
   const projectPoint = (lat: number, lng: number) => {
     const pin = map.getPin({ lat, lng });
     if (!pin) return { x: 0, y: 0 };
     return {
-      x: offsetX + (pin.x / imgW) * renderedW,
-      y: offsetY + (pin.y / imgH) * renderedH,
+      x: q(offsetX + (pin.x / imgW) * renderedW),
+      y: q(offsetY + (pin.y / imgH) * renderedH),
     };
   };
 
@@ -94,8 +98,8 @@ export function WorldMap({
     const dy = end.y - start.y;
     const chord = Math.hypot(dx, dy);
     const bow = Math.min(chord * 0.18, 28);
-    const midX = (start.x + end.x) / 2;
-    const midY = Math.min(start.y, end.y) - bow;
+    const midX = q((start.x + end.x) / 2);
+    const midY = q(Math.min(start.y, end.y) - bow);
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
@@ -248,8 +252,8 @@ export function WorldMap({
             const dx = p.x - origin.x;
             const dy = p.y - origin.y;
             const dist = Math.hypot(dx, dy) || 1;
-            const cx = p.x + (dx / dist) * RADIAL_OFFSET;
-            const cy = p.y + (dy / dist) * RADIAL_OFFSET;
+            const cx = q(p.x + (dx / dist) * RADIAL_OFFSET);
+            const cy = q(p.y + (dy / dist) * RADIAL_OFFSET);
             labelX = cx - LABEL_W / 2;
             labelY = cy - LABEL_H / 2;
             // If the radial position would clip the top edge (e.g. Berlin

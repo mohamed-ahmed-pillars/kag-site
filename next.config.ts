@@ -15,6 +15,7 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = {
   output: 'standalone',
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  allowedDevOrigins: ['192.168.1.101', '192.168.1.*'],
 };
 
 export default withNextIntl(withMDX(nextConfig));
