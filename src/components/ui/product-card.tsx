@@ -22,11 +22,6 @@ interface ProductCardProps {
   };
 }
 
-const brandLogos: Record<Product["brand"], string> = {
-  yamkers: "/yamkers_logo.png",
-  tasbeka: "/tasbeka_logo.png",
-};
-
 function Chip({
   children,
   tone,
@@ -91,7 +86,7 @@ export default function ProductCard({
             src={product.image}
             alt={name}
             fill
-            sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover"
           />
         ) : (
@@ -100,18 +95,9 @@ export default function ProductCard({
       </CardHoverRevealMain>
 
       <CardHoverRevealContent className="space-y-3 rounded-2xl bg-primary/75 text-white">
-        <div className="flex items-center gap-2">
-          <Image
-            src={brandLogos[product.brand]}
-            alt=""
-            width={20}
-            height={20}
-            className="h-5 w-5 object-contain"
-          />
-          <span className="rounded-full bg-white/15 px-2 py-0.5 text-[10px] uppercase tracking-wider">
-            {labels.brand[product.brand]}
-          </span>
-        </div>
+        <span className="inline-block rounded-full bg-white/15 px-2 py-0.5 text-[10px] uppercase tracking-wider">
+          {labels.brand[product.brand]}
+        </span>
 
         <h3 className="text-base font-semibold leading-tight">{name}</h3>
         <p className="text-xs leading-relaxed text-white/75">{description}</p>
