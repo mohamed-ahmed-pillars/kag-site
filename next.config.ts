@@ -7,7 +7,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [['remark-gfm', {}]],
+    remarkPlugins: [['remark-frontmatter', { type: 'yaml', marker: '-' }], ['remark-gfm', {}]],
     rehypePlugins: [],
   },
 });

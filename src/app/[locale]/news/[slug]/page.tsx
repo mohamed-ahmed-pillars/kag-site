@@ -27,9 +27,23 @@ export async function generateStaticParams() {
   return out;
 }
 
+const POST_LOADERS: Record<string, () => Promise<{ default: ComponentType }>> = {
+  'en/iso-22000-recertification': () => import('@/content/news/en/iso-22000-recertification.mdx'),
+  'en/kag-expands-to-berlin-istanbul': () => import('@/content/news/en/kag-expands-to-berlin-istanbul.mdx'),
+  'en/yamkers-fava-beans-launch': () => import('@/content/news/en/yamkers-fava-beans-launch.mdx'),
+  'ar/iso-22000-recertification': () => import('@/content/news/ar/iso-22000-recertification.mdx'),
+  'ar/kag-expands-to-berlin-istanbul': () => import('@/content/news/ar/kag-expands-to-berlin-istanbul.mdx'),
+  'ar/yamkers-fava-beans-launch': () => import('@/content/news/ar/yamkers-fava-beans-launch.mdx'),
+  'fr/iso-22000-recertification': () => import('@/content/news/fr/iso-22000-recertification.mdx'),
+  'fr/kag-expands-to-berlin-istanbul': () => import('@/content/news/fr/kag-expands-to-berlin-istanbul.mdx'),
+  'fr/yamkers-fava-beans-launch': () => import('@/content/news/fr/yamkers-fava-beans-launch.mdx'),
+};
+
 async function loadPost(locale: Locale, slug: string): Promise<ComponentType | null> {
+  const loader = POST_LOADERS[`${locale}/${slug}`];
+  if (!loader) return null;
   try {
-    const mod = await import(`@/content/news/${locale}/${slug}.mdx`);
+    const mod = await loader();
     return mod.default as ComponentType;
   } catch {
     return null;
@@ -58,7 +72,10 @@ export default async function BlogPostPage({
   const safeLocale = (routing.locales as readonly string[]).includes(locale)
     ? (locale as Locale)
     : routing.defaultLocale;
-  const Post = await loadPost(safeLocale, slug);
+  let Post = await loadPost(safeLocale, slug);
+  if (!Post && safeLocale !== routing.defaultLocale) {
+    Post = await loadPost(routing.defaultLocale, slug);
+  }
   if (!Post) notFound();
   let meta = await loadMeta(safeLocale, slug);
   if (!meta && safeLocale !== routing.defaultLocale) {
