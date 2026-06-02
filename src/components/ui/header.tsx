@@ -105,6 +105,10 @@ export function Header() {
             {t("ourBrands")}
           </Link>
 
+          <Link href="/private-label" className={buttonVariants({ variant: "ghost" })}>
+            {t("privateLabel")}
+          </Link>
+
           <div
             className="relative"
             onMouseEnter={openServices}
@@ -206,6 +210,17 @@ export function Header() {
               })}
             >
               {t("ourBrands")}
+            </Link>
+
+            <Link
+              href="/private-label"
+              onClick={closeMobile}
+              className={buttonVariants({
+                variant: "ghost",
+                className: "justify-start",
+              })}
+            >
+              {t("privateLabel")}
             </Link>
 
             <button
