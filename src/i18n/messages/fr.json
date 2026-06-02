@@ -405,6 +405,42 @@
       }
     ]
   },
+  "contact": {
+    "eyebrow": "NOUS SERIONS RAVIS DE VOUS LIRE",
+    "heading": "Contacter KAG",
+    "intro": "Des questions sur nos produits, nos partenariats ou la fabrication en marque de distributeur ? Envoyez-nous un message et la bonne personne vous répondra sous un jour ouvré.",
+    "info": {
+      "heading": "Nous joindre directement",
+      "intro": "Horaires : dimanche–jeudi, 9h00–17h00 (EET).",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "followUs": "Suivez-nous"
+    },
+    "rfq": {
+      "heading": "Besoin d'un devis ?",
+      "intro": "Pour les commandes de produits ou les briefs de marque de distributeur, notre formulaire RFQ couvre tout ce dont notre équipe a besoin.",
+      "cta": "Ouvrir le formulaire RFQ"
+    },
+    "form": {
+      "name":    { "label": "Votre nom",    "placeholder": "Nom complet" },
+      "email":   { "label": "E-mail",       "placeholder": "nom@entreprise.com" },
+      "message": { "label": "Message",      "placeholder": "Dites-nous comment nous pouvons vous aider - quelques phrases au minimum." },
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours..."
+    },
+    "success": {
+      "heading": "Message envoyé",
+      "message": "Merci de nous avoir contactés. Nous vous répondrons rapidement.",
+      "sendAnother": "Envoyer un autre message"
+    },
+    "errors": {
+      "name": "Merci d'indiquer votre nom.",
+      "email": "Merci de saisir une adresse e-mail valide.",
+      "message": "Merci de nous donner un peu plus de détails (10 caractères minimum).",
+      "submitFailed": "Une erreur est survenue lors de l'envoi. Réessayez ou écrivez-nous directement à wecare@kagegypt.com."
+    }
+  },
   "rfq": {
     "chooser": {
       "eyebrow": "DEMANDER UN DEVIS",
