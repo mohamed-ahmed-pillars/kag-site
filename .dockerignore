@@ -9,6 +9,8 @@ Dockerfile
 docker-compose.yml
 docs
 README.md
+public/**/*.optimized
+scripts
 .vscode
 .idea
 letsencrypt
