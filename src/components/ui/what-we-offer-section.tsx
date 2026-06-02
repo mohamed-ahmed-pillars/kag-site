@@ -238,6 +238,7 @@ export default function WhatWeOfferSection() {
                       items={t.raw("pillars.customRecipe.items") as string[]}
                       ctaText={t("pillars.customRecipe.cta")}
                       ctaHref="/contact"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
@@ -249,6 +250,7 @@ export default function WhatWeOfferSection() {
                       items={t.raw("pillars.export.items") as string[]}
                       ctaText={t("pillars.export.cta")}
                       ctaHref="/export"
+                      rfqText={t("rfq")}
                       isActive={isActive}
                     />
                   )}
