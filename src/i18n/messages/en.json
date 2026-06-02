@@ -58,7 +58,9 @@
     "heading": "Latest News",
     "intro": "Milestones, certifications, and product launches from across KAG's manufacturing, private-label, and export operations.",
     "viewAll": "View all news",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "back": "Back to news",
+    "empty": "No news posts yet — check back soon."
   },
   "whatWeOffer": {
     "eyebrow": "WHAT WE OFFER",

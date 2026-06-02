@@ -58,7 +58,9 @@
     "heading": "Dernières Actualités",
     "intro": "Étapes clés, certifications et lancements de produits dans nos activités de fabrication, marque privée et exportation chez KAG.",
     "viewAll": "Voir toutes les actualités",
-    "readMore": "Lire la suite"
+    "readMore": "Lire la suite",
+    "back": "Retour aux actualités",
+    "empty": "Aucune actualité pour l'instant — revenez bientôt."
   },
   "whatWeOffer": {
     "eyebrow": "CE QUE NOUS OFFRONS",
