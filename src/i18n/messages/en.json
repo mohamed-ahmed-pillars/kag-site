@@ -97,10 +97,11 @@
       "ourBrands": {
         "title": "Our Brands",
         "description": "KAG's own household brands - Yamkers, Tasbeka, and Weekday - covering tomato sauces, jams, juices, and legumes of all kinds for everyday Egyptian tables.",
-        "summary": "Two beloved Egyptian brands, one trusted source for everyday pantry staples.",
+        "summary": "Three beloved Egyptian brands, one trusted source for everyday pantry staples.",
         "items": [
           "Yamkers - sauces, jams, juices & legumes of all kinds",
           "Tasbeka - pantry essentials for everyday tables",
+          "Weekday - everyday classics for modern households",
           "Crafted to international food-safety standards",
           "Distributed across Egypt and exported regionally"
         ],
@@ -509,12 +510,14 @@
     "intro": "From sauces and jams to juices, legumes of all kinds, and beyond - our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
     "cta": "See All Products",
     "items": {
-      "sauce":           { "name": "Tomato Sauce",           "brand": "Yamkers" },
-      "favebeans":       { "name": "Fava Beans",             "brand": "Yamkers" },
-      "favebeansTehina": { "name": "Fava Beans with Tehina", "brand": "Yamkers" },
-      "chiliFavebeans":  { "name": "Chili Fava Beans",       "brand": "Yamkers" },
-      "mangoJar":        { "name": "Mango Jam",              "brand": "Yamkers" },
-      "apricotJam":      { "name": "Apricot Jam",            "brand": "Yamkers" }
+      "sauce":            { "name": "Tomato Sauce",           "brand": "Yamkers" },
+      "tomatoSauce400g":  { "name": "Tomato Sauce Concentrated", "brand": "Yamkers" },
+      "mangoJar":         { "name": "Mango Jam",              "brand": "Yamkers" },
+      "apricotJam":       { "name": "Apricot Jam",            "brand": "Yamkers" },
+      "guavaJuice":       { "name": "Guava Juice",            "brand": "Yamkers" },
+      "favebeans":        { "name": "Fava Beans",             "brand": "Yamkers" },
+      "chiliFavebeans":   { "name": "Chili Fava Beans",       "brand": "Yamkers" },
+      "favebeansTehina":  { "name": "Fava Beans with Tehina", "brand": "Yamkers" }
     }
   },
   "terms": {

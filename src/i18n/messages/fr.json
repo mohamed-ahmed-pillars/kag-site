@@ -97,10 +97,11 @@
       "ourBrands": {
         "title": "Nos Marques",
         "description": "Les marques familiales de KAG - Yamkers, Tasbeka et Weekday - couvrant les sauces tomate, les confitures, les jus et les légumineuses en tous genres pour les tables égyptiennes du quotidien.",
-        "summary": "Deux marques égyptiennes appréciées, une source de confiance pour les essentiels du quotidien.",
+        "summary": "Trois marques égyptiennes appréciées, une source de confiance pour les essentiels du quotidien.",
         "items": [
           "Yamkers - sauces, confitures, jus & légumineuses en tous genres",
           "Tasbeka - essentiels du garde-manger pour le quotidien",
+          "Weekday - classiques du quotidien pour les ménages modernes",
           "Élaborés selon les normes internationales de sécurité alimentaire",
           "Distribués à travers l'Égypte et exportés régionalement"
         ],
@@ -509,12 +510,14 @@
     "intro": "Des sauces aux confitures, des jus aux légumineuses en tous genres et bien plus encore - notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
     "cta": "Voir tous les produits",
     "items": {
-      "sauce":           { "name": "Sauce Tomate",       "brand": "Yamkers" },
-      "favebeans":       { "name": "Fèves",                "brand": "Yamkers" },
-      "favebeansTehina": { "name": "Fèves au Tahini",    "brand": "Yamkers" },
-      "chiliFavebeans":  { "name": "Fèves Piquantes",    "brand": "Yamkers" },
-      "mangoJar":        { "name": "Confiture de Mangue","brand": "Yamkers" },
-      "apricotJam":      { "name": "Confiture d'Abricot","brand": "Yamkers" }
+      "sauce":            { "name": "Sauce Tomate",         "brand": "Yamkers" },
+      "tomatoSauce400g":  { "name": "Sauce Tomate Concentrée", "brand": "Yamkers" },
+      "mangoJar":         { "name": "Confiture de Mangue",  "brand": "Yamkers" },
+      "apricotJam":       { "name": "Confiture d'Abricot",  "brand": "Yamkers" },
+      "guavaJuice":       { "name": "Jus de Goyave",        "brand": "Yamkers" },
+      "favebeans":        { "name": "Fèves",                "brand": "Yamkers" },
+      "chiliFavebeans":   { "name": "Fèves Piquantes",      "brand": "Yamkers" },
+      "favebeansTehina":  { "name": "Fèves au Tahini",      "brand": "Yamkers" }
     }
   },
   "terms": {

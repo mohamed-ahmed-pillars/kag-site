@@ -267,7 +267,7 @@ export default function WhatWeOfferSection() {
 const BRAND_LOGOS = [
   { src: "/yamkers_logo.png", alt: "Yamkers" },
   { src: "/tasbeka_logo.png", alt: "Tasbeka" },
-  { src: "/yamkers_logo.png", alt: "Weekday" },
+  { src: "/weekday_logo.png", alt: "Weekday" },
 ];
 
 function BrandLogoCarousel() {

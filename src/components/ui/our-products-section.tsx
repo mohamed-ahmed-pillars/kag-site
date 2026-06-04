@@ -14,11 +14,13 @@ import { FeaturedProductCard } from "@/components/ui/featured-product-card";
 
 type ProductKey =
   | "sauce"
-  | "favebeans"
-  | "favebeansTehina"
-  | "chiliFavebeans"
+  | "tomatoSauce400g"
   | "mangoJar"
-  | "apricotJam";
+  | "apricotJam"
+  | "guavaJuice"
+  | "favebeans"
+  | "chiliFavebeans"
+  | "favebeansTehina";
 
 const PRODUCTS: {
   key: ProductKey;
@@ -26,12 +28,14 @@ const PRODUCTS: {
   video: string;
   themeColor: string;
 }[] = [
-  { key: "sauce",           image: "/sauce.png",           video: "/sauce.mp4",           themeColor: "0 65% 38%"   },
-  { key: "favebeans",       image: "/favebeans.png",       video: "/favebeans.mp4",       themeColor: "28 45% 28%"  },
-  { key: "favebeansTehina", image: "/favebeanstehina.png", video: "/favebeanstehina.mp4", themeColor: "38 35% 38%"  },
-  { key: "chiliFavebeans",  image: "/chilifavebeans.png",  video: "/chilifavebeans.mp4",  themeColor: "12 70% 38%"  },
-  { key: "mangoJar",        image: "/mangojar.png",        video: "/mangojar.mp4",        themeColor: "38 80% 42%"  },
-  { key: "apricotJam",      image: "/ApricotJam3d.png",    video: "/ApricotJam3d.mp4",    themeColor: "25 80% 50%"  },
+  { key: "sauce",            image: "/sauce.png",            video: "/sauce.mp4",            themeColor: "0 65% 38%"   },
+  { key: "tomatoSauce400g",  image: "/tomatosauce400g.png",  video: "/tomatosauce400g.mp4",  themeColor: "4 70% 42%"   },
+  { key: "mangoJar",         image: "/mangojar.png",         video: "/mangojar.mp4",         themeColor: "38 80% 42%"  },
+  { key: "apricotJam",       image: "/ApricotJam3d.png",     video: "/ApricotJam3d.mp4",     themeColor: "25 80% 50%"  },
+  { key: "guavaJuice",       image: "/GuavaJuice3d.png",     video: "/GuavaJuice3d.mp4",     themeColor: "90 55% 45%"  },
+  { key: "favebeans",        image: "/favebeans.png",        video: "/favebeans.mp4",        themeColor: "28 45% 28%"  },
+  { key: "chiliFavebeans",   image: "/chilifavebeans.png",   video: "/chilifavebeans.mp4",   themeColor: "12 70% 38%"  },
+  { key: "favebeansTehina",  image: "/favebeanstehina.png",  video: "/favebeanstehina.mp4",  themeColor: "38 35% 38%"  },
 ];
 
 export default function OurProductsSection() {
