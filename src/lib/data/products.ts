@@ -6,7 +6,7 @@ export type ProductCategory =
   | "jams"
   | "juices";
 
-export type ProductBrand = "yamkers" | "tasbeka";
+export type ProductBrand = "yamkers" | "tasbeka" | "weekday";
 
 export type PackagingType =
   | "tin"

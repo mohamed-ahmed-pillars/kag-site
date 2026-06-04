@@ -11,7 +11,7 @@ import type { Locale } from "@/i18n/routing";
 const languages: { code: Locale; label: string; flag: string }[] = [
   { code: "en", label: "English", flag: "🇬🇧" },
   { code: "fr", label: "Français", flag: "🇫🇷" },
-  { code: "ar", label: "العربية", flag: "🇸🇦" },
+  { code: "ar", label: "العربية", flag: "🇪🇬" },
 ];
 
 export function LanguageSelector({ className }: { className?: string }) {

@@ -11,7 +11,7 @@ import { stepVariant } from './motion';
 
 const CATEGORIES = ['tomato_paste', 'jams', 'juices', 'fava_beans', 'sauces', 'beans_peas', 'canned_vegetables', 'other'] as const;
 const PACK_FORMATS = ['tin', 'glass', 'pet', 'pouch'] as const;
-const CERTS = ['halal', 'iso22000', 'fda', 'gmp', 'brc', 'euOrganic', 'other'] as const;
+const CERTS = ['halal', 'iso22000', 'fda', 'euOrganic', 'other'] as const;
 
 export function PrivateLabelStep() {
   const t = useTranslations('rfq.privateLabel');

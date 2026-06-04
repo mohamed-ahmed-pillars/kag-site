@@ -21,10 +21,25 @@
       },
       "subhead": "De la ferme à la table, nous livrons des produits d'excellence et une histoire de qualité aux quatre coins du monde.",
       "cta": "En savoir plus"
+    },
+    "toc": {
+      "expandedLabel": "SUR CETTE PAGE",
+      "closedLabel": "Sections",
+      "sections": {
+        "hero": "Accueil",
+        "whoWeAre": "Qui sommes-nous",
+        "whatWeOffer": "Notre offre",
+        "ourProducts": "Nos produits",
+        "privateLabel": "Marque privée",
+        "customProduct": "Produit sur mesure",
+        "export": "Export",
+        "globalReach": "Portée mondiale",
+        "news": "Actualités"
+      }
     }
   },
   "footer": {
-    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des fèves - pensé pour les communautés locales et les marchés mondiaux.",
+    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des légumineuses en tous genres - pensé pour les communautés locales et les marchés mondiaux.",
     "quickLinks": "Liens rapides",
     "services": "Services",
     "contactUs": "Contactez-nous",
@@ -41,9 +56,9 @@
   "whoWeAre": {
     "eyebrow": "NOTRE HISTOIRE",
     "heading": "Qui Sommes-Nous",
-    "intro": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des produits alimentaires de confiance - des sauces tomate et confitures aux jus et aux fèves. Nous construisons à la fois pour les communautés locales et les marchés mondiaux, ancrés dans trois valeurs : Qualité. Innovation. Croissance.",
+    "intro": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des produits alimentaires de confiance - des sauces tomate et confitures aux jus et aux légumineuses en tous genres. Nous construisons à la fois pour les communautés locales et les marchés mondiaux, ancrés dans trois valeurs : Qualité. Innovation. Croissance.",
     "pillars": {
-      "manufacturing":   { "title": "Fabrication",              "description": "Sauces tomate, confitures, jus, fèves - produits en interne selon les normes internationales de sécurité alimentaire." },
+      "manufacturing":   { "title": "Fabrication",              "description": "Sauces tomate, confitures, jus, légumineuses en tous genres - produits en interne selon les normes internationales de sécurité alimentaire." },
       "privateLabel":    { "title": "Marque Privée",            "description": "Nous fabriquons sous votre marque, avec une qualité constante aux volumes exigés par la distribution." },
       "customRecipe":    { "title": "Recette Personnalisée",    "description": "Apportez-nous un profil de saveur ou un marché cible - nous développons la recette, l'échantillonnons et la mettons à l'échelle." },
       "distribution":    { "title": "Distribution & Négoce",    "description": "Un réseau commercial qui achemine les produits alimentaires de manière fiable à travers l'Égypte et vers les marchés régionaux." },
@@ -81,10 +96,10 @@
     "pillars": {
       "ourBrands": {
         "title": "Nos Marques",
-        "description": "Les marques familiales de KAG - Yamkers et Tasbeka - couvrant les sauces tomate, les confitures, les jus et les fèves pour les tables égyptiennes du quotidien.",
+        "description": "Les marques familiales de KAG - Yamkers, Tasbeka et Weekday - couvrant les sauces tomate, les confitures, les jus et les légumineuses en tous genres pour les tables égyptiennes du quotidien.",
         "summary": "Deux marques égyptiennes appréciées, une source de confiance pour les essentiels du quotidien.",
         "items": [
-          "Yamkers - sauces, confitures, jus & fèves",
+          "Yamkers - sauces, confitures, jus & légumineuses en tous genres",
           "Tasbeka - essentiels du garde-manger pour le quotidien",
           "Élaborés selon les normes internationales de sécurité alimentaire",
           "Distribués à travers l'Égypte et exportés régionalement"
@@ -234,10 +249,10 @@
       "intro": "Six piliers qui mènent votre concept du brief sur la table aux cartons quittant le port.",
       "items": {
         "rnd":           { "title": "R&D et formulation",          "description": "Confiez-nous un profil de saveur, un marché cible ou un échantillon concurrent - nos technologues alimentaires développent, itèrent et verrouillent la recette avec vous." },
-        "manufacturing": { "title": "Fabrication interne",          "description": "Concentré de tomate, fèves, confitures, jus - tout est produit sous un même toit sur des lignes conçues pour la constance, la traçabilité et la sécurité alimentaire." },
-        "packaging":     { "title": "Flexibilité d'emballage",      "description": "Boîtes métalliques, pots en verre, bouteilles PET et poches - choisissez un format et une capacité qui correspondent à votre rayon, votre marge et votre marché." },
+        "manufacturing": { "title": "Fabrication interne",          "description": "Concentré de tomate, légumineuses en tous genres, confitures, jus - tout est produit sous un même toit sur des lignes conçues pour la constance, la traçabilité et la sécurité alimentaire." },
+        "packaging":     { "title": "Flexibilité d'emballage",      "description": "Boîtes métalliques, pots en verre, Tetra Pak et poches - choisissez un format et une capacité qui correspondent à votre rayon, votre marge et votre marché." },
         "regulatory":    { "title": "Réglementation et étiquetage", "description": "Étiquettes spécifiques au pays, déclarations d'ingrédients, valeurs nutritionnelles et documentation d'export gérées par notre équipe conformité." },
-        "qa":            { "title": "QA et certifications",         "description": "ISO 22000, HACCP, Halal, FDA, GMP et BRC - chaque lot est testé, enregistré et traçable de la matière première au carton scellé." },
+        "qa":            { "title": "QA et certifications",         "description": "ISO 22000, HACCP, Halal et FDA - chaque lot est testé, enregistré et traçable de la matière première au carton scellé." },
         "logistics":     { "title": "Logistique d'export",          "description": "Chargement de conteneurs, manutention portuaire et accompagnement Incoterms - nous acheminons votre marque de notre porte à celle de votre importateur." }
       }
     },
@@ -261,7 +276,7 @@
       "items": {
         "tin":   { "title": "Boîte métallique", "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["400 g", "800 g", "2,5 kg", "4,5 kg"] },
         "glass": { "title": "Pot en verre",     "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["250 g", "450 g", "650 g"] },
-        "pet":   { "title": "Bouteille PET",    "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
+        "pet":   { "title": "Tetra Pak",        "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
         "pouch": { "title": "Poche / Stick",    "moq": "MOQ : 1 conteneur 20ft FCL", "capacities": ["80 g", "250 g"] }
       }
     },
@@ -302,9 +317,9 @@
       "heading": "Tout ce qu'un importateur attend chez un seul fournisseur",
       "intro": "Six piliers qui font de KAG une ligne d'approvisionnement sereine du Caire à votre entrepôt - pas d'improvisation à la frontière, pas de surprise au port.",
       "items": {
-        "volume":        { "title": "Capacité de volume",       "description": "Production en conteneurs complets sur les sauces, confitures, jus et fèves - planifiée selon votre cadence de réassort et la saisonnalité." },
+        "volume":        { "title": "Capacité de volume",       "description": "Production en conteneurs complets sur les sauces, confitures, jus et légumineuses en tous genres - planifiée selon votre cadence de réassort et la saisonnalité." },
         "branded":       { "title": "Marque privée & marque",   "description": "Expédiez notre marque Yamkers ou votre propre marque privée - même usine, même équipe qualité, même documentation export." },
-        "formats":       { "title": "Formats d'emballage",       "description": "Boîte métal, verre, PET et doypack en formats retail et CHR - adaptés à votre rayon, votre marge et votre régime douanier." },
+        "formats":       { "title": "Formats d'emballage",       "description": "Boîte métal, verre, Tetra Pak et doypack en formats retail et CHR - adaptés à votre rayon, votre marge et votre régime douanier." },
         "regulatory":    { "title": "Dossiers réglementaires",  "description": "Étiquetage par pays, déclarations d'ingrédients, panneaux nutritionnels, COA et certificats de destination - préparés par notre équipe conformité." },
         "shelfLife":     { "title": "Ambiant & chaîne du froid","description": "Lignes stables à température ambiante pour les longues distances ; chaîne du froid quand le marché de destination l'exige." },
         "documentation": { "title": "Documents d'export",        "description": "Certificat d'origine, facture commerciale, liste de colisage, halal et certificats sanitaires - gérés en interne et synchronisés avec votre transitaire." }
@@ -328,14 +343,14 @@
       "heading": "Incoterms & expédition",
       "intro": "Choisissez le niveau de service adapté à votre dispositif douanier et à vos relations transitaires.",
       "terms": {
-        "fob": { "title": "FOB",  "description": "Nous livrons à bord à Alexandrie, Damiette ou Port-Saïd. Vous prenez la propriété et le fret à partir de là." },
+        "fob": { "title": "FOB",  "description": "Nous livrons à bord à Alexandrie, Damiette, Port-Saïd, Sokhna, Safaga ou tout autre port égyptien. Vous prenez la propriété et le fret à partir de là." },
         "cif": { "title": "CIF",  "description": "Nous organisons le fret maritime et l'assurance jusqu'au port de destination. L'importateur gère le dédouanement." },
         "exw": { "title": "EXW",  "description": "Votre transitaire enlève à notre site du New Cairo. Idéal si vous disposez d'une logistique établie en Égypte." },
         "dap": { "title": "DAP",  "description": "Livraison porte à porte jusqu'à votre entrepôt. Nous gérons fret, assurance et transit origine/destination." }
       },
       "ports": {
         "heading": "Ports de chargement",
-        "items": ["Alexandrie", "Damiette", "Port-Saïd"]
+        "items": ["Alexandrie", "Damiette", "Port-Saïd", "Sokhna", "Safaga", "Tout autre port égyptien"]
       },
       "containers": {
         "heading": "Types de conteneurs",
@@ -408,7 +423,7 @@
         "sauces":     { "title": "Sauces & vinaigrettes","description": "Tomate, piment, ail, tahina et vinaigrettes émulsionnées - formats retail et restauration, stables à température ambiante pour l'export." },
         "jams":       { "title": "Confitures & pâtes à tartiner","description": "Confitures de fruits, marmelades, halawa et pâtes à tartiner sucrées - ajustées au profil sucré et à la teneur en sucre cible." },
         "juices":     { "title": "Jus & boissons",      "description": "Nectars, concentrés et formats prêts à boire - saveurs adaptées à votre marché et conditionnement ambiant." },
-        "fava":       { "title": "Fèves & légumineuses","description": "Fèves nature, piment, ail et tehina, ainsi que d'autres préparations de légumineuses - notre catégorie historique." },
+        "fava":       { "title": "Légumineuses en tous genres","description": "Fèves nature, piment, ail et tehina, ainsi que d'autres préparations de légumineuses - notre catégorie historique." },
         "condiments": { "title": "Condiments",          "description": "Moutardes, variantes de mayonnaise, chutneys et pâtes - équilibrés pour la stabilité au rayon et le niveau d'épice attendu sur votre marché." },
         "pickles":    { "title": "Pickles & conserves", "description": "Légumes saumurés et acidifiés, préparations d'olives et autres conserves ambiantes - bocaux retail et formats restauration." }
       }
@@ -491,15 +506,15 @@
   "ourProducts": {
     "eyebrow": "NOS PRODUITS",
     "heading": "Plus de 50 produits répartis dans nos catégories",
-    "intro": "Des sauces aux confitures, des jus aux fèves et bien plus encore - notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
+    "intro": "Des sauces aux confitures, des jus aux légumineuses en tous genres et bien plus encore - notre catalogue en pleine expansion apporte la qualité égyptienne aux garde-mangers du monde entier. Voici quelques favoris ; la gamme complète n'est qu'à un clic.",
     "cta": "Voir tous les produits",
     "items": {
       "sauce":           { "name": "Sauce Tomate",       "brand": "Yamkers" },
-      "favebeans":       { "name": "Fèves",              "brand": "Yamkers" },
+      "favebeans":       { "name": "Fèves",                "brand": "Yamkers" },
       "favebeansTehina": { "name": "Fèves au Tahini",    "brand": "Yamkers" },
       "chiliFavebeans":  { "name": "Fèves Piquantes",    "brand": "Yamkers" },
       "mangoJar":        { "name": "Confiture de Mangue","brand": "Yamkers" },
-      "appleJam":        { "name": "Confiture de Pomme", "brand": "Yamkers" }
+      "apricotJam":      { "name": "Confiture d'Abricot","brand": "Yamkers" }
     }
   },
   "terms": {
@@ -546,7 +561,7 @@
     "tabs": {
       "all": "Tous",
       "tomato_paste": "Concentré de tomate",
-      "fava_beans": "Fèves",
+      "fava_beans": "Légumineuses en tous genres",
       "beans_peas": "Haricots et petits pois",
       "canned_vegetables": "Légumes en conserve",
       "jams": "Confitures",
@@ -558,7 +573,8 @@
       "drained": "Égoutté",
       "brand": {
         "yamkers": "Yamkers",
-        "tasbeka": "Tasbeka"
+        "tasbeka": "Tasbeka",
+        "weekday": "Weekday"
       },
       "packaging": {
         "tin": "Boîte en fer-blanc",
@@ -709,7 +725,7 @@
       "intro": "Choisissez le parcours adapté à votre projet. Nous répondons sous un jour ouvré.",
       "brands": {
         "heading": "Commander nos marques",
-        "description": "Achetez Yamkers et Tasbeka en gros - sauces tomate, confitures, jus et fèves prêtes à expédier.",
+        "description": "Achetez Yamkers, Tasbeka et Weekday en gros - sauces tomate, confitures, jus et légumineuses en tous genres prêtes à expédier.",
         "cta": "Commander nos marques"
       },
       "privateLabel": {
@@ -753,7 +769,7 @@
         "tomato_paste": "Concentré de tomate",
         "jams": "Confitures",
         "juices": "Jus",
-        "fava_beans": "Fèves",
+        "fava_beans": "Légumineuses en tous genres",
         "sauces": "Sauces",
         "beans_peas": "Légumineuses",
         "canned_vegetables": "Légumes en conserve",
@@ -762,7 +778,7 @@
       "packagingFormats": {
         "tin": "Boîte métal",
         "glass": "Verre",
-        "pet": "PET",
+        "pet": "Tetra Pak",
         "pouch": "Sachet"
       },
       "fields": {
@@ -781,8 +797,6 @@
       "halal": "Halal",
       "iso22000": "ISO 22000",
       "fda": "FDA",
-      "gmp": "GMP",
-      "brc": "BRC",
       "euOrganic": "Bio UE",
       "other": "Autre"
     },

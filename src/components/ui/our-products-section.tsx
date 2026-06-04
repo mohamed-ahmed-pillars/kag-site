@@ -18,7 +18,7 @@ type ProductKey =
   | "favebeansTehina"
   | "chiliFavebeans"
   | "mangoJar"
-  | "appleJam";
+  | "apricotJam";
 
 const PRODUCTS: {
   key: ProductKey;
@@ -31,7 +31,7 @@ const PRODUCTS: {
   { key: "favebeansTehina", image: "/favebeanstehina.png", video: "/favebeanstehina.mp4", themeColor: "38 35% 38%"  },
   { key: "chiliFavebeans",  image: "/chilifavebeans.png",  video: "/chilifavebeans.mp4",  themeColor: "12 70% 38%"  },
   { key: "mangoJar",        image: "/mangojar.png",        video: "/mangojar.mp4",        themeColor: "38 80% 42%"  },
-  { key: "appleJam",        image: "/applejam.png",        video: "/applejam.mp4",        themeColor: "350 55% 32%" },
+  { key: "apricotJam",      image: "/ApricotJam3d.png",    video: "/ApricotJam3d.mp4",    themeColor: "25 80% 50%"  },
 ];
 
 export default function OurProductsSection() {

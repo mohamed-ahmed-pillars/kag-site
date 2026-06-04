@@ -58,7 +58,7 @@ const socials: Social[] = [
   {
     src: '/icons/whatsapp.svg',
     label: 'WhatsApp',
-    href: 'https://wa.me/201080843334',
+    href: 'https://wa.me/201033322050',
   },
   {
     src: '/icons/maildotru.svg',

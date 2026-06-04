@@ -21,10 +21,25 @@
       },
       "subhead": "From farm to table, we deliver premium products and a story of excellence to every corner of the world.",
       "cta": "Discover More"
+    },
+    "toc": {
+      "expandedLabel": "ON THIS PAGE",
+      "closedLabel": "Sections",
+      "sections": {
+        "hero": "Welcome",
+        "whoWeAre": "Who we are",
+        "whatWeOffer": "What we offer",
+        "ourProducts": "Our products",
+        "privateLabel": "Private label",
+        "customProduct": "Custom product",
+        "export": "Export",
+        "globalReach": "Global reach",
+        "news": "News"
+      }
     }
   },
   "footer": {
-    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and fava beans - built for local communities and global markets.",
+    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and legumes of all kinds - built for local communities and global markets.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactUs": "Contact Us",
@@ -41,9 +56,9 @@
   "whoWeAre": {
     "eyebrow": "OUR STORY",
     "heading": "Who We Are",
-    "intro": "KAG is an Egyptian food group producing, distributing, and exporting trusted food products - from tomato sauces and jams to juices and fava beans. We build for both local communities and global markets, grounded in three values: Quality. Innovation. Growth.",
+    "intro": "KAG is an Egyptian food group producing, distributing, and exporting trusted food products - from tomato sauces and jams to juices and legumes of all kinds. We build for both local communities and global markets, grounded in three values: Quality. Innovation. Growth.",
     "pillars": {
-      "manufacturing":   { "title": "Manufacturing",          "description": "Tomato sauces, jams, juices, fava beans - produced in-house to international food-safety standards." },
+      "manufacturing":   { "title": "Manufacturing",          "description": "Tomato sauces, jams, juices, legumes of all kinds - produced in-house to international food-safety standards." },
       "privateLabel":    { "title": "Private Labeling",       "description": "We manufacture under your brand, with consistent quality at the volumes retail demands." },
       "customRecipe":    { "title": "Custom Recipe",          "description": "Bring us a flavor profile or a target market - we develop the recipe, sample it, and scale it." },
       "distribution":    { "title": "Distribution & Trading", "description": "A trade network that moves food goods reliably across Egypt and into regional markets." },
@@ -81,10 +96,10 @@
     "pillars": {
       "ourBrands": {
         "title": "Our Brands",
-        "description": "KAG's own household brands - Yamkers and Tasbeka - covering tomato sauces, jams, juices, and fava beans for everyday Egyptian tables.",
+        "description": "KAG's own household brands - Yamkers, Tasbeka, and Weekday - covering tomato sauces, jams, juices, and legumes of all kinds for everyday Egyptian tables.",
         "summary": "Two beloved Egyptian brands, one trusted source for everyday pantry staples.",
         "items": [
-          "Yamkers - sauces, jams, juices & fava beans",
+          "Yamkers - sauces, jams, juices & legumes of all kinds",
           "Tasbeka - pantry essentials for everyday tables",
           "Crafted to international food-safety standards",
           "Distributed across Egypt and exported regionally"
@@ -234,10 +249,10 @@
       "intro": "Six pillars that take your concept from a brief on the table to cartons leaving the port.",
       "items": {
         "rnd":           { "title": "R&D & Formulation",       "description": "Hand us a flavor brief, a target market, or a competitor sample - our food technologists develop, iterate, and lock the recipe with you." },
-        "manufacturing": { "title": "In-house Manufacturing",  "description": "Tomato paste, fava, jams, juices - all produced under one roof on lines built for consistency, traceability, and food safety." },
-        "packaging":     { "title": "Packaging Flexibility",   "description": "Tins, glass jars, PET bottles, and pouches - pick a format and capacity that fits your shelf, your margin, and your market." },
+        "manufacturing": { "title": "In-house Manufacturing",  "description": "Tomato paste, legumes of all kinds, jams, juices - all produced under one roof on lines built for consistency, traceability, and food safety." },
+        "packaging":     { "title": "Packaging Flexibility",   "description": "Tins, glass jars, Tetra Pak, and pouches - pick a format and capacity that fits your shelf, your margin, and your market." },
         "regulatory":    { "title": "Regulatory & Labeling",   "description": "Country-specific labels, ingredient declarations, nutritional panels, and export documentation handled by our compliance team." },
-        "qa":            { "title": "QA & Certifications",     "description": "ISO 22000, HACCP, Halal, FDA, GMP, and BRC - every batch is tested, logged, and traceable from raw input to sealed carton." },
+        "qa":            { "title": "QA & Certifications",     "description": "ISO 22000, HACCP, Halal, and FDA - every batch is tested, logged, and traceable from raw input to sealed carton." },
         "logistics":     { "title": "Export Logistics",        "description": "Container loading, port handling, and Incoterms support - we get your brand from our gate to your importer's door." }
       }
     },
@@ -261,7 +276,7 @@
       "items": {
         "tin":   { "title": "Tin (Canned)",   "moq": "MOQ: 1× 20ft FCL", "capacities": ["400 g", "800 g", "2.5 kg", "4.5 kg"] },
         "glass": { "title": "Glass Jar",      "moq": "MOQ: 1× 20ft FCL", "capacities": ["250 g", "450 g", "650 g"] },
-        "pet":   { "title": "PET Bottle",     "moq": "MOQ: 1× 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
+        "pet":   { "title": "Tetra Pak",      "moq": "MOQ: 1× 20ft FCL", "capacities": ["250 ml", "500 ml", "1 L"] },
         "pouch": { "title": "Pouch / Stick",  "moq": "MOQ: 1× 20ft FCL", "capacities": ["80 g", "250 g"] }
       }
     },
@@ -302,9 +317,9 @@
       "heading": "Everything an importer needs in one supplier",
       "intro": "Six pillars that make KAG a calm supply line from Cairo to your warehouse - no improvising at the border, no surprises at the port.",
       "items": {
-        "volume":        { "title": "Volume capacity",        "description": "FCL throughput across sauces, jams, juices, and fava beans - production scheduled to your reorder cadence and seasonal demand." },
+        "volume":        { "title": "Volume capacity",        "description": "FCL throughput across sauces, jams, juices, and legumes of all kinds - production scheduled to your reorder cadence and seasonal demand." },
         "branded":       { "title": "Private label & branded","description": "Ship our Yamkers brand or your own private label - same plant, same QA team, same export documentation." },
-        "formats":       { "title": "Packaging formats",      "description": "Tin, glass, PET, and pouch in retail and food-service sizes - tailored to your shelf, your margin, and your customs regime." },
+        "formats":       { "title": "Packaging formats",      "description": "Tin, glass, Tetra Pak, and pouch in retail and food-service sizes - tailored to your shelf, your margin, and your customs regime." },
         "regulatory":    { "title": "Regulatory dossiers",    "description": "Country-specific labels, ingredient declarations, nutritional panels, COA, and destination certificates - prepared by our compliance team." },
         "shelfLife":     { "title": "Cold chain & dry",       "description": "Ambient-stable lines for long-haul lanes; cold-chain handling when your destination market requires it." },
         "documentation": { "title": "Export documentation",   "description": "Certificate of origin, commercial invoice, packing list, halal, and health certificates - handled in-house and synchronized with your forwarder." }
@@ -328,14 +343,14 @@
       "heading": "Incoterms & shipping",
       "intro": "Pick the level of service that fits your customs setup and forwarder relationships.",
       "terms": {
-        "fob": { "title": "FOB",  "description": "We deliver goods on board at Alexandria, Damietta, or Port Said. You take ownership and freight from there." },
+        "fob": { "title": "FOB",  "description": "We deliver goods on board at Alexandria, Damietta, Port Said, Sokhna, Safaga, or any other Egyptian port. You take ownership and freight from there." },
         "cif": { "title": "CIF",  "description": "We arrange ocean freight and cargo insurance to your destination port. Your importer handles customs clearance." },
         "exw": { "title": "EXW",  "description": "Your forwarder collects from our facility in New Cairo. Best when you have established Egyptian logistics." },
         "dap": { "title": "DAP",  "description": "Door-to-door delivery to your warehouse. We handle freight, insurance, and origin/destination forwarding." }
       },
       "ports": {
         "heading": "Loading ports",
-        "items": ["Alexandria", "Damietta", "Port Said"]
+        "items": ["Alexandria", "Damietta", "Port Said", "Sokhna", "Safaga", "Any other Egyptian port"]
       },
       "containers": {
         "heading": "Container types",
@@ -408,7 +423,7 @@
         "sauces":     { "title": "Sauces & dressings",  "description": "Tomato, chili, garlic, tahina, and emulsified dressings - retail and food-service formats, ambient-stable for export." },
         "jams":       { "title": "Jams & spreads",      "description": "Fruit jams, marmalades, halawa, and sweet spreads - tuned for sweetness profile and target sugar content." },
         "juices":     { "title": "Juices & beverages",  "description": "Nectars, concentrates, and ready-to-drink formats - flavor matched to your market and packaged for ambient distribution." },
-        "fava":       { "title": "Fava & legumes",      "description": "Plain, chili, garlic, and tehina-spiked fava beans plus other legume preparations - our heritage category." },
+        "fava":       { "title": "Legumes of all kinds", "description": "Plain, chili, garlic, and tehina-spiked fava beans plus other legume preparations - our heritage category." },
         "condiments": { "title": "Condiments",          "description": "Mustards, mayonnaise variants, chutneys, and pastes - balanced for shelf stability and the heat profile of your market." },
         "pickles":    { "title": "Pickles & preserves", "description": "Brined and acidified vegetables, olive preparations, and other ambient preserves - retail jars and food-service bulk formats." }
       }
@@ -491,15 +506,15 @@
   "ourProducts": {
     "eyebrow": "OUR PRODUCTS",
     "heading": "More than 50 products across our categories",
-    "intro": "From sauces and jams to juices, fava beans, and beyond - our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
+    "intro": "From sauces and jams to juices, legumes of all kinds, and beyond - our growing catalog brings Egyptian quality to pantries worldwide. Below are a few of the favourites; the full range is just a click away.",
     "cta": "See All Products",
     "items": {
-      "sauce":           { "name": "Sauce",                  "brand": "Yamkers" },
+      "sauce":           { "name": "Tomato Sauce",           "brand": "Yamkers" },
       "favebeans":       { "name": "Fava Beans",             "brand": "Yamkers" },
       "favebeansTehina": { "name": "Fava Beans with Tehina", "brand": "Yamkers" },
       "chiliFavebeans":  { "name": "Chili Fava Beans",       "brand": "Yamkers" },
-      "mangoJar":        { "name": "Mango Jar",              "brand": "Yamkers" },
-      "appleJam":        { "name": "Apple Jam",              "brand": "Yamkers" }
+      "mangoJar":        { "name": "Mango Jam",              "brand": "Yamkers" },
+      "apricotJam":      { "name": "Apricot Jam",            "brand": "Yamkers" }
     }
   },
   "terms": {
@@ -546,7 +561,7 @@
     "tabs": {
       "all": "All",
       "tomato_paste": "Tomato Paste",
-      "fava_beans": "Fava Beans",
+      "fava_beans": "Legumes of all kinds",
       "beans_peas": "Beans & Peas",
       "canned_vegetables": "Canned Vegetables",
       "jams": "Jams",
@@ -558,7 +573,8 @@
       "drained": "Drained",
       "brand": {
         "yamkers": "Yamkers",
-        "tasbeka": "Tasbeka"
+        "tasbeka": "Tasbeka",
+        "weekday": "Weekday"
       },
       "packaging": {
         "tin": "Tin can",
@@ -709,7 +725,7 @@
       "intro": "Choose the path that fits your project. We answer within one business day.",
       "brands": {
         "heading": "Order our brands",
-        "description": "Buy Yamkers and Tasbeka SKUs in bulk - tomato sauces, jams, juices, and fava beans ready to ship.",
+        "description": "Buy Yamkers, Tasbeka, and Weekday SKUs in bulk - tomato sauces, jams, juices, and legumes of all kinds ready to ship.",
         "cta": "Order brands"
       },
       "privateLabel": {
@@ -753,7 +769,7 @@
         "tomato_paste": "Tomato paste",
         "jams": "Jams",
         "juices": "Juices",
-        "fava_beans": "Fava beans",
+        "fava_beans": "Legumes of all kinds",
         "sauces": "Sauces",
         "beans_peas": "Beans & peas",
         "canned_vegetables": "Canned vegetables",
@@ -762,7 +778,7 @@
       "packagingFormats": {
         "tin": "Tin",
         "glass": "Glass",
-        "pet": "PET",
+        "pet": "Tetra Pak",
         "pouch": "Pouch"
       },
       "fields": {
@@ -781,8 +797,6 @@
       "halal": "Halal",
       "iso22000": "ISO 22000",
       "fda": "FDA",
-      "gmp": "GMP",
-      "brc": "BRC",
       "euOrganic": "EU Organic",
       "other": "Other"
     },

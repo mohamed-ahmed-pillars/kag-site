@@ -20,7 +20,7 @@ const TAB_KEYS: TabKey[] = [
   "juices",
 ];
 
-const BRAND_KEYS: ProductBrand[] = ["yamkers", "tasbeka"];
+const BRAND_KEYS: ProductBrand[] = ["yamkers", "tasbeka", "weekday"];
 
 const PACKAGING_KEYS: PackagingType[] = [
   "tin",
