@@ -32,9 +32,8 @@ type TabMedia =
   | { value: string; type: "video"; src: string };
 
 const TABS: TabMedia[] = [
-  { value: "rnd",     type: "video", src: "/sauce.mp4" },
-  { value: "tasting", type: "image", src: "/recipe.jpg" },
-  { value: "pilot",   type: "video", src: "/applejam.mp4" },
+  { value: "rnd",     type: "video", src: "/randd.mp4" },
+  { value: "tasting", type: "image", src: "/recipe.png" },
 ];
 
 export default function CustomProductSection() {

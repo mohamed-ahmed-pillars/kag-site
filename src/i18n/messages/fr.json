@@ -44,7 +44,8 @@
     "services": "Services",
     "contactUs": "Contactez-nous",
     "company": "Entreprise",
-    "address": "Bureau 2B – 1er étage, Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte",
+    "address": "Siège – Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte",
+    "addressFactory": "Usine – Parcelle 56, 3ème Zone Industrielle, 6 Octobre, Égypte",
     "phoneServiceLabel": "Service client",
     "phoneSuggestionsLabel": "Suggestions",
     "terms": "Conditions générales",
@@ -229,8 +230,7 @@
     ],
     "tabs": {
       "rnd": "R&D",
-      "tasting": "Dégustation",
-      "pilot": "Pilote"
+      "tasting": "Dégustation"
     },
     "cta": {
       "primary": "Démarrer une recette",
@@ -546,7 +546,7 @@
       },
       {
         "title": "Informations de contact",
-        "body": "Pour toute question concernant ces conditions générales, contactez-nous à notre site : Bureau 2B – 1er étage, Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte, ou par e-mail à wecare@kagegypt.com."
+        "body": "Pour toute question concernant ces conditions générales, contactez-nous à notre site : Siège – Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte, ou par e-mail à wecare@kagegypt.com."
       }
     ]
   },
@@ -675,7 +675,7 @@
       },
       {
         "title": "Informations de contact",
-        "body": "Pour toute demande ou question relative à la confidentialité, contactez-nous à : Bureau 2B – 1er étage, Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte, ou par e-mail à wecare@kagegypt.com."
+        "body": "Pour toute demande ou question relative à la confidentialité, contactez-nous à : Siège – Bâtiment 4, Mivida Business Park 3, 5e Settlement, New Cairo, Égypte, ou par e-mail à wecare@kagegypt.com."
       },
       {
         "title": "Mises à jour de la politique",

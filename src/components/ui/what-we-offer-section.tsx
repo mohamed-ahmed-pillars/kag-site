@@ -220,7 +220,7 @@ export default function WhatWeOfferSection() {
                   )}
                   {p.key === "privateLabel" && (
                     <StandardCard
-                      image="/privatelable.jpg"
+                      image="/privatelable.png"
                       title={t("pillars.privateLabel.title")}
                       summary={t("pillars.privateLabel.summary")}
                       items={t.raw("pillars.privateLabel.items") as string[]}
@@ -232,7 +232,7 @@ export default function WhatWeOfferSection() {
                   )}
                   {p.key === "customRecipe" && (
                     <StandardCard
-                      image="/recipe.jpg"
+                      image="/recipe.png"
                       title={t("pillars.customRecipe.title")}
                       summary={t("pillars.customRecipe.summary")}
                       items={t.raw("pillars.customRecipe.items") as string[]}
@@ -362,9 +362,9 @@ function OurBrandsCard({
     <>
       <div
         className="relative mb-4 h-72 w-full overflow-hidden rounded-lg bg-cover bg-center"
-        style={{ backgroundImage: "url('/ourbrandsbackground.webp')" }}
+        style={{ backgroundImage: "url('/ourbrandsbackground.png')" }}
       >
-        <div className="absolute inset-0 bg-white/70" />
+        <div className="absolute inset-0 bg-white/50" />
         <div className="relative z-10 flex h-full items-center justify-center p-6">
           <BrandLogoCarousel />
         </div>
@@ -457,13 +457,16 @@ function StandardCard({
 }: StandardCardProps) {
   return (
     <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={image}
-        alt=""
-        className="mb-4 h-72 w-full rounded-lg object-cover"
-        loading="lazy"
-      />
+      <div className="relative mb-4 h-72 w-full overflow-hidden rounded-lg">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={image}
+          alt=""
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-black/30" />
+      </div>
       <div className="space-y-4">
         <div className="space-y-2">
           <h3

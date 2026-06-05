@@ -40,9 +40,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary/30 text-primary">
                     <MapPin className="h-4 w-4" />
                   </span>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col gap-1">
                     <span className="text-xs uppercase tracking-wider text-primary/60">{t('info.address')}</span>
                     <span className="text-primary">{tFooter('address')}</span>
+                    <span className="text-primary">{tFooter('addressFactory')}</span>
                   </div>
                 </li>
 

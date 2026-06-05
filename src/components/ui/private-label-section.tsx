@@ -33,7 +33,7 @@ type TabMedia =
 
 const TABS: TabMedia[] = [
   { value: "production", type: "video", src: "/privatelable.mp4" },
-  { value: "packaging", type: "image", src: "/privatelable.jpg" },
+  { value: "packaging", type: "image", src: "/privatelable.png" },
   { value: "export", type: "image", src: "/exportstrip.jpg" },
 ];
 
@@ -224,6 +224,12 @@ export default function PrivateLabelSection() {
                           sizes="(min-width: 768px) 50vw, 100vw"
                           className="object-cover"
                           priority={idx === 0}
+                        />
+                      )}
+                      {tab.value === "packaging" && (
+                        <div
+                          aria-hidden="true"
+                          className="pointer-events-none absolute inset-0 bg-black/40"
                         />
                       )}
                       <div

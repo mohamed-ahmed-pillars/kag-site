@@ -29,13 +29,19 @@ export async function generateStaticParams() {
 
 const POST_LOADERS: Record<string, () => Promise<{ default: ComponentType }>> = {
   'en/iso-22000-recertification': () => import('@/content/news/en/iso-22000-recertification.mdx'),
+  'en/kag-expands-brand-portfolio': () => import('@/content/news/en/kag-expands-brand-portfolio.mdx'),
   'en/kag-expands-to-berlin-istanbul': () => import('@/content/news/en/kag-expands-to-berlin-istanbul.mdx'),
+  'en/kag-joins-egyptian-trade-mission-morocco': () => import('@/content/news/en/kag-joins-egyptian-trade-mission-morocco.mdx'),
   'en/yamkers-fava-beans-launch': () => import('@/content/news/en/yamkers-fava-beans-launch.mdx'),
   'ar/iso-22000-recertification': () => import('@/content/news/ar/iso-22000-recertification.mdx'),
+  'ar/kag-expands-brand-portfolio': () => import('@/content/news/ar/kag-expands-brand-portfolio.mdx'),
   'ar/kag-expands-to-berlin-istanbul': () => import('@/content/news/ar/kag-expands-to-berlin-istanbul.mdx'),
+  'ar/kag-joins-egyptian-trade-mission-morocco': () => import('@/content/news/ar/kag-joins-egyptian-trade-mission-morocco.mdx'),
   'ar/yamkers-fava-beans-launch': () => import('@/content/news/ar/yamkers-fava-beans-launch.mdx'),
   'fr/iso-22000-recertification': () => import('@/content/news/fr/iso-22000-recertification.mdx'),
+  'fr/kag-expands-brand-portfolio': () => import('@/content/news/fr/kag-expands-brand-portfolio.mdx'),
   'fr/kag-expands-to-berlin-istanbul': () => import('@/content/news/fr/kag-expands-to-berlin-istanbul.mdx'),
+  'fr/kag-joins-egyptian-trade-mission-morocco': () => import('@/content/news/fr/kag-joins-egyptian-trade-mission-morocco.mdx'),
   'fr/yamkers-fava-beans-launch': () => import('@/content/news/fr/yamkers-fava-beans-launch.mdx'),
 };
 

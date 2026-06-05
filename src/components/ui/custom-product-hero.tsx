@@ -62,7 +62,7 @@ export default function CustomProductHero({
         className="absolute inset-0"
       >
         <Image
-          src="/recipe.jpg"
+          src="/recipe.png"
           alt=""
           fill
           priority
