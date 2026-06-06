@@ -200,11 +200,17 @@
     },
     "eyebrow": "Produit Personnalisé",
     "heading": "Votre idée, notre R&D",
-    "description": "Apportez-nous un brief - un marché cible, un produit de référence ou une direction aromatique - et nos technologues alimentaires le traduisent en une recette prête à produire. Itérée sous panel entraîné, validée pour la durée de vie, puis transférée à la production avec un cahier des charges figé.",
+    "description": "Apportez-nous un brief - un marché cible, un produit de référence ou une direction aromatique - et nos technologues alimentaires le traduisent en une recette prête à produire. Nous développons et fabriquons déjà du ketchup, de la sauce pâtes, de la sauce pizza et de la sauce jalapeño pour d'autres marques - itérée sous panel entraîné, validée pour la durée de vie, puis transférée à la production avec un cahier des charges figé.",
     "stats": [
       "R&D et labo sensoriel",
       "Lots pilotes possibles",
       "Recettes que vous possédez"
+    ],
+    "coPackSauces": [
+      "Ketchup",
+      "Sauce pâtes",
+      "Sauce pizza",
+      "Sauce jalapeño"
     ],
     "steps": [
       {
@@ -419,14 +425,13 @@
     "applications": {
       "eyebrow": "APPLICATIONS",
       "heading": "Catégories que nous avons déjà construites",
-      "intro": "Six catégories où notre équipe R&D a formulé, industrialisé et expédié des produits commerciaux - le point de départ de la plupart des briefs personnalisés.",
+      "intro": "Cinq catégories où notre équipe R&D a formulé, industrialisé et expédié des produits commerciaux - le point de départ de la plupart des briefs personnalisés.",
       "items": {
-        "sauces":     { "title": "Sauces & vinaigrettes","description": "Tomate, piment, ail, tahina et vinaigrettes émulsionnées - formats retail et restauration, stables à température ambiante pour l'export." },
+        "sauces":     { "title": "Sauces & vinaigrettes","description": "Ketchup, sauce pâtes, sauce pizza, sauce jalapeño piquante, plus tomate, piment, ail, tahina et vinaigrettes émulsionnées - déjà fabriqués pour d'autres marques en formats retail et restauration, stables à température ambiante pour l'export." },
         "jams":       { "title": "Confitures & pâtes à tartiner","description": "Confitures de fruits, marmelades, halawa et pâtes à tartiner sucrées - ajustées au profil sucré et à la teneur en sucre cible." },
         "juices":     { "title": "Jus & boissons",      "description": "Nectars, concentrés et formats prêts à boire - saveurs adaptées à votre marché et conditionnement ambiant." },
         "fava":       { "title": "Légumineuses en tous genres","description": "Fèves nature, piment, ail et tehina, ainsi que d'autres préparations de légumineuses - notre catégorie historique." },
-        "condiments": { "title": "Condiments",          "description": "Moutardes, variantes de mayonnaise, chutneys et pâtes - équilibrés pour la stabilité au rayon et le niveau d'épice attendu sur votre marché." },
-        "pickles":    { "title": "Pickles & conserves", "description": "Légumes saumurés et acidifiés, préparations d'olives et autres conserves ambiantes - bocaux retail et formats restauration." }
+        "condiments": { "title": "Condiments",          "description": "Moutardes, variantes de mayonnaise, chutneys et pâtes - équilibrés pour la stabilité au rayon et le niveau d'épice attendu sur votre marché." }
       }
     },
     "certifications": { "heading": "Des recettes bâties selon des normes certifiées" },

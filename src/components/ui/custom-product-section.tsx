@@ -67,6 +67,7 @@ export default function CustomProductSection() {
   };
 
   const stats = t.raw("stats") as string[];
+  const coPackSauces = t.raw("coPackSauces") as string[];
   const steps = t.raw("steps") as Step[];
 
   return (
@@ -154,6 +155,12 @@ export default function CustomProductSection() {
                           priority={idx === 0}
                         />
                       )}
+                      {tab.value === "tasting" && (
+                        <div
+                          aria-hidden="true"
+                          className="pointer-events-none absolute inset-0 bg-black/40"
+                        />
+                      )}
                       <div
                         aria-hidden="true"
                         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
@@ -214,6 +221,23 @@ export default function CustomProductSection() {
                     key={i}
                     variant="secondary"
                     className="h-7 rounded-full bg-primary/10 px-3 text-xs font-medium text-primary"
+                  >
+                    {s}
+                  </Badge>
+                ))}
+              </motion.div>
+            )}
+
+            {coPackSauces.length > 0 && (
+              <motion.div
+                className="mt-3 flex flex-wrap gap-2"
+                variants={itemVariants}
+              >
+                {coPackSauces.map((s, i) => (
+                  <Badge
+                    key={i}
+                    variant="secondary"
+                    className="h-7 rounded-full border border-secondary/40 bg-secondary/20 px-3 text-xs font-medium text-primary"
                   >
                     {s}
                   </Badge>

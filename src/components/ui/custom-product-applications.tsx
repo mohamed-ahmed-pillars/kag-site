@@ -16,7 +16,6 @@ const APPLICATION_KEYS = [
   "juices",
   "fava",
   "condiments",
-  "pickles",
 ] as const;
 
 type ApplicationKey = (typeof APPLICATION_KEYS)[number];

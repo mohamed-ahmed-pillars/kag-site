@@ -200,11 +200,17 @@
     },
     "eyebrow": "Custom Product",
     "heading": "Your idea, our R&D bench",
-    "description": "Bring us a brief - a target market, a benchmark product, or a flavor direction - and our food technologists translate it into a production-ready recipe. Iterated under a trained panel, validated for shelf life, and handed to production with a locked spec.",
+    "description": "Bring us a brief - a target market, a benchmark product, or a flavor direction - and our food technologists translate it into a production-ready recipe. We already develop and produce ketchup, pasta sauce, pizza sauce, and jalapeño sauce for other brands - iterated under a trained panel, validated for shelf life, and handed to production with a locked spec.",
     "stats": [
       "R&D & sensory lab",
       "Pilot-batch capable",
       "Recipes you own"
+    ],
+    "coPackSauces": [
+      "Ketchup",
+      "Pasta sauce",
+      "Pizza sauce",
+      "Jalapeño sauce"
     ],
     "steps": [
       {
@@ -419,14 +425,13 @@
     "applications": {
       "eyebrow": "APPLICATIONS",
       "heading": "Categories we've built before",
-      "intro": "Six categories where our R&D team has formulated, scaled, and shipped commercial products - the starting point for most custom briefs.",
+      "intro": "Five categories where our R&D team has formulated, scaled, and shipped commercial products - the starting point for most custom briefs.",
       "items": {
-        "sauces":     { "title": "Sauces & dressings",  "description": "Tomato, chili, garlic, tahina, and emulsified dressings - retail and food-service formats, ambient-stable for export." },
+        "sauces":     { "title": "Sauces & dressings",  "description": "Ketchup, pasta sauce, pizza sauce, jalapeño hot sauce, plus tomato, chili, garlic, tahina, and emulsified dressings - already produced for other brands in retail and food-service formats, ambient-stable for export." },
         "jams":       { "title": "Jams & spreads",      "description": "Fruit jams, marmalades, halawa, and sweet spreads - tuned for sweetness profile and target sugar content." },
         "juices":     { "title": "Juices & beverages",  "description": "Nectars, concentrates, and ready-to-drink formats - flavor matched to your market and packaged for ambient distribution." },
         "fava":       { "title": "Legumes of all kinds", "description": "Plain, chili, garlic, and tehina-spiked fava beans plus other legume preparations - our heritage category." },
-        "condiments": { "title": "Condiments",          "description": "Mustards, mayonnaise variants, chutneys, and pastes - balanced for shelf stability and the heat profile of your market." },
-        "pickles":    { "title": "Pickles & preserves", "description": "Brined and acidified vegetables, olive preparations, and other ambient preserves - retail jars and food-service bulk formats." }
+        "condiments": { "title": "Condiments",          "description": "Mustards, mayonnaise variants, chutneys, and pastes - balanced for shelf stability and the heat profile of your market." }
       }
     },
     "certifications": { "heading": "Recipes built to certified standards" },

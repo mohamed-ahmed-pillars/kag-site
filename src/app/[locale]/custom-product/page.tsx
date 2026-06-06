@@ -31,7 +31,6 @@ const APPLICATION_KEYS = [
   "juices",
   "fava",
   "condiments",
-  "pickles",
 ] as const;
 
 const FAQ_KEYS = [
