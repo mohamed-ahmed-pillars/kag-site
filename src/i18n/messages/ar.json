@@ -516,7 +516,7 @@
     "cta": "اطلع على جميع المنتجات",
     "items": {
       "sauce":            { "name": "صلصة طماطم",         "brand": "يامكرز" },
-      "tomatoSauce400g":  { "name": "صلصة طماطم مركزة",   "brand": "يامكرز" },
+      "tomatoSauce400g":  { "name": "معجون طماطم",        "brand": "يامكرز" },
       "mangoJar":         { "name": "مربى المانجو",       "brand": "يامكرز" },
       "apricotJam":       { "name": "مربى المشمش",        "brand": "يامكرز" },
       "guavaJuice":       { "name": "عصير جوافة",         "brand": "يامكرز" },

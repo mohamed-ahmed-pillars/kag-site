@@ -516,7 +516,7 @@
     "cta": "See All Products",
     "items": {
       "sauce":            { "name": "Tomato Sauce",           "brand": "Yamkers" },
-      "tomatoSauce400g":  { "name": "Tomato Sauce Concentrated", "brand": "Yamkers" },
+      "tomatoSauce400g":  { "name": "Tomato Paste",              "brand": "Yamkers" },
       "mangoJar":         { "name": "Mango Jam",              "brand": "Yamkers" },
       "apricotJam":       { "name": "Apricot Jam",            "brand": "Yamkers" },
       "guavaJuice":       { "name": "Guava Juice",            "brand": "Yamkers" },

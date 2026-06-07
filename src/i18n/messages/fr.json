@@ -516,7 +516,7 @@
     "cta": "Voir tous les produits",
     "items": {
       "sauce":            { "name": "Sauce Tomate",         "brand": "Yamkers" },
-      "tomatoSauce400g":  { "name": "Sauce Tomate Concentrée", "brand": "Yamkers" },
+      "tomatoSauce400g":  { "name": "Concentré de Tomate",  "brand": "Yamkers" },
       "mangoJar":         { "name": "Confiture de Mangue",  "brand": "Yamkers" },
       "apricotJam":       { "name": "Confiture d'Abricot",  "brand": "Yamkers" },
       "guavaJuice":       { "name": "Jus de Goyave",        "brand": "Yamkers" },
