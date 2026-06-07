@@ -168,13 +168,20 @@
   body {
     @apply text-foreground;
     background-color: var(--background);
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     background-image:
       linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-      url('/bg6.jpg');
+      url('/bg2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    pointer-events: none;
   }
   html {
     @apply font-sans;

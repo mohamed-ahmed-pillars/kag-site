@@ -88,7 +88,8 @@ export function Footer() {
             alt="KAG"
             width={120}
             height={40}
-            className="h-auto w-32 md:w-48"
+            style={{ width: "auto", height: "auto" }}
+            className="w-32 md:w-48"
           />
         </Link>
         <p className="bg-transparent text-center text-xs leading-5 text-foreground/70 md:text-left">

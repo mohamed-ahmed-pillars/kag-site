@@ -60,7 +60,7 @@ const CardHoverRevealMain = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={cn("size-full transition-transform duration-300 ", className)}
+      className={cn("relative size-full transition-transform duration-300 ", className)}
       style={
         isHovered
           ? { transform: `scale(${hoverScale})`, ...props.style }
