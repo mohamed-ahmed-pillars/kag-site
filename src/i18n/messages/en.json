@@ -39,7 +39,7 @@
     }
   },
   "footer": {
-    "blurb": "KAG is an Egyptian food group producing, distributing, and exporting tomato sauces, jams, juices, and legumes of all kinds - built for local communities and global markets.",
+    "blurb": "KAG is an Egyptian food group — manufacturing, exporting, importing, and distributing high-quality food products, delivering trusted brands across Egypt and to markets worldwide.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactUs": "Contact Us",
@@ -569,6 +569,7 @@
     "tabs": {
       "all": "All",
       "tomato_paste": "Tomato Paste",
+      "tomato_sauce": "Tomato Sauce",
       "fava_beans": "Legumes of all kinds",
       "beans_peas": "Beans & Peas",
       "canned_vegetables": "Canned Vegetables",
@@ -589,15 +590,17 @@
         "glass_jar": "Glass jar",
         "plastic_cup": "Plastic cup",
         "sachet": "Sachet",
-        "tetra_pak": "Tetra Pak"
+        "tetra_pak": "Tetra Pak",
+        "doypack": "Doypack"
       }
     },
     "items": {
       "tomato-paste-4200g-tin":      { "name": "Tomato Paste 4.2 kg Tin",        "description": "Wholesale 4.2 kg tin of 28–30 % tomato paste for HORECA use." },
-      "tomato-paste-2800g-tin":      { "name": "Tomato Paste 2.8 kg Tin",        "description": "Catering-size 2.8 kg tin, 20–22 % concentration." },
+      "tomato-paste-2800g-tin":      { "name": "Tomato Sauce 2.8 kg Tin",        "description": "Catering-size 2.8 kg tin of tomato sauce, 20–22 % concentration." },
       "tomato-paste-800g-tin":       { "name": "Tomato Paste 800 g Tin",         "description": "Family-size 800 g tin of 28–30 % concentrated tomato paste." },
       "tomato-paste-400g-tin":       { "name": "Tomato Paste 400 g Tin",         "description": "Rich 28–30 % tomato paste in a 400 g tin - base for sauces, soups, and stews." },
-      "tomato-paste-360g-jar":       { "name": "Tomato Paste 360 g Glass Jar",   "description": "Tomato paste in a reclosable 360 g glass jar, 22–24 % concentration." },
+      "tomato-sauce-300g-doypack":   { "name": "Tomato Sauce 300 g Doypack",     "description": "Yamkers concentrated tomato sauce in a 300 g doypack (stand-up pouch), 20–22 % concentration." },
+      "tomato-paste-360g-jar":       { "name": "Tomato Sauce 360 g Glass Jar",   "description": "Tomato sauce in a reclosable 360 g glass jar, 22–24 % concentration." },
       "tomato-paste-120g-tin":       { "name": "Tomato Paste 120 g Tin",         "description": "Single-meal 120 g tin of 28–30 % tomato paste." },
       "tomato-paste-70g-sachet":     { "name": "Tomato Paste 70 g Sachet",       "description": "70 g tear-open sachet of 28–30 % tomato paste." },
       "tomato-paste-60g-tin":        { "name": "Tomato Paste 60 g Tin",          "description": "Compact 60 g tin - perfect for single recipes or lunchboxes." },

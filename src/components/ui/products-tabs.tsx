@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import {
   Bean,
   Cherry,
+  CookingPot,
   GlassWater,
   LayoutGrid,
   Salad,
@@ -20,6 +21,7 @@ type TabKey = "all" | ProductCategory;
 const TABS: { key: TabKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "all", icon: LayoutGrid },
   { key: "tomato_paste", icon: Soup },
+  { key: "tomato_sauce", icon: CookingPot },
   { key: "jams", icon: Cherry },
   { key: "fava_beans", icon: Bean },
   { key: "beans_peas", icon: Sprout },

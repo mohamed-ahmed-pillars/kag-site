@@ -13,6 +13,7 @@ type TabKey = "all" | ProductCategory;
 const TAB_KEYS: TabKey[] = [
   "all",
   "tomato_paste",
+  "tomato_sauce",
   "fava_beans",
   "beans_peas",
   "canned_vegetables",
@@ -28,6 +29,7 @@ const PACKAGING_KEYS: PackagingType[] = [
   "plastic_cup",
   "sachet",
   "tetra_pak",
+  "doypack",
 ];
 
 export default async function ProductsPage({

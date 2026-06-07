@@ -39,7 +39,7 @@
     }
   },
   "footer": {
-    "blurb": "KAG est un groupe alimentaire égyptien qui produit, distribue et exporte des sauces tomate, des confitures, des jus et des légumineuses en tous genres - pensé pour les communautés locales et les marchés mondiaux.",
+    "blurb": "KAG est un groupe alimentaire égyptien — fabrication, exportation, importation et distribution de produits alimentaires de haute qualité, livrant des marques de confiance à travers l'Égypte et vers les marchés du monde entier.",
     "quickLinks": "Liens rapides",
     "services": "Services",
     "contactUs": "Contactez-nous",
@@ -569,6 +569,7 @@
     "tabs": {
       "all": "Tous",
       "tomato_paste": "Concentré de tomate",
+      "tomato_sauce": "Sauce tomate",
       "fava_beans": "Légumineuses en tous genres",
       "beans_peas": "Haricots et petits pois",
       "canned_vegetables": "Légumes en conserve",
@@ -589,15 +590,17 @@
         "glass_jar": "Bocal en verre",
         "plastic_cup": "Coupelle plastique",
         "sachet": "Sachet",
-        "tetra_pak": "Brique Tetra Pak"
+        "tetra_pak": "Brique Tetra Pak",
+        "doypack": "Doypack"
       }
     },
     "items": {
       "tomato-paste-4200g-tin":      { "name": "Concentré de tomate 4,2 kg boîte",     "description": "Boîte 4,2 kg de concentré de tomate 28–30 % pour la restauration." },
-      "tomato-paste-2800g-tin":      { "name": "Concentré de tomate 2,8 kg boîte",     "description": "Format restauration 2,8 kg, concentration 20–22 %." },
+      "tomato-paste-2800g-tin":      { "name": "Sauce tomate 2,8 kg boîte",            "description": "Sauce tomate format restauration 2,8 kg, concentration 20–22 %." },
       "tomato-paste-800g-tin":       { "name": "Concentré de tomate 800 g boîte",      "description": "Boîte familiale 800 g, concentré 28–30 %." },
       "tomato-paste-400g-tin":       { "name": "Concentré de tomate 400 g boîte",      "description": "Concentré de tomate riche 28–30 % en boîte de 400 g - base pour sauces, soupes et plats mijotés." },
-      "tomato-paste-360g-jar":       { "name": "Concentré de tomate 360 g bocal verre", "description": "Concentré de tomate en bocal en verre refermable de 360 g, concentration 22–24 %." },
+      "tomato-sauce-300g-doypack":   { "name": "Sauce tomate 300 g doypack",           "description": "Sauce tomate concentrée Yamkers en doypack (sachet debout) 300 g, concentration 20–22 %." },
+      "tomato-paste-360g-jar":       { "name": "Sauce tomate 360 g bocal verre",       "description": "Sauce tomate en bocal en verre refermable de 360 g, concentration 22–24 %." },
       "tomato-paste-120g-tin":       { "name": "Concentré de tomate 120 g boîte",      "description": "Boîte 120 g pour un repas, concentré 28–30 %." },
       "tomato-paste-70g-sachet":     { "name": "Concentré de tomate 70 g sachet",      "description": "Sachet à ouverture facile 70 g, concentré 28–30 %." },
       "tomato-paste-60g-tin":        { "name": "Concentré de tomate 60 g boîte",       "description": "Boîte compacte 60 g - idéale pour une recette ou un lunchbox." },

@@ -21,7 +21,7 @@ export function LanguageSelector({ className }: { className?: string }) {
   const [, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [pos, setPos] = useState<{ top: number; right: number } | null>(null);
+  const [pos, setPos] = useState<{ top?: number; bottom?: number; right: number } | null>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -36,10 +36,23 @@ export function LanguageSelector({ className }: { className?: string }) {
     function updatePos() {
       if (!buttonRef.current) return;
       const rect = buttonRef.current.getBoundingClientRect();
-      setPos({
-        top: rect.bottom + 8,
-        right: window.innerWidth - rect.right,
-      });
+      const PANEL_W = 192;
+      const MARGIN = 8;
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      const flipUp = spaceBelow < 180 && spaceAbove > spaceBelow;
+
+      let right = window.innerWidth - rect.right;
+      const panelLeft = window.innerWidth - right - PANEL_W;
+      if (panelLeft < MARGIN) {
+        right = Math.max(MARGIN, window.innerWidth - PANEL_W - MARGIN);
+      }
+
+      setPos(
+        flipUp
+          ? { bottom: window.innerHeight - rect.top + MARGIN, right }
+          : { top: rect.bottom + MARGIN, right }
+      );
     }
     updatePos();
     window.addEventListener("scroll", updatePos, true);
@@ -96,9 +109,8 @@ export function LanguageSelector({ className }: { className?: string }) {
             role="listbox"
             style={{
               position: "fixed",
-              top: pos.top,
-              right: pos.right,
               zIndex: 1000,
+              ...pos,
             }}
             className={cn(
               "w-48 rounded-xl overflow-hidden",

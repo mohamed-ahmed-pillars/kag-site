@@ -1,5 +1,6 @@
 export type ProductCategory =
   | "tomato_paste"
+  | "tomato_sauce"
   | "fava_beans"
   | "beans_peas"
   | "canned_vegetables"
@@ -13,7 +14,8 @@ export type PackagingType =
   | "glass_jar"
   | "plastic_cup"
   | "sachet"
-  | "tetra_pak";
+  | "tetra_pak"
+  | "doypack";
 
 export type ShippingType = "carton" | "shrink_wrap";
 
@@ -46,7 +48,7 @@ export const products: Product[] = [
     packaging: { type: "tin", unitsPerCarton: 2, shipping: "shrink_wrap" },
   },
   {
-    id: 3, slug: "tomato-paste-2800g-tin", brand: "yamkers", category: "tomato_paste",
+    id: 3, slug: "tomato-paste-2800g-tin", brand: "yamkers", category: "tomato_sauce",
     image: "/Products/2800 g.png",
     specs: { netWeight: "2800 g", netWeightAr: "2800 جرام", concentration: "20–22 %" },
     packaging: { type: "tin", unitsPerCarton: 4, shipping: "carton" },
@@ -64,7 +66,7 @@ export const products: Product[] = [
     packaging: { type: "tin", unitsPerCarton: 12, shipping: "shrink_wrap" },
   },
   {
-    id: 5, slug: "tomato-paste-360g-jar", brand: "yamkers", category: "tomato_paste",
+    id: 5, slug: "tomato-paste-360g-jar", brand: "yamkers", category: "tomato_sauce",
     image: "/Products/jar.png",
     specs: { netWeight: "360 g", netWeightAr: "360 جرام", concentration: "22–24 %" },
     packaging: { type: "glass_jar", unitsPerCarton: 12, shipping: "shrink_wrap" },
@@ -92,6 +94,12 @@ export const products: Product[] = [
     image: "/Products/50 g.png",
     specs: { netWeight: "50 g", netWeightAr: "50 جرام", concentration: "28–30 %" },
     packaging: { type: "sachet", unitsPerCarton: 96, shipping: "carton" },
+  },
+  {
+    id: 51, slug: "tomato-sauce-300g-doypack", brand: "yamkers", category: "tomato_sauce",
+    image: "/Products/dep 300 g.png",
+    specs: { netWeight: "300 g", netWeightAr: "300 جرام", concentration: "20–22 %" },
+    packaging: { type: "doypack", unitsPerCarton: 24, shipping: "carton" },
   },
 
   // ── Jams - 360 g glass jars ──────────────────────────────────────
@@ -161,61 +169,61 @@ export const products: Product[] = [
     id: 26, slug: "fig-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/fig Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 27, slug: "strawberry-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/Strawberry Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 28, slug: "guava-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/guava Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 29, slug: "apricot-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/apricots Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 30, slug: "apple-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/Apple Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 31, slug: "peach-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/Peach Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 32, slug: "mango-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/mango Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 33, slug: "orange-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/orange Jam Portion copy.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 34, slug: "mixed-fruit-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/mixed fruits Jam Portion.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
   {
     id: 49, slug: "carrot-jam-30g-cup", brand: "yamkers", category: "jams",
     image: "/Products/Carrot Jam Portion.png",
     specs: { netWeight: "30 g", netWeightAr: "30 جرام" },
-    packaging: { type: "plastic_cup", unitsPerCarton: 144, shipping: "carton" },
+    packaging: { type: "plastic_cup", unitsPerCarton: 224, shipping: "carton" },
   },
 
   // ── Fava Beans ───────────────────────────────────────────────────
