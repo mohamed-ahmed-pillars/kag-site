@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -9,18 +9,18 @@ import { FlowButton } from "@/components/ui/flow-button";
 import CertificationsMarquee from "@/components/ui/certifications-marquee";
 
 const pillars = [
-  { key: "manufacturing", icon: "/pattern/manufacturing-lime.png",        side: "left"  },
-  { key: "privateLabel",  icon: "/pattern/private-label-lime.png",        side: "left"  },
-  { key: "customRecipe",  icon: "/pattern/wheat-lime.png",                side: "left"  },
-  { key: "distribution",  icon: "/pattern/distribution-truck-lime.png",   side: "right" },
-  { key: "export",        icon: "/pattern/export-globe-lime.png",         side: "right" },
-  { key: "quality",       icon: "/pattern/kag-monogram-lime.png",         side: "right" },
+  { key: "manufacturing", icon: "/pattern/manufacturing-lime.png", side: "left" },
+  { key: "privateLabel", icon: "/pattern/private-label-lime.png", side: "left" },
+  { key: "customRecipe", icon: "/pattern/wheat-lime.png", side: "left" },
+  { key: "distribution", icon: "/pattern/distribution-truck-lime.png", side: "right" },
+  { key: "export", icon: "/pattern/export-globe-lime.png", side: "right" },
+  { key: "quality", icon: "/pattern/kag-monogram-lime.png", side: "right" },
 ] as const;
 
 const values = [
-  { key: "quality",    Icon: Award },
+  { key: "quality", Icon: Award },
   { key: "innovation", Icon: Sparkles },
-  { key: "growth",     Icon: TrendingUp },
+  { key: "growth", Icon: TrendingUp },
 ] as const;
 
 interface PillarItemProps {
@@ -71,15 +71,12 @@ function PillarItem({
   );
 }
 
-const heroVideos = ["/1.mp4", "/2.mp4", "/3.mp4", "/4.mp4"] as const;
-
 export default function WhoWeAreSection() {
   const t = useTranslations("whoWeAre");
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
   const valuesRef = useRef<HTMLDivElement>(null);
   const isValuesInView = useInView(valuesRef, { once: false, amount: 0.3 });
-  const [videoIdx, setVideoIdx] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -199,25 +196,23 @@ export default function WhoWeAreSection() {
           <div className="order-first mb-8 flex items-center justify-center md:order-none md:mb-0">
             <motion.div className="relative w-full max-w-xs" variants={itemVariants}>
               <motion.div
-                className="overflow-hidden rounded-md shadow-xl"
+                className="relative overflow-hidden rounded-md shadow-xl"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
                 <video
-                  key={videoIdx}
-                  src={heroVideos[videoIdx]}
+                  src="/herovid.mp4"
                   autoPlay
                   muted
+                  loop
                   playsInline
                   preload="metadata"
                   aria-hidden="true"
-                  onEnded={() =>
-                    setVideoIdx((i) => (i + 1) % heroVideos.length)
-                  }
                   className="block aspect-[9/16] w-full object-cover"
                 />
+                <div className="pointer-events-none absolute inset-0 bg-black/40" />
               </motion.div>
 
               {/* Decorative offset frame */}

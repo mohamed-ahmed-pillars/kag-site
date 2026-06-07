@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import {
   motion,
@@ -11,12 +11,9 @@ import {
 import { ChevronDown } from "lucide-react";
 import { FlowButton } from "@/components/ui/flow-button";
 
-const heroVideos = ["/1.mp4", "/2.mp4", "/3.mp4", "/4.mp4", "/testvid.mp4"] as const;
-
 export default function HeroSection() {
   const t = useTranslations("home.hero");
   const sectionRef = useRef<HTMLElement>(null);
-  const [videoIdx, setVideoIdx] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -53,18 +50,17 @@ export default function HeroSection() {
       className="relative h-screen w-full overflow-hidden"
     >
       <motion.video
-        key={videoIdx}
-        src={heroVideos[videoIdx]}
+        src="/herovid.mp4"
         autoPlay
         muted
+        loop
         playsInline
         preload="metadata"
-        onEnded={() => setVideoIdx((i) => (i + 1) % heroVideos.length)}
         style={{ scale: videoScale }}
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
 
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
