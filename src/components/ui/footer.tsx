@@ -83,13 +83,11 @@ export function Footer() {
     <footer className="mx-auto w-full border-b border-t border-foreground/10 bg-transparent px-2 md:px-4">
       <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex">
         <Link href="/" aria-label="KAG">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/navbarLogo.svg"
             alt="KAG"
-            width={120}
-            height={40}
-            style={{ width: "auto", height: "auto" }}
-            className="w-32 md:w-48"
+            className="h-7 w-auto md:h-8"
           />
         </Link>
         <p className="bg-transparent text-center text-xs leading-5 text-foreground/70 md:text-left">
