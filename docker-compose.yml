@@ -31,9 +31,20 @@ services:
       - web
     labels:
       - "traefik.enable=true"
+      # Apex router — serves the site, cert covers apex + www
       - "traefik.http.routers.web.rule=Host(`${SITE_HOST}`)"
       - "traefik.http.routers.web.entrypoints=websecure"
       - "traefik.http.routers.web.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.web.tls.domains[0].main=${SITE_HOST}"
+      - "traefik.http.routers.web.tls.domains[0].sans=www.${SITE_HOST}"
+      # www router — redirects to apex
+      - "traefik.http.routers.web-www.rule=Host(`www.${SITE_HOST}`)"
+      - "traefik.http.routers.web-www.entrypoints=websecure"
+      - "traefik.http.routers.web-www.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.web-www.middlewares=www-to-apex"
+      - "traefik.http.middlewares.www-to-apex.redirectregex.regex=^https?://www\\.${SITE_HOST}/(.*)"
+      - "traefik.http.middlewares.www-to-apex.redirectregex.replacement=https://${SITE_HOST}/$${1}"
+      - "traefik.http.middlewares.www-to-apex.redirectregex.permanent=true"
       - "traefik.http.services.web.loadbalancer.server.port=3000"
 
 networks:
