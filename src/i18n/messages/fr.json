@@ -605,6 +605,7 @@
       "tomato-paste-70g-sachet":     { "name": "Concentré de tomate 70 g sachet",      "description": "Sachet à ouverture facile 70 g, concentré 28–30 %." },
       "tomato-paste-60g-tin":        { "name": "Concentré de tomate 60 g boîte",       "description": "Boîte compacte 60 g - idéale pour une recette ou un lunchbox." },
       "tomato-paste-50g-sachet":     { "name": "Concentré de tomate 50 g sachet",      "description": "Sachet à ouverture facile 50 g, concentré 28–30 % - pratique au quotidien et en voyage." },
+      "tomato-sauce-35g-sachet":     { "name": "Sauce tomate 35 g sachet",             "description": "Sachet à ouverture facile 35 g de sauce tomate, concentration 20–22 % - format dose individuelle." },
       "fig-jam-360g-jar":            { "name": "Confiture de figue 360 g bocal",       "description": "Confiture de figue entière en bocal en verre refermable de 360 g." },
       "strawberry-jam-360g-jar":     { "name": "Confiture de fraise 360 g bocal",      "description": "Confiture de fraise entière en bocal en verre de 360 g." },
       "guava-jam-360g-jar":          { "name": "Confiture de goyave 360 g bocal",      "description": "Confiture de goyave en bocal en verre de 360 g." },

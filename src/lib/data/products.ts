@@ -43,7 +43,7 @@ export const products: Product[] = [
   // ── Tomato Paste ──────────────────────────────────────────────────
   {
     id: 4, slug: "tomato-paste-4200g-tin", brand: "yamkers", category: "tomato_paste",
-    image: "/Products/4200 g.png",
+    image: "/Products/New 4,2 kilo Tin Can Mockup.png",
     specs: { netWeight: "4200 g", netWeightAr: "4200 جرام", concentration: "28–30 %" },
     packaging: { type: "tin", unitsPerCarton: 2, shipping: "shrink_wrap" },
   },
@@ -93,6 +93,12 @@ export const products: Product[] = [
     id: 8, slug: "tomato-paste-50g-sachet", brand: "yamkers", category: "tomato_paste",
     image: "/Products/50 g.png",
     specs: { netWeight: "50 g", netWeightAr: "50 جرام", concentration: "28–30 %" },
+    packaging: { type: "sachet", unitsPerCarton: 96, shipping: "carton" },
+  },
+  {
+    id: 52, slug: "tomato-sauce-35g-sachet", brand: "yamkers", category: "tomato_sauce",
+    image: "/Products/new sachet 35g.png",
+    specs: { netWeight: "35 g", netWeightAr: "35 جرام", concentration: "20–22 %" },
     packaging: { type: "sachet", unitsPerCarton: 96, shipping: "carton" },
   },
   {
