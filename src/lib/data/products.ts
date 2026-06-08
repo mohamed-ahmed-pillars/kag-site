@@ -43,7 +43,7 @@ export const products: Product[] = [
   // ── Tomato Paste ──────────────────────────────────────────────────
   {
     id: 4, slug: "tomato-paste-4200g-tin", brand: "yamkers", category: "tomato_paste",
-    image: "/Products/New 4,2 kilo Tin Can Mockup.png",
+    image: "/Products/4200g-new.png",
     specs: { netWeight: "4200 g", netWeightAr: "4200 جرام", concentration: "28–30 %" },
     packaging: { type: "tin", unitsPerCarton: 2, shipping: "shrink_wrap" },
   },
